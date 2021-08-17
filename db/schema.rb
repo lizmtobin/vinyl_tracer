@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2021_08_17_192359) do
 
   create_table "associations", force: :cascade do |t|
     t.bigint "artist_id", null: false
-    t.bigint "album_id"
+    t.bigint "album_id", null: false
     t.text "connection_description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 2021_08_17_192359) do
 
   add_foreign_key "albums", "artists"
   add_foreign_key "albums", "sellers"
+  add_foreign_key "associations", "albums"
   add_foreign_key "associations", "artists"
   add_foreign_key "reviews", "albums"
   add_foreign_key "reviews", "users"
