@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_17_191458) do
+ActiveRecord::Schema.define(version: 2021_08_17_191842) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,16 @@ ActiveRecord::Schema.define(version: 2021_08_17_191458) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "associations", force: :cascade do |t|
+    t.bigint "artist_id", null: false
+    t.bigint "album_id"
+    t.text "connection_description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["album_id"], name: "index_associations_on_album_id"
+    t.index ["artist_id"], name: "index_associations_on_artist_id"
+  end
+
   create_table "sellers", force: :cascade do |t|
     t.string "seller_name"
     t.string "location"
@@ -60,4 +70,5 @@ ActiveRecord::Schema.define(version: 2021_08_17_191458) do
 
   add_foreign_key "albums", "artists"
   add_foreign_key "albums", "sellers"
+  add_foreign_key "associations", "artists"
 end
