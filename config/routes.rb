@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     resources :reviews, only: [ :new, :create ]
   end
   resources :sellers, only: [ :index, :show ]
+  resources :reviews, only: [ :destroy ]
 end
