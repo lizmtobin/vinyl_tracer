@@ -248,6 +248,7 @@ DEPENDENCIES
   font-awesome-sass
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  nokogiri
   pg (~> 1.1)
   pry-byebug
   pry-rails

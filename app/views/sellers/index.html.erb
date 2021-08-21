@@ -1,1 +1,46 @@
-<h3>Search for vinyl on discogs, or browse independent sellers here</h3>
+
+
+
+<div class="container" style="width: 200rem;">
+
+  <h3>Search for vinyl on discogs, or browse independent sellers here</h3>
+
+<%= form_tag sellers_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control", id: "seller-search",
+        placeholder: "enter your location"
+      %>
+      <%= submit_tag "Search", class: "btn btn-danger" %>
+    <% end %>
+
+  <div class="d-flex justify-content-center">
+
+  </div>
+
+    <div class="row">
+
+    <div class="seller-card-box">
+
+      <% @sellers.each do |seller| %>
+        <div class="col-4 " style= "align-content: space-between;">
+          <div class="card-vinyl">
+            <%= image_tag ["turntable.png", "vinyl-player.png", "vinyl.png", "vinyl1.png", ].sample, alt: "Vinyl Tracer icon" %>
+
+
+
+            <div class="card-vinyl-infos">
+            <h2><%= link_to "#{seller.seller_name}", seller_path(seller) %></h4>
+
+              <p><%= seller.location %></p>
+
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+    <br>
+    <div><%= link_to 'Search again', root_path, class: "btn btn-primary ml-3" %></div>
+
+  </div>
