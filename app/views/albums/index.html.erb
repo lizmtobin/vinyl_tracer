@@ -5,27 +5,27 @@
 
 
 
-    <div class="flex-container">
+  <div class="flex-container">
 
-      <% @albums.each do |album| %>
-        <div class="flex-item mb-4">
-          <div class="card-vinyl" style="width: 15rem;">
-            <img src= <%= album.artwork_url %> />
-            <div class="card-vinyl-infos">
-            <ul>
-              <li><h2><%= link_to "#{album.album_name}", album_path(album) %></h4></li>
-              <li><p><%= album.artist.artist_name %></p></li>
-              <li><p><%= album.year %></p></li>
-              <li><p><%= album.genre %></p></li>
-            </ul>
-            </div>
+    <% @albums.each do |album| %>
+      <div class="flex-item mb-4">
+        <div class="card-vinyl" style="width: 15rem;">
+          <img src= <%= album.artwork_url %> />
+          <div class="card-vinyl-infos">
+          <ul>
+            <li><h2><%= link_to "#{album.album_name}", album_path(album) %></h4></li>
+            <li><p><%= album.artist.artist_name %></p></li>
+            <li><p><%= album.year %></p></li>
+            <li><p><%= album.genre %></p></li>
+          </ul>
           </div>
         </div>
-      <% end %>
+      </div>
+    <% end %>
 
-    </div>
-    <br>
-    <div><%= link_to 'Search again', root_path, class: "btn btn-primary ml-3" %></div>
+  </div>
+  <br>
+  <div><%= link_to 'Search again', root_path, class: "btn btn-primary ml-3" %></div>
 
 
 </div>
