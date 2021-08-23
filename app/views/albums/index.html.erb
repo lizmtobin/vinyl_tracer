@@ -1,0 +1,33 @@
+<div class="container" style="width: 200rem;">
+  <div class="d-flex justify-content-center">
+    <h1 style="text-align:center;">Albums</h1>
+  </div>
+
+
+
+    <div class="flex-container">
+
+      <% @albums.each do |album| %>
+        <div class="flex-item mb-4">
+          <div class="card-vinyl" style="width: 15rem;">
+            <img src= <%= album.artwork_url %> />
+            <div class="card-vinyl-infos">
+            <ul>
+              <li><h2><%= link_to "#{album.album_name}", album_path(album) %></h4></li>
+              <li><p><%= album.artist.artist_name %></p></li>
+              <li><p><%= album.year %></p></li>
+              <li><p><%= album.genre %></p></li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+    <br>
+    <div><%= link_to 'Search again', root_path, class: "btn btn-primary ml-3" %></div>
+
+
+</div>
+
+

@@ -84,7 +84,7 @@ Artist.create!(
 Album.create!(
   album_name: 'Sticky Fingers',
   year: '1971',
-  artwork_url: 'https://en.wikipedia.org/wiki/Sticky_Fingers#/media/File:The_Rolling_Stones_-_Sticky_Fingers.png',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/5/57/The_Rolling_Stones_-_Sticky_Fingers.png',
   producers: ['Jimmy Miller'],
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
@@ -95,7 +95,7 @@ Album.create!(
 Album.create!(
   album_name: 'Exile on Main Street',
   year: '1972',
-  artwork_url: 'https://en.wikipedia.org/wiki/Exile_on_Main_St.#/media/File:ExileMainSt.jpg',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/c/ca/ExileMainSt.jpg',
   producers: ['Jimmy Miller'],
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
@@ -106,7 +106,7 @@ Album.create!(
 Album.create!(
   album_name: 'Goats Head Soup',
   year: '1973',
-  artwork_url: 'https://en.wikipedia.org/wiki/Goats_Head_Soup#/media/File:The_Rolling_Stones_-_Goats_Head_Soup.jpg',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/d/d8/The_Rolling_Stones_-_Goats_Head_Soup.jpg',
   producers: ['Jimmy Miller'],
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
@@ -117,7 +117,7 @@ Album.create!(
 Album.create!(
   album_name: 'It\'s Only Rock \'n Roll',
   year: '1974',
-  artwork_url: 'https://en.wikipedia.org/wiki/It%27s_Only_Rock_%27n_Roll#/media/File:IORNRCover.jpg',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/5/5d/IORNRCover.jpg',
   producers: ["The Glimmer Twins"],
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
@@ -128,7 +128,7 @@ Album.create!(
 Album.create!(
   album_name: 'Black and Blue',
   year: '1976',
-  artwork_url: 'https://en.wikipedia.org/wiki/Black_and_Blue#/media/File:Blackblue.jpg',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/5/5a/Blackblue.jpg',
   producers: ["The Glimmer Twins"],
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
@@ -139,7 +139,7 @@ Album.create!(
 Album.create!(
   album_name: 'Some Girls',
   year: '1978',
-  artwork_url: 'https://en.wikipedia.org/wiki/Some_Girls#/media/File:Some_Girls.png',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/6/6c/Some_Girls.png',
   producers: ["The Glimmer Twins"],
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
@@ -150,7 +150,7 @@ Album.create!(
 Album.create!(
   album_name: 'Emotional Rescue',
   year: '1980',
-  artwork_url: 'https://en.wikipedia.org/wiki/Emotional_Rescue#/media/File:EmotionalRescue.jpg',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/3/3b/EmotionalRescue.jpg',
   producers: ["The Glimmer Twins"],
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
@@ -161,7 +161,7 @@ Album.create!(
 Album.create!(
   album_name: 'Tattoo You',
   year: '1981',
-  artwork_url: 'https://en.wikipedia.org/wiki/Tattoo_You#/media/File:TattooYou81.jpg',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/1/16/TattooYou81.jpg',
   producers: ["The Glimmer Twins"],
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
@@ -172,7 +172,7 @@ Album.create!(
 Album.create!(
   album_name: 'Undercover',
   year: '1983',
-  artwork_url: 'https://en.wikipedia.org/wiki/Undercover_(Rolling_Stones_album)#/media/File:Undercoverstones.jpg',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/3/3b/Undercoverstones.jpg',
   producers: ["The Glimmer Twins", "Chris Kimsey"],
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
@@ -183,7 +183,7 @@ Album.create!(
 Album.create!(
   album_name: 'Dirty Work',
   year: '1986',
-  artwork_url: 'https://en.wikipedia.org/wiki/Dirty_Work_(Rolling_Stones_album)#/media/File:DirtyworkRS.jpg',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/b/be/DirtyworkRS.jpg',
   producers: ["Steve Lilywhite", "The Glimmer Twins"],
   record_label: 'CBS Records',
   seller_id: Seller.all.sample.id,
@@ -194,7 +194,7 @@ Album.create!(
 Album.create!(
   album_name: 'Steel Wheels',
   year: '1989',
-  artwork_url: 'https://en.wikipedia.org/wiki/Steel_Wheels#/media/File:SteelWheels89.jpg',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/2/24/SteelWheels89.jpg',
   producers: ["The Glimmer Twins", "Chris Kimsey"],
   record_label: 'CBS Records',
   seller_id: Seller.all.sample.id,
@@ -205,7 +205,7 @@ Album.create!(
 Album.create!(
   album_name: 'Voodoo Lounge',
   year: '1994',
-  artwork_url: 'https://en.wikipedia.org/wiki/Voodoo_Lounge#/media/File:VoodooLounge94.jpg',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/8/84/VoodooLounge94.jpg',
   producers: ["The Glimmer Twins", "Don Was"],
   record_label: 'Virgin Records',
   seller_id: Seller.all.sample.id,
@@ -216,7 +216,7 @@ Album.create!(
 Album.create!(
   album_name: 'Bridges to Babylon',
   year: '1997',
-  artwork_url: 'https://en.wikipedia.org/wiki/Bridges_to_Babylon#/media/File:BridgesBabylon97.jpg',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/3/3d/BridgesBabylon97.jpg',
   producers: ["The Glimmer Twins", "Don Was"],
   record_label: 'Virgin Records',
   seller_id:Seller.all.sample.id,
@@ -227,7 +227,7 @@ Album.create!(
 Album.create!(
   album_name: 'A Bigger Bang',
   year: '2005',
-  artwork_url: 'https://en.wikipedia.org/wiki/A_Bigger_Bang#/media/File:A_bigger_band_album_cover_(Wikipedia).jpg',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/b/b3/A_bigger_band_album_cover_%28Wikipedia%29.jpg',
   producers: ["The Glimmer Twins", "Don Was"],
   record_label: 'Virgin Records',
   seller_id: Seller.all.sample.id,
@@ -238,7 +238,7 @@ Album.create!(
 Album.create!(
   album_name: 'Blue & Lonesome',
   year: '2016',
-  artwork_url: 'https://en.wikipedia.org/wiki/Blue_%26_Lonesome_(Rolling_Stones_album)#/media/File:The_Rolling_Stones_-_Blue_&_Lonesome.png',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/1/1f/The_Rolling_Stones_-_Blue_%26_Lonesome.png',
   producers: ["The Glimmer Twins"],
   record_label: 'Polydor',
   seller_id: Seller.all.sample.id,
