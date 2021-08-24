@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
+require 'json'
 
 
 puts "creating sellers"
@@ -15,6 +17,8 @@ Album.destroy_all
 Seller.destroy_all
 Artist.destroy_all
 puts "Database cleaned"
+
+
 
 Seller.create!(
   seller_name: 'Sounds of the Universe',
@@ -100,7 +104,10 @@ Album.create!(
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: ["Rocks Off", "Rip This Joint", "Shake Your Hips",  "Casino Boogie",  "Tumbling Dice",  "Sweet Virginia",
+    "Torn and Frayed",  "Sweet Black Angel",  "Loving Cup",   "Happy", "Turd on the Run",   "Ventilator Blues",
+    "I Just Want to See His Face",  "Let It Loose",   "All Down the Line",  "Stop Breaking Down",   "Shine a Light",  "Soul Survivor"]
   )
 
 Album.create!(
@@ -246,4 +253,48 @@ Album.create!(
   artist_id: Artist.all.sample.id
   )
 
+Album.create!(
+  album_name: 'The Rise and Fall of Ziggy Stardust and the Spiders from Mars',
+  year: '1972',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/0/01/ZiggyStardust.jpg',
+  producers: ["Ken Scott"],
+  record_label: 'RCA',
+  seller_id: Seller.all.sample.id,
+  genre: ['Glam rock', 'proto-punk'],
+  artist_id: Artist.id
+  )
+
+Association.create!(
+  connection_description: "David Bowie collaborated Mick Jagger of the Rolling Stones for the 1985 hit 'Dancing in the street'",
+  artist_id: Artist.id,
+  album_id: Album.id
+  )
+
+
+
+puts "Albums created"
 puts "done"
+
+
+
+# url = "https://api.discogs.com/database/search?q=Nirvana&token=aCtVKDbDpMUcsVOklJkKEnvQAGCDyfemHoXbZZIh"
+
+#   i = 0
+#   puts "Importing albums from page #{i + 1}"
+#   albums = JSON.parse(open("#{url}?page=#{i + 1}").read)['results']
+#   p albums
+#   albums.each do |album|
+#     puts "Creating #{album['title']}"
+#     Album.create(
+#       album_name: album['title'],
+#       year: album['year'],
+#       artwork_url: album['cover_image'],
+#       record_label: album['label'],
+#       genre: album['genre']
+
+#     )
+
+  # end
+
+
+
