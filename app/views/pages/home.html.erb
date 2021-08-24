@@ -1,19 +1,25 @@
-<h1 style="font-family: Lobster Two"><%= image_tag "vinyl1.png", :size => "50x50" %>Vinyl Tracer </h1>
-<h1 style="font-family: Monoton"><%= image_tag "vinyl2.png", :size => "50x50" %>Vinyl Tracer</h1>
-<h1 style="font-family: Oleo Script Swash Caps"><%= image_tag "vinyl_icon.png", :size => "50x50" %>Vinyl Tracer</h1>
-<h1 style="font-family: Train One"><%= image_tag "vinyl-player.png", :size => "50x50" %>Vinyl Tracer</h1>
-<h1 style="font-family: Sonsie One"><%= image_tag "vinyl-player2.png", :size => "50x50" %>Vinyl Tracer</h1>
-<h1 style="font-family: Sansita Swashed"><%= image_tag "vinyl.png", :size => "50x50" %>Vinyl Tracer</h1>
-<h1 style="font-family: Nunito"><%= image_tag "turntable.png", :size => "50x50" %>Vinyl Tracer</h1>
-<h1 style="font-family: Helvetica"><%= image_tag "vinyl3.png", :size => "50x50" %>Vinyl Tracer</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%=image_path('home-banner.jpg')%>');">
+  <div class="container">
+    <h1 id="main-heading">Vinyl Tracer</h1>
+    <p>Follow us down the wormhole of album connections</p>
 
-<p style="font-family: Poppins">Some amazingly clever and witty text describing our raison d'etre and Vinyl Tracer life goals in poppins</p>
-<p style="font-family: Raleway">Some amazingly clever and witty text describing our raison d'etre and Vinyl Tracer life goals in raleway</p>
+     <%= form_tag artists_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control", id: "home-search",
+        placeholder: "Search for an Artist..."
 
+      %>
+      <%= submit_tag "Search", class: "btn btn-basic" %>
+    <% end %>
+  </div>
+  <br>
+  <!-- <div class="container">
+      <h2 id="main-heading">What We're about</h2>
+      <p>Vinyl Tracer is a unique search engine that lets you search for your favorite artists back catologue and provides a new list of connected albums for you to learn about the web of influences each album has gathered over the years.</p>
+  </div> -->
 
-<p style="font-family: Work sans">Some amazingly clever and witty text describing our raison d'etre and Vinyl Tracer life goals in work sans</p>
-<p style="font-family: Helvetica">Some amazingly clever and witty text describing our raison d'etre and Vinyl Tracer life goals in helvetica</p>
-<p style="font-family: Nunito">Some amazingly clever and witty text describing our raison d'etre and Vinyl Tracer life goals in nunito</p>
+</div>
 
 
 <%= form_tag albums_path(@artist_id), method: :get do %>
