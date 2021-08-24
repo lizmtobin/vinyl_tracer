@@ -10,7 +10,7 @@ class AlbumsController < ApplicationController
     else
       @albums = Album.all
     end
-
+  end
 
   def show
     @album = Album.find(params[:id])
@@ -26,6 +26,12 @@ class AlbumsController < ApplicationController
     doc.search('.item_description_title').each_with_index do |element, index|
       "#{index + 1}. #{element.text.strip}"
     end
+  end
+end
+
+
+
+
 
   # def api_call(artist)
   #   # url = "https://api.discogs.com/database/search?q=#{query}&token=aCtVKDbDpMUcsVOklJkKEnvQAGCDyfemHoXbZZIh"
@@ -44,7 +50,7 @@ class AlbumsController < ApplicationController
   #          end
 
   # end
-end
+
 
 # https://musicbrainz.org/ws/2/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da?inc=work-rels+artist-rels&fmt=json
 

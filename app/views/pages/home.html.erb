@@ -16,7 +16,7 @@
 <p style="font-family: Nunito">Some amazingly clever and witty text describing our raison d'etre and Vinyl Tracer life goals in nunito</p>
 
 
-<%= form_tag artist_albums_path, method: :get do %>
+<%= form_tag albums_path(@artist_id), method: :get do %>
 <%= text_field_tag :query,
   params[:query],
   placeholder: "Find an artist"

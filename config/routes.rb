@@ -7,9 +7,6 @@ Rails.application.routes.draw do
     resources :reviews, only: [ :new, :create ]
   end
   resources :sellers, only: [ :index, :show ]
-<<<<<<< HEAD
-  resources :reviews, only: [ :destroy ]
-=======
 
->>>>>>> logos
+  resources :reviews, only: [ :destroy ]
 end
