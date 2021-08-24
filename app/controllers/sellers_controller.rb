@@ -1,8 +1,10 @@
 class SellersController < ApplicationController
 
+
+
   def index
     if params[:query].present?
-      @sellers = Seller.where("seller_type ILIKE ?", "%#{params[:query]}%")
+      @sellers = Seller.where("location ILIKE ?", "%#{params[:query]}%")
     else
       @sellers = Seller.all
     end
@@ -15,4 +17,6 @@ class SellersController < ApplicationController
   #       lng: @seller.longitude
   #     }]
   end
+
+
 end
