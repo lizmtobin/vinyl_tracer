@@ -1,5 +1,9 @@
-class ArtistsController < ApplicationController
 
+class ArtistController < ApplicationController
+
+def new
+end
+  
 def index
    if params[:query].present?
       @artist = Artist.where("artist_name ILIKE ?", "%#{params[:query]}%")
@@ -9,8 +13,6 @@ def index
 end
 
 def show
-
-
 end
 
 end

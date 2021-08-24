@@ -1,0 +1,28 @@
+<div class="container" style="width: 200rem;">
+  <div class="d-flex justify-content-center">
+    <h1 style="text-align:center;"><%= @album.album_name + " - " + @album.artist.artist_name %></h1>
+  </div>
+  <div class="flex-container justify-content-center">
+    <div class="flex-item mb-4">
+      <div class="card-vinyl" style="width: 15rem;">
+        <img src= <%= @album.artwork_url %> />
+        <div class="card-vinyl-infos">
+        <ul>
+          <li><h2><%= @album.album_name %></h2></li>
+          <li><p><%= @album.artist.artist_name %></p></li>
+          <li><p><%= @album.year %></p></li>
+          <li><p><%= @album.genre %></p></li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="flex-item mb-4">
+      <div class="card-album-tracks" style="width: 15rem;">
+        <ol>
+          <% @album.tracks.each_with_index do | track | %>
+            <li><p><%= track %></p></li>
+          <% end %>
+        </ol>
+      </div>
+    </div>
+  </div>
