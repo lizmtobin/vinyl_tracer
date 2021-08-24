@@ -43,3 +43,4 @@ end
 #                   method: :delete,
 #                   data: { confirm: "Are you sure?" } %>
 #     </li>
+end
