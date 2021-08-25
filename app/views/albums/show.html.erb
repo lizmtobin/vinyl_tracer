@@ -1,7 +1,9 @@
+
 <div class="container" style="width: 200rem;">
   <div class="d-flex justify-content-center">
     <h1 style="text-align:center;"><%= @album.album_name + " - " + @album.artist.artist_name %></h1>
   </div>
+
   <div class="flex-container justify-content-center">
     <div class="flex-item mb-4">
       <div class="card-vinyl" style="width: 15rem;">
@@ -26,3 +28,14 @@
       </div>
     </div>
   </div>
+
+  <div class="d-flex justify-content-center">
+    <%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=#{@album.album_name}", class: "btn btn-primary mb-4", target: :blank %>
+    <%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mb-4" %>
+    <%= link_to 'Go back to albums', albums_path, class: "" %>
+  </div>
+
+</div>
+
+    <!-- <a href= <#%= "https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=#{@album.album_name}" %>, target = "blank "> <%= "Search for #{@album.album_name}" %></a> -->
+
