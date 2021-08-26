@@ -13,7 +13,7 @@ puts "creating sellers"
 puts "creating artists"
 puts "creating albums"
 puts "cleaning up"
-Association.destroy_all
+AssociatedAct.destroy_all
 Album.destroy_all
 Seller.destroy_all
 Artist.destroy_all
@@ -251,7 +251,10 @@ Album.create!(
   record_label: 'Polydor',
   seller_id: Seller.all.sample.id,
   genre: ['electric blues', 'blues rock', 'Chicago blues'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: ["Just Your Fool",  "Commit a Crime", "Blue and Lonesome",  "All of Your Love",   "I Gotta Go",
+    "Everybody Knows About My Good Thing", "Ride 'Em on Down",  "Hate to See You Go",   "Hoo Doo Blues",
+    "Little Rain",  "Just Like I Treat You",  "I Can't Quit You Baby"]
   )
 
 
@@ -260,10 +263,10 @@ Artist.create!(
   band_members: ["Amy Winehouse"]
   )
 
-Association.create!(
+AssociatedAct.create!(
   connection_description: "Amy Winehouse collaborated with the Rolling Stones onstage at the Isle of Wight festival in 2007 to sing 'Ain’t Too Proud To Beg' https://youtu.be/TQQzudglm2U.",
-  artist_id: Artist.all.sample.id,
-  album_id: Album.all.sample.id
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
   )
 
 Album.create!(
@@ -274,7 +277,7 @@ Album.create!(
   record_label: 'Island',
   seller_id: Seller.all.sample.id,
   genre: ['Soul', 'rhythm and blues', 'contemporary',  'R&B', 'neo soul'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.last.id
   )
 
 Artist.create!(
@@ -282,10 +285,10 @@ Artist.create!(
   band_members: ["Marvin Gaye"]
   )
 
-Association.create!(
+AssociatedAct.create!(
   connection_description: "Amy Winehouse covered the Marvin Gaye song 'I heard it through the grapevine' with Jools Holland and Paul Weller on  Jools Holland's New Year’s Hootenanny 2006",
-  artist_id: Artist.all.sample.id,
-  album_id: Album.all.sample.id
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
   )
 
 Album.create!(
@@ -296,7 +299,7 @@ Album.create!(
   record_label: 'Tamla Motown',
   seller_id: Seller.all.sample.id,
   genre: ['Soul'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.last.id
   )
 
 Artist.create!(
@@ -304,10 +307,10 @@ Artist.create!(
   band_members: ["John Lennon", "Paul McCartney", "Ringo Starr", "George Harrison"]
   )
 
-Association.create!(
+AssociatedAct.create!(
   connection_description: "Marvin Gaye became one of the many acts to record a version of 'Yesterday' by The Beatles in 1970.",
-  artist_id: Artist.all.sample.id,
-  album_id: Album.all.sample.id
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
   )
 
 Album.create!(
@@ -318,7 +321,7 @@ Album.create!(
   record_label: 'Parlophone',
   seller_id: Seller.all.sample.id,
   genre: ['Rock', 'pop', 'psychedelia', 'art rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.last.id
   )
 
 Artist.create!(
@@ -326,10 +329,10 @@ Artist.create!(
   band_members: ["Elton John"]
   )
 
-Association.create!(
+AssociatedAct.create!(
   connection_description: "Beatles producer George Martin also produced Elton John's hit 'Candle in the wind 1997'",
-  artist_id: Artist.all.sample.id,
-  album_id: Album.all.sample.id
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
   )
 
 Album.create!(
@@ -340,7 +343,7 @@ Album.create!(
   record_label: ' DJM ',
   seller_id: Seller.all.sample.id,
   genre: ['Rock', 'pop'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.last.id
   )
 
 Artist.create!(
@@ -348,10 +351,10 @@ Artist.create!(
   band_members: ["Roger Daltrey", "Pete Townshend", "John Entwistle", "Keith Moon", "Doug Sandom", "Kenney Jones"]
   )
 
-Association.create!(
+AssociatedAct.create!(
   connection_description: "Elton John performed 'Pinball Wizard' in the 1975 film adaption of The Who's concept album 'Tommy'",
-  artist_id: Artist.all.sample.id,
-  album_id: Album.all.sample.id
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
   )
 
 Album.create!(
@@ -362,7 +365,7 @@ Album.create!(
   record_label: 'MCA',
   seller_id: Seller.all.sample.id,
   genre: ['Rock', 'Hard rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.last.id
   )
 
 Artist.create!(
@@ -370,10 +373,10 @@ Artist.create!(
   band_members: ["Damon Albarn", "Graham Coxon", "Alex James", "Dave Rowntree"]
   )
 
-Association.create!(
+AssociatedAct.create!(
   connection_description: "Phil Daniels who performed the lead role in the film adaption of The Who's album 'Quadrophenia' also performs the lead vocals on the 1994 Blur hit 'Parklife'",
-  artist_id: Artist.all.sample.id,
-  album_id: Album.all.sample.id
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
   )
 
 Album.create!(
@@ -384,7 +387,7 @@ Album.create!(
   record_label: 'Food',
   seller_id: Seller.all.sample.id,
   genre: ['Britpop'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.last.id
   )
 puts "Albums created"
 puts "done"

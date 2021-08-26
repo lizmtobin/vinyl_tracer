@@ -14,6 +14,7 @@ class AlbumsController < ApplicationController
 
   def show
     @album = Album.find(params[:id])
+    @next_album = Album.find(params[:id].to_i + 1)
   end
 
 
