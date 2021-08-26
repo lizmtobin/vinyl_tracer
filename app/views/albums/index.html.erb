@@ -8,7 +8,7 @@
   <div class="flex-container">
 
     <% @albums.each do |album| %>
-      <div class="flex-item mb-4">
+      <div class="d-flex mb-4 flex-wrap">
         <div class="card-vinyl" style="width: 15rem;">
           <img src= <%= album.artwork_url %> />
           <div class="card-vinyl-infos">
