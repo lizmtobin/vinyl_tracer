@@ -13,7 +13,7 @@ puts "creating sellers"
 puts "creating artists"
 puts "creating albums"
 puts "cleaning up"
-Association.destroy_all
+AssociatedAct.destroy_all
 Album.destroy_all
 Seller.destroy_all
 Artist.destroy_all
@@ -92,7 +92,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/5/57/The_Rolling_Stones_-_Sticky_Fingers.png',
   producers: ['Jimmy Miller'],
   record_label: 'Rolling Stones Records',
-  seller_id: [1..10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['rock'],
   artist_id: Artist.all.sample.id
   )
@@ -103,7 +103,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/c/ca/ExileMainSt.jpg',
   producers: ['Jimmy Miller'],
   record_label: 'Rolling Stones Records',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['rock'],
   artist_id: Artist.all.sample.id,
   tracks: ["Rocks Off", "Rip This Joint", "Shake Your Hips",  "Casino Boogie",  "Tumbling Dice",  "Sweet Virginia",
@@ -117,7 +117,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/d/d8/The_Rolling_Stones_-_Goats_Head_Soup.jpg',
   producers: ['Jimmy Miller'],
   record_label: 'Rolling Stones Records',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['rock'],
   artist_id: Artist.all.sample.id
   )
@@ -128,7 +128,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/5/5d/IORNRCover.jpg',
   producers: ["The Glimmer Twins"],
   record_label: 'Rolling Stones Records',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['rock'],
   artist_id: Artist.all.sample.id
   )
@@ -139,7 +139,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/5/5a/Blackblue.jpg',
   producers: ["The Glimmer Twins"],
   record_label: 'Rolling Stones Records',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['rock'],
   artist_id: Artist.all.sample.id
   )
@@ -150,7 +150,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/6/6c/Some_Girls.png',
   producers: ["The Glimmer Twins"],
   record_label: 'Rolling Stones Records',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['rock'],
   artist_id: Artist.all.sample.id
   )
@@ -161,7 +161,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/3/3b/EmotionalRescue.jpg',
   producers: ["The Glimmer Twins"],
   record_label: 'Rolling Stones Records',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['rock, disco'],
   artist_id: Artist.all.sample.id
   )
@@ -172,7 +172,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/1/16/TattooYou81.jpg',
   producers: ["The Glimmer Twins"],
   record_label: 'Rolling Stones Records',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['rock'],
   artist_id: Artist.all.sample.id
   )
@@ -183,7 +183,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/3/3b/Undercoverstones.jpg',
   producers: ["The Glimmer Twins", "Chris Kimsey"],
   record_label: 'Rolling Stones Records',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['rock'],
   artist_id: Artist.all.sample.id
   )
@@ -194,7 +194,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/b/be/DirtyworkRS.jpg',
   producers: ["Steve Lilywhite", "The Glimmer Twins"],
   record_label: 'CBS Records',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['rock'],
   artist_id: Artist.all.sample.id
   )
@@ -205,7 +205,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/2/24/SteelWheels89.jpg',
   producers: ["The Glimmer Twins", "Chris Kimsey"],
   record_label: 'CBS Records',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['rock', 'hard rock'],
   artist_id: Artist.all.sample.id
   )
@@ -216,7 +216,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/8/84/VoodooLounge94.jpg',
   producers: ["The Glimmer Twins", "Don Was"],
   record_label: 'Virgin Records',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['blues rock', 'hard rock', 'roots rock'],
   artist_id: Artist.all.sample.id
   )
@@ -227,7 +227,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/3/3d/BridgesBabylon97.jpg',
   producers: ["The Glimmer Twins", "Don Was"],
   record_label: 'Virgin Records',
-  seller_id:[1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id:Seller.all.sample.id,
   genre: ['blues rock', 'hard rock'],
   artist_id: Artist.all.sample.id
   )
@@ -238,7 +238,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/b/b3/A_bigger_band_album_cover_%28Wikipedia%29.jpg',
   producers: ["The Glimmer Twins", "Don Was"],
   record_label: 'Virgin Records',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['rock'],
   artist_id: Artist.all.sample.id
   )
@@ -249,9 +249,12 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/1/1f/The_Rolling_Stones_-_Blue_%26_Lonesome.png',
   producers: ["The Glimmer Twins"],
   record_label: 'Polydor',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['electric blues', 'blues rock', 'Chicago blues'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: ["Just Your Fool",  "Commit a Crime", "Blue and Lonesome",  "All of Your Love",   "I Gotta Go",
+    "Everybody Knows About My Good Thing", "Ride 'Em on Down",  "Hate to See You Go",   "Hoo Doo Blues",
+    "Little Rain",  "Just Like I Treat You",  "I Can't Quit You Baby"]
   )
 
 
@@ -260,7 +263,7 @@ Artist.create!(
   band_members: ["Amy Winehouse"]
   )
 
-Association.create!(
+AssociatedAct.create!(
   connection_description: "Amy Winehouse collaborated with the Rolling Stones onstage at the Isle of Wight festival in 2007 to sing 'Ain’t Too Proud To Beg' https://youtu.be/TQQzudglm2U.",
   artist_id: Artist.last.id,
   album_id: Album.last.id
@@ -272,7 +275,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/6/67/Amy_Winehouse_-_Back_to_Black_%28album%29.png',
   producers: ["Mark Ronson", "Salaam Remi"],
   record_label: 'Island',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['Soul', 'rhythm and blues', 'contemporary',  'R&B', 'neo soul'],
   artist_id: Artist.last.id
   )
@@ -282,7 +285,7 @@ Artist.create!(
   band_members: ["Marvin Gaye"]
   )
 
-Association.create!(
+AssociatedAct.create!(
   connection_description: "Amy Winehouse covered the Marvin Gaye song 'I heard it through the grapevine' with Jools Holland and Paul Weller on  Jools Holland's New Year’s Hootenanny 2006",
   artist_id: Artist.last.id,
   album_id: Album.last.id
@@ -294,7 +297,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/8/80/Marvin-gaye-in-the-groove.jpg',
   producers: ["Norman Whitfield", "Ivy Jo Hunter", "Frank Wilson"],
   record_label: 'Tamla Motown',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['Soul'],
   artist_id: Artist.last.id
   )
@@ -304,7 +307,7 @@ Artist.create!(
   band_members: ["John Lennon", "Paul McCartney", "Ringo Starr", "George Harrison"]
   )
 
-Association.create!(
+AssociatedAct.create!(
   connection_description: "Marvin Gaye became one of the many acts to record a version of 'Yesterday' by The Beatles in 1970.",
   artist_id: Artist.last.id,
   album_id: Album.last.id
@@ -316,7 +319,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/5/50/Sgt._Pepper%27s_Lonely_Hearts_Club_Band.jpg',
   producers: [" George Martin"],
   record_label: 'Parlophone',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['Rock', 'pop', 'psychedelia', 'art rock'],
   artist_id: Artist.last.id
   )
@@ -326,7 +329,7 @@ Artist.create!(
   band_members: ["Elton John"]
   )
 
-Association.create!(
+AssociatedAct.create!(
   connection_description: "Beatles producer George Martin also produced Elton John's hit 'Candle in the wind 1997'",
   artist_id: Artist.last.id,
   album_id: Album.last.id
@@ -338,7 +341,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/8/86/Elton_John_-_Goodbye_Yellow_Brick_Road.jpg',
   producers: ["Gus Dudgeon"],
   record_label: ' DJM ',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['Rock', 'pop'],
   artist_id: Artist.last.id
   )
@@ -348,7 +351,7 @@ Artist.create!(
   band_members: ["Roger Daltrey", "Pete Townshend", "John Entwistle", "Keith Moon", "Doug Sandom", "Kenney Jones"]
   )
 
-Association.create!(
+AssociatedAct.create!(
   connection_description: "Elton John performed 'Pinball Wizard' in the 1975 film adaption of The Who's concept album 'Tommy'",
   artist_id: Artist.last.id,
   album_id: Album.last.id
@@ -360,7 +363,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/8/8a/Quadrophenia_%28album%29.jpg',
   producers: ["Kit Lambert", "Chris Stamp", "Pete Kameron"],
   record_label: 'MCA',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['Rock', 'Hard rock'],
   artist_id: Artist.last.id
   )
@@ -370,7 +373,7 @@ Artist.create!(
   band_members: ["Damon Albarn", "Graham Coxon", "Alex James", "Dave Rowntree"]
   )
 
-Association.create!(
+AssociatedAct.create!(
   connection_description: "Phil Daniels who performed the lead role in the film adaption of The Who's album 'Quadrophenia' also performs the lead vocals on the 1994 Blur hit 'Parklife'",
   artist_id: Artist.last.id,
   album_id: Album.last.id
@@ -382,7 +385,7 @@ Album.create!(
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/7/7d/BlurParklife.jpg',
   producers: ["Stephen Street", "Stephen Hague", "John Smith", "Blur"],
   record_label: 'Food',
-  seller_id: [1,2,3,4,5,6,7,8,9,10].sample,
+  seller_id: Seller.all.sample.id,
   genre: ['Britpop'],
   artist_id: Artist.last.id
   )

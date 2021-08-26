@@ -30,7 +30,18 @@
     </div>
     <div class="flex-item row col-12 justify-content-center">
       <div class="flex-item mb-4 card-six-degrees">
-        <h2 class="text-underline mb-1">Linked Artists</h2>
+        <h2 class="text-underline mb-1 ">Linked Artists</h2>
+        <div class="card-six-degrees">
+          <img src= <%= @next_album.artwork_url%> />
+          <div class="card-vinyl-infos">
+            <ul>
+              <li><h2><%= @next_album.album_name %></h2></li>
+              <li><p><%= @next_album.artist.artist_name %></p></li>
+              <li><p><%= @next_album.year %></p></li>
+              <p><%= @album.associated_act.connection_description %></p>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
 
