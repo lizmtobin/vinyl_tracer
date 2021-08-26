@@ -13,6 +13,7 @@ puts "creating sellers"
 puts "creating artists"
 puts "creating albums"
 puts "cleaning up"
+Association.destroy_all
 Album.destroy_all
 Seller.destroy_all
 Artist.destroy_all
@@ -253,25 +254,138 @@ Album.create!(
   artist_id: Artist.all.sample.id
   )
 
-Album.create!(
-  album_name: 'The Rise and Fall of Ziggy Stardust and the Spiders from Mars',
-  year: '1972',
-  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/0/01/ZiggyStardust.jpg',
-  producers: ["Ken Scott"],
-  record_label: 'RCA',
-  seller_id: Seller.all.sample.id,
-  genre: ['Glam rock', 'proto-punk'],
-  artist_id: Artist.id
+
+Artist.create!(
+  artist_name: 'Amy Winehouse',
+  band_members: ["Amy Winehouse"]
   )
 
 Association.create!(
-  connection_description: "David Bowie collaborated Mick Jagger of the Rolling Stones for the 1985 hit 'Dancing in the street'",
-  artist_id: Artist.id,
-  album_id: Album.id
+  connection_description: "Amy Winehouse collaborated with the Rolling Stones onstage at the Isle of Wight festival in 2007 to sing 'Ain’t Too Proud To Beg' https://youtu.be/TQQzudglm2U.",
+  artist_id: Artist.all.sample.id,
+  album_id: Album.all.sample.id
   )
 
+Album.create!(
+  album_name: 'Back to Black',
+  year: '2006',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/6/67/Amy_Winehouse_-_Back_to_Black_%28album%29.png',
+  producers: ["Mark Ronson", "Salaam Remi"],
+  record_label: 'Island',
+  seller_id: Seller.all.sample.id,
+  genre: ['Soul', 'rhythm and blues', 'contemporary',  'R&B', 'neo soul'],
+  artist_id: Artist.all.sample.id
+  )
 
+Artist.create!(
+  artist_name: 'Marvin Gaye',
+  band_members: ["Marvin Gaye"]
+  )
 
+Association.create!(
+  connection_description: "Amy Winehouse covered the Marvin Gaye song 'I heard it through the grapevine' with Jools Holland and Paul Weller on  Jools Holland's New Year’s Hootenanny 2006",
+  artist_id: Artist.all.sample.id,
+  album_id: Album.all.sample.id
+  )
+
+Album.create!(
+  album_name: 'In the Groove',
+  year: '1968',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/8/80/Marvin-gaye-in-the-groove.jpg',
+  producers: ["Norman Whitfield", "Ivy Jo Hunter", "Frank Wilson"],
+  record_label: 'Tamla Motown',
+  seller_id: Seller.all.sample.id,
+  genre: ['Soul'],
+  artist_id: Artist.all.sample.id
+  )
+
+Artist.create!(
+  artist_name: 'The Beatles',
+  band_members: ["John Lennon", "Paul McCartney", "Ringo Starr", "George Harrison"]
+  )
+
+Association.create!(
+  connection_description: "Marvin Gaye became one of the many acts to record a version of 'Yesterday' by The Beatles in 1970.",
+  artist_id: Artist.all.sample.id,
+  album_id: Album.all.sample.id
+  )
+
+Album.create!(
+  album_name: "Sgt. Pepper's Lonely Hearts Club Band",
+  year: '1967',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/5/50/Sgt._Pepper%27s_Lonely_Hearts_Club_Band.jpg',
+  producers: [" George Martin"],
+  record_label: 'Parlophone',
+  seller_id: Seller.all.sample.id,
+  genre: ['Rock', 'pop', 'psychedelia', 'art rock'],
+  artist_id: Artist.all.sample.id
+  )
+
+Artist.create!(
+  artist_name: 'Elton John',
+  band_members: ["Elton John"]
+  )
+
+Association.create!(
+  connection_description: "Beatles producer George Martin also produced Elton John's hit 'Candle in the wind 1997'",
+  artist_id: Artist.all.sample.id,
+  album_id: Album.all.sample.id
+  )
+
+Album.create!(
+  album_name: "Goodbye Yellow Brick Road",
+  year: '1973',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/8/86/Elton_John_-_Goodbye_Yellow_Brick_Road.jpg',
+  producers: ["Gus Dudgeon"],
+  record_label: ' DJM ',
+  seller_id: Seller.all.sample.id,
+  genre: ['Rock', 'pop'],
+  artist_id: Artist.all.sample.id
+  )
+
+Artist.create!(
+  artist_name: 'The Who',
+  band_members: ["Roger Daltrey", "Pete Townshend", "John Entwistle", "Keith Moon", "Doug Sandom", "Kenney Jones"]
+  )
+
+Association.create!(
+  connection_description: "Elton John performed 'Pinball Wizard' in the 1975 film adaption of The Who's concept album 'Tommy'",
+  artist_id: Artist.all.sample.id,
+  album_id: Album.all.sample.id
+  )
+
+Album.create!(
+  album_name: "Quadrophenia",
+  year: '1973',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/8/8a/Quadrophenia_%28album%29.jpg',
+  producers: ["Kit Lambert", "Chris Stamp", "Pete Kameron"],
+  record_label: 'MCA',
+  seller_id: Seller.all.sample.id,
+  genre: ['Rock', 'Hard rock'],
+  artist_id: Artist.all.sample.id
+  )
+
+Artist.create!(
+  artist_name: 'Blur',
+  band_members: ["Damon Albarn", "Graham Coxon", "Alex James", "Dave Rowntree"]
+  )
+
+Association.create!(
+  connection_description: "Phil Daniels who performed the lead role in the film adaption of The Who's album 'Quadrophenia' also performs the lead vocals on the 1994 Blur hit 'Parklife'",
+  artist_id: Artist.all.sample.id,
+  album_id: Album.all.sample.id
+  )
+
+Album.create!(
+  album_name: "Parklife",
+  year: '1994',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/7/7d/BlurParklife.jpg',
+  producers: ["Stephen Street", "Stephen Hague", "John Smith", "Blur"],
+  record_label: 'Food',
+  seller_id: Seller.all.sample.id,
+  genre: ['Britpop'],
+  artist_id: Artist.all.sample.id
+  )
 puts "Albums created"
 puts "done"
 

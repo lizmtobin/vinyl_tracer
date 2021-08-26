@@ -22,7 +22,7 @@
 </div>
 
 
-<%= form_tag albums_path(@artist_id), method: :get do %>
+<%= form_tag albums_path, method: :get do %>
 <%= text_field_tag :query,
   params[:query],
   placeholder: "Find an artist"
