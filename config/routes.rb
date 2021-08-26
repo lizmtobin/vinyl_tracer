@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :sellers, only: [ :index, :show ]
 
   resources :reviews, only: [ :destroy ]
+
+  get "profile", action: :index, controller: "users"
 end
