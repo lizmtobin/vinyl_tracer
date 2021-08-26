@@ -1,4 +1,4 @@
-.card-vinyl, .card-album-tracks {
+.card-vinyl, .card-album-tracks, .card-six-degrees {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -12,42 +12,42 @@
   object-fit: cover;
 }
 
-.card-vinyl h2, .card-album-tracks h2 {
+.card-vinyl h2, .card-album-tracks h2, .card-six-degrees h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-vinyl p, .card-album-tracks p {
+.card-vinyl p, .card-album-tracks p, .card-six-degrees p {
   font-size: 12px;
   font-weight: bold;
   opacity: .7;
   margin: 0;
 }
 
-.card-vinyl h3, .card-album-tracks h3 {
+.card-vinyl h3, .card-album-tracks h3, .card-six-degrees h3 {
   font-size: 14px;
   font-weight: bold;
   color: $dark-mauve;
   margin: 0;
   }
 
-.card-vinyl h4, .card-album-tracks h4 {
+.card-vinyl h4, .card-album-tracks h4, .card-six-degrees h4 {
   font-size: 12px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-vinyl a, .card-album-tracks a {
+.card-vinyl a, .card-album-tracks a, .card-six-degrees a {
   color: inherit;
 }
 
-.card-vinyl a:hover, .card-album-tracks a:hover{
+.card-vinyl a:hover, .card-album-tracks a:hover, .card-six-degrees a:hover{
   color: $storm;
   text-decoration: none;
 }
 
-.card-vinyl .card-vinyl-infos, .card-album-tracks {
+.card-vinyl .card-vinyl-infos, .card-album-tracks, .card-six-degrees {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -62,7 +62,7 @@
 }
 
 .card-six-degrees{
-  background-color: green;
+  width: 15rem;
 
 }
 
