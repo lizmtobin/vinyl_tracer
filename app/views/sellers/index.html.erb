@@ -3,7 +3,7 @@
 
 <div class="container" style="width: 200rem;">
 
-  <h3>Search for vinyl on discogs, or browse independent sellers here</h3>
+  <h3 style="margin: 24px;">Browse independent sellers here, or search for your nearest store</h3>
 
   <%= form_tag sellers_path, method: :get do %>
     <%= text_field_tag :query,
@@ -24,8 +24,10 @@
         <div class="card-vinyl" style="width: 15rem;">
           <%= image_tag ["turntable.png", "vinyl-player.png", "vinyl.png", "vinyl1.png", ].sample, alt: "Vinyl Tracer icon" %>
           <div class="card-vinyl-infos">
-            <h2><%= link_to "#{seller.seller_name}", seller_path(seller) %></h4>
+            <h2><%= link_to "#{seller.seller_name}", seller_path(seller) %></h2>
             <p><%= seller.location %></p>
+            <p><%= link_to "View website", "#{seller.seller_url}", target: :blank %></p>
+
           </div>
         </div>
       </div>
@@ -35,6 +37,6 @@
 
   <br>
 
-  <div><%= link_to 'back to album search', root_path, class: "btn btn-primary mb-4" %></div>
+  <div><%= link_to 'back to album search', albums_path, class: "btn btn-primary mb-4" %></div>
 
 </div>
