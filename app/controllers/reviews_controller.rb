@@ -19,9 +19,10 @@ class ReviewsController < ApplicationController
 
   def destroy
     if @user = current_user
-    @review = Review.find(params[:id])
-    @review.delete
-    redirect_to album_path(@review.album)
+      @review = Review.find(params[:id])
+      @review.delete
+      redirect_to album_path(@review.album)
+    end
   end
 
   private
@@ -43,3 +44,4 @@ end
 #                   method: :delete,
 #                   data: { confirm: "Are you sure?" } %>
 #     </li>
+

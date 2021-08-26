@@ -1,4 +1,4 @@
-.card-vinyl {
+.card-vinyl, .card-album-tracks {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -10,24 +10,51 @@
   object-fit: cover;
 }
 
-.card-vinyl h2 {
+.card-vinyl h2, .card-album-tracks h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-vinyl p {
+.card-vinyl p, .card-album-tracks p {
   font-size: 12px;
+  font-weight: bold;
   opacity: .7;
   margin: 0;
 }
 
-.card-vinyl .card-vinyl-infos {
+.card-vinyl h3, .card-album-tracks h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: $dark-mauve;
+  margin: 0;
+  }
+
+.card-vinyl h4, .card-album-tracks h4 {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-vinyl a, .card-album-tracks a {
+  color: inherit;
+}
+
+.card-vinyl a:hover, .card-album-tracks a:hover{
+  color: $storm;
+  text-decoration: none;
+}
+
+.card-vinyl .card-vinyl-infos, .card-album-tracks {
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  // align-items: flex-end;
   position: relative;
+  flex-direction: column;
+  text-align: center
 }
+
+
 
 
