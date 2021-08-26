@@ -5,9 +5,10 @@ class ArtistsController < ApplicationController
 
   def index
     if params[:query].present?
-      @artists = Artist.where("artist_name ILIKE ?", "%#{params[:query]}%")
+      @artist = Artist.where("artist_name ILIKE ?", "%#{params[:query]}%").first
     else
-      @artists = Artist.last(5)
+      @artist = Artist.last(5)
+
     end
   end
 
