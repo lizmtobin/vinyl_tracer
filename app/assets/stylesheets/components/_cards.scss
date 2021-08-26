@@ -2,6 +2,8 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  border : solid 2px #DDCAF1;
 }
 
 .card-vinyl > img {
@@ -49,12 +51,19 @@
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  // align-items: flex-end;
   position: relative;
   flex-direction: column;
   text-align: center
 }
 
+.card-album-tracks {
+  width: 15rem;
+  margin: 20px 100px;
+}
 
+.card-six-degrees{
+  background-color: green;
+
+}
 
 
