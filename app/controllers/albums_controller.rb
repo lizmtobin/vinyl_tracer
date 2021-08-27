@@ -20,6 +20,16 @@ class AlbumsController < ApplicationController
 
   private
 
+  def album_search
+    @artist = Artist.find(params[:id])
+    @album = Album.find(params[:id])
+    @title = %w("Album.album_name")
+    @artist = %w("Artist.artist_name")
+
+
+  end
+
+
   def scrape_sellers
     html_content = URI.open("https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=sticky+fingers").read
     doc = Nokogiri::HTML(html_content)
