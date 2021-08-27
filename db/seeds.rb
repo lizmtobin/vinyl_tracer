@@ -263,11 +263,6 @@ Artist.create!(
   band_members: ["Amy Winehouse"]
   )
 
-AssociatedAct.create!(
-  connection_description: "Amy Winehouse collaborated with the Rolling Stones onstage at the Isle of Wight festival in 2007 to sing 'Ain’t Too Proud To Beg' https://youtu.be/TQQzudglm2U.",
-  artist_id: Artist.last.id,
-  album_id: Album.last.id
-  )
 
 Album.create!(
   album_name: 'Back to Black',
@@ -279,17 +274,17 @@ Album.create!(
   genre: ['Soul', 'rhythm and blues', 'contemporary',  'R&B', 'neo soul'],
   artist_id: Artist.last.id
   )
+AssociatedAct.create!(
+  connection_description: "Amy Winehouse collaborated with the Rolling Stones onstage at the Isle of Wight festival in 2007 to sing 'Ain’t Too Proud To Beg' https://youtu.be/TQQzudglm2U.",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
+  )
 
 Artist.create!(
   artist_name: 'Marvin Gaye',
   band_members: ["Marvin Gaye"]
   )
 
-AssociatedAct.create!(
-  connection_description: "Amy Winehouse covered the Marvin Gaye song 'I heard it through the grapevine' with Jools Holland and Paul Weller on  Jools Holland's New Year’s Hootenanny 2006",
-  artist_id: Artist.last.id,
-  album_id: Album.last.id
-  )
 
 Album.create!(
   album_name: 'In the Groove',
@@ -302,15 +297,15 @@ Album.create!(
   artist_id: Artist.last.id
   )
 
+AssociatedAct.create!(
+  connection_description: "Amy Winehouse covered the Marvin Gaye song 'I heard it through the grapevine' with Jools Holland and Paul Weller on  Jools Holland's New Year’s Hootenanny 2006",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
+  )
+
 Artist.create!(
   artist_name: 'The Beatles',
   band_members: ["John Lennon", "Paul McCartney", "Ringo Starr", "George Harrison"]
-  )
-
-AssociatedAct.create!(
-  connection_description: "Marvin Gaye became one of the many acts to record a version of 'Yesterday' by The Beatles in 1970.",
-  artist_id: Artist.last.id,
-  album_id: Album.last.id
   )
 
 Album.create!(
@@ -324,15 +319,15 @@ Album.create!(
   artist_id: Artist.last.id
   )
 
+AssociatedAct.create!(
+  connection_description: "Marvin Gaye became one of the many acts to record a version of 'Yesterday' by The Beatles in 1970.",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
+  )
+
 Artist.create!(
   artist_name: 'Elton John',
   band_members: ["Elton John"]
-  )
-
-AssociatedAct.create!(
-  connection_description: "Beatles producer George Martin also produced Elton John's hit 'Candle in the wind 1997'",
-  artist_id: Artist.last.id,
-  album_id: Album.last.id
   )
 
 Album.create!(
@@ -346,15 +341,15 @@ Album.create!(
   artist_id: Artist.last.id
   )
 
+AssociatedAct.create!(
+  connection_description: "Beatles producer George Martin also produced Elton John's hit 'Candle in the wind 1997'",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
+  )
+
 Artist.create!(
   artist_name: 'The Who',
   band_members: ["Roger Daltrey", "Pete Townshend", "John Entwistle", "Keith Moon", "Doug Sandom", "Kenney Jones"]
-  )
-
-AssociatedAct.create!(
-  connection_description: "Elton John performed 'Pinball Wizard' in the 1975 film adaption of The Who's concept album 'Tommy'",
-  artist_id: Artist.last.id,
-  album_id: Album.last.id
   )
 
 Album.create!(
@@ -368,16 +363,17 @@ Album.create!(
   artist_id: Artist.last.id
   )
 
+AssociatedAct.create!(
+  connection_description: "Elton John performed 'Pinball Wizard' in the 1975 film adaption of The Who's concept album 'Tommy'",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
+  )
+
 Artist.create!(
   artist_name: 'Blur',
   band_members: ["Damon Albarn", "Graham Coxon", "Alex James", "Dave Rowntree"]
   )
 
-AssociatedAct.create!(
-  connection_description: "Phil Daniels who performed the lead role in the film adaption of The Who's album 'Quadrophenia' also performs the lead vocals on the 1994 Blur hit 'Parklife'",
-  artist_id: Artist.last.id,
-  album_id: Album.last.id
-  )
 
 Album.create!(
   album_name: "Parklife",
@@ -388,6 +384,34 @@ Album.create!(
   seller_id: Seller.all.sample.id,
   genre: ['Britpop'],
   artist_id: Artist.last.id
+  )
+
+AssociatedAct.create!(
+  connection_description: "Phil Daniels who performed the lead role in the film adaption of The Who's album 'Quadrophenia' also performs the lead vocals on the 1994 Blur hit 'Parklife'",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
+  )
+
+Artist.create!(
+  artist_name: 'Gorrilaz',
+  band_members: ["Damon Albarn", "Jamie Hewlett"]
+  )
+
+Album.create!(
+  album_name: "Demon Days",
+  year: '1994',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/d/df/Gorillaz_Demon_Days.PNG',
+  producers: ["Gorillaz", "Danger Mouse", "Jason Cox", "James Dring"],
+  record_label: 'Parlaphone',
+  seller_id: Seller.all.sample.id,
+  genre: ['Britpop'],
+  artist_id: Artist.last.id
+  )
+
+AssociatedAct.create!(
+  connection_description: "Blur vocalist Damon Alburn is also the founder and vocalist / multi instrumentalist of Gorrilaz",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
   )
 puts "Albums created"
 puts "done"

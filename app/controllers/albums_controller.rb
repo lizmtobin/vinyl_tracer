@@ -4,6 +4,7 @@ class AlbumsController < ApplicationController
   require 'open-uri'
   require 'nokogiri'
 
+
   def index
     if params[:query].present?
       @albums = Album.where("album_name ILIKE ?", "%#{params[:query]}%")
@@ -14,7 +15,9 @@ class AlbumsController < ApplicationController
 
   def show
     @album = Album.find(params[:id])
+
     @next_album = Album.find(params[:id].to_i + 1)
+    @associated_albums = Album.where(id: params[:id].to_i + 1..params[:id].to_i + 7)
   end
 
 
