@@ -32,28 +32,35 @@
         </ol>
       </div>
     </div>
+
+    <div class="d-flex justify-content-center">
+      <%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=#{@album.album_name}", class: "btn btn-primary mb-4 mr-3", target: :blank %>
+      <%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mb-4 mr-3" %>
+      <%= link_to 'Go back to albums', albums_path, class: "btn btn-info mb-4" %>
+    </div>
+
     <div class="flex-item row col-12 justify-content-center">
-      <div class="flex-item mb-4 card-six-degrees">
+      <div class="flex-item mb-4 card-six-degrees_container">
         <h2 class="text-underline mb-1 ">Linked Artists</h2>
-        <div class="card-six-degrees">
-          <img src= <%= @next_album.artwork_url%> />
-          <div class="card-vinyl-infos">
-            <ul>
-              <li><h2><%= @next_album.album_name %></h2></li>
-              <li><p><%= @next_album.artist.artist_name %></p></li>
-              <li><p><%= @next_album.year %></p></li>
-              <p><%= @album.associated_act.connection_description %></p>
-            </ul>
+        <% @associated_albums.each do | album | %>
+          <div class="card-six-degrees">
+            <img src= <%= album.artwork_url%> />
+            <div class="card-vinyl-infos">
+                <h2><%= link_to "#{album.album_name}", album_path(album) %></h2>
+                <h3><%= album.artist.artist_name + " " +  album.year %></h3>
+                <br>
+                <h4>Why <%= album.artist.artist_name %>?</h4>
+
+                <p><%= album.associated_act ? album.associated_act.connection_description : nil %></p>
+              </ul>
+            </div>
           </div>
-        </div>
+        <% end %>
+
       </div>
     </div>
 
-  <div class="d-flex justify-content-center">
-    <%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=#{@album.album_name}", class: "btn btn-primary mb-4 mr-3", target: :blank %>
-    <%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mb-4 mr-3" %>
-    <%= link_to 'Go back to albums', albums_path, class: "btn btn-info mb-4" %>
-  </div>
+
 
 </div>
 

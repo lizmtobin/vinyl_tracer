@@ -1,4 +1,4 @@
-.card-vinyl, .card-album-tracks, .card-six-degrees {
+.card-vinyl, .card-album-tracks, .card-six-degrees, .card-six-degrees_container {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -63,7 +63,11 @@
 
 .card-six-degrees{
   width: 15rem;
+  margin: 10px auto;
 
+}
+.card-six-degrees_container{
+    width: 17rem;
 }
 
 
