@@ -10,5 +10,11 @@ Rails.application.routes.draw do
 
   resources :reviews, only: [ :destroy ]
 
+  resources :users, only: [ :index ] do
+    resources :favourites, only: [ :index ]
+  end
+
+  resources :favourites, only: [ :create, :destroy ]
+
   get "profile", action: :index, controller: "users"
 end

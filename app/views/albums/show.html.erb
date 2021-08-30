@@ -8,15 +8,31 @@
 
   <div class="flex-container justify-content-center">
 
-     <!-- Buttons -->
+    <!-- Buttons -->
 
     <div class="d-flex align-items center">
       <div class="row justify-content-center">
         <div><%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=#{@album.album_name}", class: "btn btn-primary mr-2", target: :blank %></div>
         <div><%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mr-2" %></div>
-        <div><%= link_to 'Go back to albums', albums_path, class: "btn btn-info" %></div>
+        <div><%= link_to 'Go back to albums', :back, class: "btn btn-info" %></div>
       </div>
     </div>
+
+<!--     <div class="flex-item row col-12 justify-content-center">
+      <div class="card-vinyl" style="width: 15rem; margin-top: 2rem;">
+        <img src= <%= @album.artwork_url %> />
+        <div class="card-vinyl-infos">
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li><h2><%= @album.album_name %></h2></li>
+            <li><p><%= @album.artist.artist_name %></p></li>
+            <li><p><%= @album.year %></p></li>
+            <% @album.genre.each do |genre| %>
+              <li><p><%= genre %></p></li>
+            <% end %>
+          </ul>
+          <h2 style="text-align: right; margin: 4px 12px;"><i class="fab fa-gratipay" id="heart"></i></h2>
+        </div> -->
+
 
     <div class="d-flex show-card row col-6 justify-content-center align-items-center m-3">
           <!-- Featured album card -->
@@ -24,12 +40,15 @@
         <div class="card-vinyl" style="width: 15rem; margin-top: 1rem;">
           <img src= <%= @album.artwork_url %> />
           <div class="card-vinyl-infos">
-          <ul>
+          <ul style="list-style: none; margin: 0; padding: 0;">
             <li><h2><%= @album.album_name %></h2></li>
             <li><p><%= @album.artist.artist_name %></p></li>
             <li><p><%= @album.year %></p></li>
-            <li><p><%= @album.genre %></p></li>
+            <% @album.genre.each do |genre| %>
+              <li><p><%= genre %></p></li>
+            <% end %>
           </ul>
+          <h2 style="text-align: right; margin: 4px 12px;"><i class="fab fa-gratipay" id="heart"></i></h2>
           </div>
         </div>
       </div>
@@ -48,10 +67,17 @@
       </div>
     </div>
 
+
+<!--     <div class="d-flex justify-content-center">
+      <%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/search/?type=all&title=#{@search_title}&artist=#{@search_artist}&format=vinyl", class: "btn btn-primary mb-4 mr-3", target: :blank %>
+      <%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mb-4 mr-3" %>
+      <%= link_to 'Go back to albums', :back, class: "btn btn-info mb-4" %> -->
+
           <!-- Six degrees button -->
       </div>
     <div class="col-12 d-flex justify-content-center">
       <div class="six-degrees btn btn-basic mb-4 w-50" style="text-align: center;">Six Degrees Of Seperation</div>
+
     </div>
     <!-- </div> -->
 
@@ -83,4 +109,8 @@
 </div>
 
     <!-- <a href= <#%= "https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=#{@album.album_name}" %>, target = "blank "> <%= "Search for #{@album.album_name}" %></a> -->
+
+   <!-- https://www.discogs.com/search/?type=all&title=#{@search_title}&artist=#{@search_artist}&format=vinyl -->
+
+        <!-- https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=#{@album.album_name} -->
 

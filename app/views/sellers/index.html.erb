@@ -21,9 +21,9 @@
 
     <% @sellers.each do |seller| %>
       <div class="flex-item mb-4">
-        <div class="card-vinyl" style="width: 15rem;">
-          <%= image_tag ["turntable.png", "vinyl-player.png", "vinyl.png", "vinyl1.png", ].sample, alt: "Vinyl Tracer icon" %>
-          <div class="card-vinyl-infos">
+        <div class="card-vinyl" id="seller" >
+          <img src= <%= seller.seller_logo %> style="object-fit: scale-down"/>
+          <div class="card-vinyl-infos" style= "background-color: white;">
             <h2><%= link_to "#{seller.seller_name}", seller_path(seller) %></h2>
             <p><%= seller.location %></p>
             <p><%= link_to "View website", "#{seller.seller_url}", target: :blank %></p>
@@ -37,6 +37,6 @@
 
   <br>
 
-  <div><%= link_to 'back to album search', albums_path, class: "btn btn-primary mb-4" %></div>
+  <div><%= link_to 'back to album search', albums_path, class: "btn btn-danger mb-4" %></div>
 
 </div>
