@@ -39,7 +39,7 @@
 }
 
 .card-vinyl a, .card-album-tracks a, .card-six-degrees a {
-  color: inherit;
+  color: $red;
 }
 
 .card-vinyl a:hover, .card-album-tracks a:hover, .card-six-degrees a:hover{
@@ -70,4 +70,12 @@
     width: 17rem;
 }
 
+#seller {
+  background-color: $gray;
+  width: 15rem;
+}
+
+#seller > .img {
+    object-fit: scale-down;
+}
 

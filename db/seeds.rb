@@ -20,66 +20,89 @@ Artist.destroy_all
 puts "Database cleaned"
 
 
-
-Seller.create!(
-  seller_name: 'Sounds of the Universe',
-  location: '7 Broadwick Street, London, W1F 0DA',
-  rating: 4,
-  seller_url: 'https://soundsoftheuniverse.com/')
-
-Seller.create!(
-  seller_name: 'Reckless Records',
-  location: '30 Berwick Street, London, W1F 8RH',
-  rating: 5,
-  seller_url: 'https://reckless.co.uk/')
-
 Seller.create!(
   seller_name: 'Sister Ray',
   location: '75 Berwick Street, Soho, London, W1F 8RP',
-  rating: 3,
-  seller_url: 'https://sisterray.co.uk/')
+  rating: 5,
+  seller_url: 'https://sisterray.co.uk/',
+  seller_logo: 'https://cdn.shopify.com/s/files/1/0096/1884/9839/files/Sister-Ray-Records-Logo-white2_200x@2x.png?v=1564139863')
 
 Seller.create!(
   seller_name: 'Phonica Records',
   location: '51 Poland Street, London, W1F 7LZ',
   rating: 5,
-  seller_url: 'https://www.phonicarecords.com/')
+  seller_url: 'https://www.phonicarecords.com/',
+  seller_logo: 'https://d2rkyy1xo9fsdq.cloudfront.net/phonica-new-logo-white2.png')
 
 Seller.create!(
   seller_name: 'Flashback Records',
   location: '50 Essex Road, London, N1 8LR',
   rating: 4,
-  seller_url: 'https://www.flashback.co.uk/')
+  seller_url: 'https://www.flashback.co.uk/',
+  seller_logo: 'https://www.flashback.co.uk/templates/untitled/images/designer/9d1501262758df2b5a3810689868caeb_logo120.jpg')
 
 Seller.create!(
   seller_name: 'Rough Trade East',
   location: 'Draywalk, 91 Brick Lane, London, E1 6QL',
   rating: 5,
-  seller_url: 'https://www.roughtrade.com/')
+  seller_url: 'https://www.roughtrade.com/',
+  seller_logo: 'https://www.roughtrade.com/assets/logo-4e4504367ced1a66e8b5bb7281e66234fdeaeb3f973516ccfa7704e7fd6c2a58.png')
 
 Seller.create!(
   seller_name: 'Let it Roll Records',
   location: '121 Kentish Town Road, London, NW1 8PB',
   rating: '(3..5).sample',
-  seller_url: 'https://letitrollrecords.com/')
+  seller_url: 'https://letitrollrecords.com/',
+  seller_logo: 'https://cdn.shopify.com/s/files/1/0085/5828/0762/files/Let-it-Roll-Records-red-2_145x@2x.png?v=1529436675')
 
 Seller.create!(
   seller_name: 'World of Echo',
   location: '128 Columbia Road, London, E2 7RG',
   rating: 4,
-  seller_url: 'https://worldofechomusic.com/')
+  seller_url: 'https://worldofechomusic.com/',
+  seller_logo: 'https://cdn.shopify.com/s/files/1/0051/1380/6921/files/WOE_LOGO_FINAL_360x-trans-white_500x.png?v=1569845297')
 
 Seller.create!(
   seller_name: 'Peckham Soul',
   location: 'Bussey Building, 133 Rye Lane, London, SE15 4ST',
   rating: 3,
-  seller_url: 'https://www.peckhamsoul.co.uk/#fwdmspPlayer0?catid=0&trackid=0')
+  seller_url: 'https://www.peckhamsoul.co.uk/#fwdmspPlayer0?catid=0&trackid=0',
+  seller_logo: 'https://peckhamsoul.co.uk/wp-content/uploads/2020/06/logo-darkx200.png')
 
 Seller.create!(
   seller_name: 'Rough Trade West',
   location: '130 Talbot Road, London, W11 1JA',
   rating: 4,
-  seller_url: 'https://www.roughtrade.com/')
+  seller_url: 'https://www.roughtrade.com/',
+  seller_logo: 'https://www.roughtrade.com/assets/logo-4e4504367ced1a66e8b5bb7281e66234fdeaeb3f973516ccfa7704e7fd6c2a58.png')
+
+Seller.create!(
+  seller_name: 'Stranger Than Paradise',
+  location: 'Mare Street Market, 117 Mare Street, London, E8 4RT',
+  rating: 3,
+  seller_url: 'https://www.strangerthanparadiserecords.com/',
+  seller_logo: 'https://cdn.webshopapp.com/shops/252051/themes/135743/assets/logo.png?20210719094322')
+
+Seller.create!(
+  seller_name: 'Lion Coffee & Records',
+  location: '118a Lower Clapton Road, London , E5 0QR',
+  rating: 3,
+  seller_url: 'https://lioncoffeerecords.com/',
+  seller_logo: 'https://cdn.shopify.com/s/files/1/2317/9551/files/lion_180x.jpg?v=1576757977')
+
+Seller.create!('Sleeve Notes Records',
+  location: '16 Richmond Hill, Richmond Upon Thames, TW10 6QX',
+  rating: 4,
+  seller_url: 'https://sleevenotesrecords.com/',
+  seller_logo: 'https://cdn.shopify.com/s/files/1/0086/8050/5429/files/SNR_WHITE_SIDE_x65@2x.jpg?v=1559845747')
+
+Seller.create!(
+  seller_name: 'Honest Jon\'s',
+  location: '115 Lower Stable Street, London, N1C 4DR',
+  rating: 5,
+  seller_url: 'https://honestjons.com/shop/latest_100_arrivals',
+  seller_logo: 'https://honestjons.com/img/hjons_colour_logo.png')
+
 
 Artist.create!(
   artist_name: 'The Rolling Stones',

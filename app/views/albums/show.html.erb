@@ -34,9 +34,9 @@
     </div>
 
     <div class="d-flex justify-content-center">
-      <%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=#{@album.album_name}", class: "btn btn-primary mb-4 mr-3", target: :blank %>
+      <%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/search/?type=all&title=#{@search_title}&artist=#{@search_artist}&format=vinyl", class: "btn btn-primary mb-4 mr-3", target: :blank %>
       <%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mb-4 mr-3" %>
-      <%= link_to 'Go back to albums', albums_path, class: "btn btn-info mb-4" %>
+      <%= link_to 'Go back to albums', :back, class: "btn btn-info mb-4" %>
     </div>
 
     <div class="flex-item row col-12 justify-content-center">
@@ -66,7 +66,7 @@
 
     <!-- <a href= <#%= "https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=#{@album.album_name}" %>, target = "blank "> <%= "Search for #{@album.album_name}" %></a> -->
 
-   <!-- https://www.discogs.com/search/?type=all&title=blue+and+lonesome&artist=the+rolling+stones&format=vinyl -->
+   <!-- https://www.discogs.com/search/?type=all&title=#{@search_title}&artist=#{@search_artist}&format=vinyl -->
 
-
+        <!-- https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=#{@album.album_name} -->
 
