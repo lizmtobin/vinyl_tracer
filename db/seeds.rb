@@ -263,11 +263,6 @@ Artist.create!(
   band_members: ["Amy Winehouse"]
   )
 
-AssociatedAct.create!(
-  connection_description: "Amy Winehouse collaborated with the Rolling Stones onstage at the Isle of Wight festival in 2007 to sing 'Ain’t Too Proud To Beg' https://youtu.be/TQQzudglm2U.",
-  artist_id: Artist.last.id,
-  album_id: Album.last.id
-  )
 
 Album.create!(
   album_name: 'Back to Black',
@@ -277,7 +272,13 @@ Album.create!(
   record_label: 'Island',
   seller_id: Seller.all.sample.id,
   genre: ['Soul', 'rhythm and blues', 'contemporary',  'R&B', 'neo soul'],
-  artist_id: Artist.last.id
+  artist_id: Artist.last.id,
+  tracks: ["Rehab", "You Know I'm No Good", "Me & Mr Jones", "Just Friends",  "Back to Black", "Love Is a Losing Game", "Tears Dry on Their Own", "Wake Up Alone",  "Some Unholy War",  "He Can Only Hold Her", "Addicted"]
+  )
+AssociatedAct.create!(
+  connection_description: "Amy Winehouse collaborated with the Rolling Stones onstage at the Isle of Wight festival in 2007 to sing 'Ain’t Too Proud To Beg'.",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
   )
 
 Artist.create!(
@@ -285,11 +286,6 @@ Artist.create!(
   band_members: ["Marvin Gaye"]
   )
 
-AssociatedAct.create!(
-  connection_description: "Amy Winehouse covered the Marvin Gaye song 'I heard it through the grapevine' with Jools Holland and Paul Weller on  Jools Holland's New Year’s Hootenanny 2006",
-  artist_id: Artist.last.id,
-  album_id: Album.last.id
-  )
 
 Album.create!(
   album_name: 'In the Groove',
@@ -299,18 +295,21 @@ Album.create!(
   record_label: 'Tamla Motown',
   seller_id: Seller.all.sample.id,
   genre: ['Soul'],
-  artist_id: Artist.last.id
+  artist_id: Artist.last.id,
+  tracks: ["You", "Tear It on Down", "Chained", "I Heard It Through the Grapevine", "At Last (I Found a Love)", "Some Kind of Wonderful",
+    "Loving You Is Sweeter Than Ever",  "Change What You Can", "It's Love I Need", "Every Now And Then", "You're What's Happening (In The World Today)",
+    "There Goes My Baby"]
+  )
+
+AssociatedAct.create!(
+  connection_description: "Amy Winehouse covered the Marvin Gaye song 'I heard it through the grapevine' with Jools Holland and Paul Weller on  Jools Holland's New Year’s Hootenanny 2006",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
   )
 
 Artist.create!(
   artist_name: 'The Beatles',
   band_members: ["John Lennon", "Paul McCartney", "Ringo Starr", "George Harrison"]
-  )
-
-AssociatedAct.create!(
-  connection_description: "Marvin Gaye became one of the many acts to record a version of 'Yesterday' by The Beatles in 1970.",
-  artist_id: Artist.last.id,
-  album_id: Album.last.id
   )
 
 Album.create!(
@@ -321,18 +320,20 @@ Album.create!(
   record_label: 'Parlophone',
   seller_id: Seller.all.sample.id,
   genre: ['Rock', 'pop', 'psychedelia', 'art rock'],
-  artist_id: Artist.last.id
+  artist_id: Artist.last.id,
+  tracks: [ "Sgt. Pepper's Lonely Hearts Club Band",  "With a Little Help from My Friends",   "Lucy in the Sky with Diamonds", "Getting Better", "Fixing a Hole", "She's Leaving Home",
+    "Being for the Benefit of Mr. Kite!", "Within You Without You", "When I'm Sixty-Four", "Lovely Rita",   "Good Morning Good Morning",  "Sgt. Pepper's Lonely Hearts Club Band (Reprise)",  "A Day in the Life"]
+  )
+
+AssociatedAct.create!(
+  connection_description: "Marvin Gaye became one of the many acts to record a version of 'Yesterday' by The Beatles in 1970.",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
   )
 
 Artist.create!(
   artist_name: 'Elton John',
   band_members: ["Elton John"]
-  )
-
-AssociatedAct.create!(
-  connection_description: "Beatles producer George Martin also produced Elton John's hit 'Candle in the wind 1997'",
-  artist_id: Artist.last.id,
-  album_id: Album.last.id
   )
 
 Album.create!(
@@ -343,18 +344,22 @@ Album.create!(
   record_label: ' DJM ',
   seller_id: Seller.all.sample.id,
   genre: ['Rock', 'pop'],
-  artist_id: Artist.last.id
+  artist_id: Artist.last.id,
+  tracks: [ "Funeral for a Friend/Love Lies Bleeding",  "Candle in the Wind", "Bennie and the Jets",  "Goodbye Yellow Brick Road",
+    "This Song Has No Title", "Grey Seal", "Jamaica Jerk-Off", "I've Seen That Movie Too", "Sweet Painted Lady",  "The Ballad of Danny Bailey (1909–34)",
+    "Dirty Little Girl", "All the Girls Love Alice", "Your Sister Can't Twist (But She Can Rock 'n Roll)", "Saturday Night's Alright for Fighting",
+    "Roy Rogers",   "Social Disease",   "Harmony"]
+  )
+
+AssociatedAct.create!(
+  connection_description: "Beatles producer George Martin also produced Elton John's hit 'Candle in the wind 1997'",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
   )
 
 Artist.create!(
   artist_name: 'The Who',
   band_members: ["Roger Daltrey", "Pete Townshend", "John Entwistle", "Keith Moon", "Doug Sandom", "Kenney Jones"]
-  )
-
-AssociatedAct.create!(
-  connection_description: "Elton John performed 'Pinball Wizard' in the 1975 film adaption of The Who's concept album 'Tommy'",
-  artist_id: Artist.last.id,
-  album_id: Album.last.id
   )
 
 Album.create!(
@@ -365,7 +370,16 @@ Album.create!(
   record_label: 'MCA',
   seller_id: Seller.all.sample.id,
   genre: ['Rock', 'Hard rock'],
-  artist_id: Artist.last.id
+  artist_id: Artist.last.id,
+  tracks: [ "I Am the Sea",   "The Real Me",  "Quadrophenia", "Cut My Hair",  "The Punk and the Godfather",   "I'm One",
+    "The Dirty Jobs", "Helpless Dancer",  "Is It in My Head?",  "I've Had Enough", "5:15", "Sea and Sand",  "Drowned",
+    "Bell Boy" ,  "Doctor Jimmy", "The Rock", "Love, Reign o'er Me"]
+  )
+
+AssociatedAct.create!(
+  connection_description: "Elton John performed 'Pinball Wizard' in the 1975 film adaption of The Who's concept album 'Tommy'",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
   )
 
 Artist.create!(
@@ -373,11 +387,6 @@ Artist.create!(
   band_members: ["Damon Albarn", "Graham Coxon", "Alex James", "Dave Rowntree"]
   )
 
-AssociatedAct.create!(
-  connection_description: "Phil Daniels who performed the lead role in the film adaption of The Who's album 'Quadrophenia' also performs the lead vocals on the 1994 Blur hit 'Parklife'",
-  artist_id: Artist.last.id,
-  album_id: Album.last.id
-  )
 
 Album.create!(
   album_name: "Parklife",
@@ -387,7 +396,164 @@ Album.create!(
   record_label: 'Food',
   seller_id: Seller.all.sample.id,
   genre: ['Britpop'],
-  artist_id: Artist.last.id
+  artist_id: Artist.last.id,
+  tracks: ["Girls & Boys", "Tracy Jacks", "End of a Century", "Parklife (featuring Phil Daniels)",  "Bank Holiday",   "Badhead",
+    "The Debt Collector", "Far Out", "To the End",  "London Loves",   "Trouble in the Message Centre", "Clover Over Dover",
+    "Magic America",  "Jubilee", "This Is a Low", "Lot 105"]
+  )
+
+AssociatedAct.create!(
+  connection_description: "Phil Daniels who performed the lead role in the film adaption of The Who's album 'Quadrophenia' also performs the lead vocals on the 1994 Blur hit 'Parklife'",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
+  )
+
+Artist.create!(
+  artist_name: 'Gorrilaz',
+  band_members: ["Damon Albarn", "Jamie Hewlett"]
+  )
+
+Album.create!(
+  album_name: "Demon Days",
+  year: '1994',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/d/df/Gorillaz_Demon_Days.PNG',
+  producers: ["Gorillaz", "Danger Mouse", "Jason Cox", "James Dring"],
+  record_label: 'Parlaphone',
+  seller_id: Seller.all.sample.id,
+  genre: ['Alternative rock', 'hip hop', 'trip hop', 'art rock', 'pop'],
+  artist_id: Artist.last.id,
+  tracks: [ "Intro", "Last Living Souls", "Kids with Guns", "O Green World", "Dirty Harry" ,  "Feel Good Inc.",   "El Mañana",
+    "Every Planet We Reach Is Dead", "November Has Come",   "All Alone", "White Light",   "Dare", "Fire Coming out of the Monkey's Head",
+    "Don't Get Lost in Heaven", "Demon Days"]
+  )
+
+AssociatedAct.create!(
+  connection_description: "Blur vocalist Damon Alburn is also the founder and vocalist / multi instrumentalist of Gorrilaz",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
+  )
+
+Artist.create!(
+  artist_name: 'Beck',
+  band_members: ["Beck Hanson"]
+  )
+
+Album.create!(
+  album_name: "Odelay",
+  year: '1996',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/f/f4/Odelay.jpg',
+  producers: ["Beck Hansen", "The Dust Brothers", "Mario Caldato Jr", "Brian Paulson", "Tom Rothrock", "Rob Schnapf"],
+  record_label: 'DGC',
+  seller_id: Seller.all.sample.id,
+  genre: ['Alternative rock', 'folk rock', 'garage rock'],
+  artist_id: Artist.last.id,
+  tracks: [ "Devils Haircut", "Hotwax",   "Lord Only Knows", "The New Pollution",   "Derelict", "Novacane", "Jack-Ass",
+    "Where It's At",  "Minus", "Sissyneck",   "Readymade", "High 5 (Rock the Catskills)",   "Ramshackle"]
+  )
+
+AssociatedAct.create!(
+  connection_description: "In 2020, Beck collaborated with virtual band Gorillaz to create the song 'The Valley of the Pagans' which appears on Song Machine, Season One: Strange Timez.",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
+  )
+
+Artist.create!(
+  artist_name: 'The Velvet Underground',
+  band_members: ["Lou Reed", "Sterling Morrison", "John Cale", "Maureen Tucker", "Nico", "Doug Yule", "Walter Powers", "Willie Alexander"]
+  )
+
+Album.create!(
+  album_name: "The Velvet Underground & Nico",
+  year: '1967',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/0/0c/Velvet_Underground_and_Nico.jpg',
+  producers: ["Andy Warhol", "Tom Wilson"],
+  record_label: 'Verve',
+  seller_id: Seller.all.sample.id,
+  genre: ['Art rock', 'experimental rock', 'proto-punk', 'psychedelic', 'rock', 'avant-pop'],
+  artist_id: Artist.last.id,
+  tracks: [ "Sunday Morning", "I'm Waiting for the Man",  "Femme Fatale",   "Venus in Furs",  "Run Run Run",  "All Tomorrow's Parties",
+    "Heroin",   "There She Goes Again",   "I'll Be Your Mirror",  "The Black Angel's Death Song",  "European Son" ]
+  )
+
+AssociatedAct.create!(
+  connection_description: "On June 20, 2009, Beck announced that he was starting an experiment called Record Club, in which he and other musicians would record cover versions of entire albums in one day.
+  The first album covered by Beck's Record Club was The Velvet Underground & Nico.",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
+  )
+puts "Albums created"
+puts "done"
+
+Artist.create!(
+  artist_name: 'Lou Reed',
+  band_members: ["Lou Reed"]
+  )
+
+Album.create!(
+  album_name: "Transformer",
+  year: '1972',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/f/f1/Loureedtransformer.jpeg',
+  producers: ["David Bowie", "Mick Ronson"],
+  record_label: 'RCA',
+  seller_id: Seller.all.sample.id,
+  genre: [ 'Glam rock', 'pop', 'rock','avant-pop'],
+  artist_id: Artist.last.id,
+  tracks: [ "Vicious", "Andy's Chest" , "Perfect Day", "Hangin' 'Round", "Walk on the Wild Side", "Make Up",
+  "Satellite of Love", "Wagon Wheel", "New York Telephone Conversation", "I'm So Free", "Goodnight Ladies"  ]
+  )
+
+AssociatedAct.create!(
+  connection_description: "Lou Reed was a founder member and chief songwriter for the Velvet Underground in the 1960's.",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
+  )
+
+Artist.create!(
+  artist_name: 'David Bowie',
+  band_members: ["David Bowie"]
+  )
+
+Album.create!(
+  album_name: "Aladdin Sane",
+  year: '1973',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/6/6e/DavisBowieAladdinSane.jpg',
+  producers: ["David Bowie", "Ken Scott"],
+  record_label: 'RCA',
+  seller_id: Seller.all.sample.id,
+  genre: [ 'Glam rock', 'hard rock'],
+  artist_id: Artist.last.id,
+  tracks: ["Watch That Man", "Aladdin Sane (1913–1938–197?)", "Drive-In Saturday", "Panic in Detroit", "Cracked Actor", "Time",
+  "The Prettiest Star", "Let's Spend the Night Together", "The Jean Genie", "Lady Grinning Soul"]
+  )
+
+AssociatedAct.create!(
+  connection_description: "David Bowie produced Lou Reed's 1972 album Transformer.",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
+  )
+
+Artist.create!(
+  artist_name: 'Queen',
+  band_members: ["David Bowie"]
+  )
+
+Album.create!(
+  album_name: "Hot Space",
+  year: '1982',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/3/3c/Queen_Hot_Space.png',
+  producers: ["David Bowie", "Queen", "Arif Mardin", "Reinhold Mack"],
+  record_label: 'EMI',
+  seller_id: Seller.all.sample.id,
+  genre: [ 'Pop', 'Rock', 'Glam rock', 'hard rock'],
+  artist_id: Artist.last.id,
+  tracks: [ "Staying Power", "Dancer",  "Back Chat",  "Body Language",  "Action This Day",  "Put Out the Fire", "Life Is Real (Song for Lennon)",
+    "Calling All Girls",  "Las Palabras de Amor (The Words of Love)", "Cool Cat",   "Under Pressure (with David Bowie)"]
+  )
+
+AssociatedAct.create!(
+  connection_description: "David Bowie sang with Queen on the 1981 single 'Under Pressure'. He also co-produced their album 'Hot Space'.",
+  artist_id: Artist.last.id,
+  album_id: Album.last.id
   )
 puts "Albums created"
 puts "done"
