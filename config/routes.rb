@@ -5,16 +5,14 @@ Rails.application.routes.draw do
   resources :artists, only: [ :index, :show]
   resources :albums, only: [ :show, :index  ] do
     resources :reviews, only: [ :new, :create ]
+    resources :favourites, only: [ :create ]
   end
   resources :sellers, only: [ :index, :show ]
 
   resources :reviews, only: [ :destroy ]
 
-  resources :users, only: [ :index ] do
-    resources :favourites, only: [ :index ]
-  end
+  resources :users, only: [ :index ]
 
-  resources :favourites, only: [ :create, :destroy ]
 
   get "profile", action: :index, controller: "users"
 end

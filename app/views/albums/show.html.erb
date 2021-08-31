@@ -50,7 +50,10 @@
                 <li><p><%= genre %></p></li>
               <% end %>
             </ul>
-            <h2 style="text-align: right; margin: 4px 12px;"><i class="fab fa-gratipay" id="heart"></i></h2>
+            <!-- <h2 style="text-align: right; margin: 4px 12px;">  -->
+            <%= link_to "<i class='fab fa-gratipay' id='heart'></i>".html_safe, album_favourites_path(@album.id), method: :post %>
+
+            <!-- </h2> -->
             </div>
           </div>
         </div>
