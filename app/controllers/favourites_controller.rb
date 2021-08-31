@@ -12,7 +12,7 @@ class FavouritesController < ApplicationController
     if @favourite.save
       redirect_to album_path(@album)
     # else
-      # render :new
+
     end
   end
 

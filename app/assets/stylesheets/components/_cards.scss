@@ -4,6 +4,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 10px;
   border : solid 2px #DDCAF1;
+  position: relative;
 }
 
 .card-vinyl > img {
@@ -48,7 +49,7 @@
 }
 
 .card-vinyl .card-vinyl-infos, .card-album-tracks, .card-six-degrees {
-  padding: 16px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   position: relative;
