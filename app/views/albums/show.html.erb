@@ -1,17 +1,14 @@
 
 <div class="container" style="width: 200rem;">
   <div>
-    <div class="d-flex justify-content-center">
-      <h1 class="text-underline"><%= @album.album_name + " - " + @album.artist.artist_name %></h1>
-    </div>
-
-
+    <br>
+      <div class="d-flex justify-content-center">
+        <h1 class="text-underline"><%= @album.album_name + " - " + @album.artist.artist_name %></h1>
+      </div>
+    <br>
 
     <div class="flex-container justify-content-center">
-
       <!-- Buttons -->
-
-
     <div class="d-flex align-items center">
       <div class="row justify-content-center">
         <div><%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/search/?type=all&title=#{@album.album_name}&artist=#{@album.artist.artist_name}&format=vinyl", class: "btn btn-primary mr-2", target: :blank %></div>
@@ -19,6 +16,7 @@
         <div><%= link_to 'Go back to albums', :back, class: "btn btn-info" %></div>
       </div>
     </div>
+
 
   <!--     <div class="flex-item row col-12 justify-content-center">
         <div class="card-vinyl" style="width: 15rem; margin-top: 2rem;">
@@ -92,6 +90,7 @@
             <div class="card-six-degrees">
               <img src= <%= album.artwork_url%> />
               <div class="card-vinyl-infos">
+                <br>
                   <h2><%= link_to "#{album.album_name}", album_path(album) %></h2>
                   <h3><%= album.artist.artist_name + " " +  album.year %></h3>
                   <br>
@@ -107,7 +106,7 @@
       </div>
     </div>
   <div class="home-card six-text col-10" style="margin:0 auto 50px auto;">
-  <h2 style="color:#AC7FDD;">What is Six Degrees of Seperation?</h2>
+  <h2 style="color:#AC7FDD; padding:8px">What is Six Degrees of Seperation?</h2>
         <p>Musicians like to mingle. They collaborate, change bands, cover each others songs and share producers.
         Six degrees of seperation explores these links by suggesting six albums all linked to each other by real world events. Starting from your chosen album,
         the next suggested album could be linked by a guitarist that played in both bands or a producer that worked on both albums or an act that performed with another onstage. The list is endless.
