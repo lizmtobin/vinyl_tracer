@@ -1,4 +1,4 @@
-.card-vinyl, .card-six-degrees, .card-six-degrees_container, .show-card  {
+.card-vinyl, .card-six-degrees, .card-six-degrees_container, .show-card, .home-card  {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -54,6 +54,16 @@
   position: relative;
   flex-direction: column;
   text-align: center
+}
+
+.home-card {
+  background: none;
+  margin-bottom: 40px;
+}
+
+.home-card h2{
+  font-family: Oleo Script Swash Caps;
+  color: $vt-purple-light;
 }
 
 .card-album-tracks {

@@ -90,7 +90,8 @@ Seller.create!(
   seller_url: 'https://lioncoffeerecords.com/',
   seller_logo: 'https://cdn.shopify.com/s/files/1/2317/9551/files/lion_180x.jpg?v=1576757977')
 
-Seller.create!('Sleeve Notes Records',
+Seller.create!(
+  seller_name: 'Sleeve Notes Records',
   location: '16 Richmond Hill, Richmond Upon Thames, TW10 6QX',
   rating: 4,
   seller_url: 'https://sleevenotesrecords.com/',
