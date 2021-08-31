@@ -11,12 +11,13 @@
 
       <!-- Buttons -->
 
-      <div class="d-flex align-items center">
-        <div class="row justify-content-center">
-          <div><%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=#{@album.album_name}", class: "btn btn-primary mr-2", target: :blank %></div>
-          <div><%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mr-2" %></div>
-          <div><%= link_to 'Go back to albums', :back, class: "btn btn-info" %></div>
-        </div>
+
+    <div class="d-flex align-items center">
+      <div class="row justify-content-center">
+        <div><%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/search/?type=all&title=#{@album.album_name}&artist=#{@album.artist.artist_name}&format=vinyl", class: "btn btn-primary mr-2", target: :blank %></div>
+        <div><%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mr-2" %></div>
+        <div><%= link_to 'Go back to albums', :back, class: "btn btn-info" %></div>
+
       </div>
 
   <!--     <div class="flex-item row col-12 justify-content-center">

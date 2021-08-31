@@ -19,16 +19,6 @@ class AlbumsController < ApplicationController
     # @next_album = Album.find(params[:id].to_i + 1)
     @associated_albums = Album.where(id: params[:id].to_i + 1..params[:id].to_i + 6)
 
-    @artist = @album.artist.artist_name
-    @title = @album.album_name
-    @title_elements = @title.split(" ")
-    @name_elements = @artist.split(" ")
-    @search_title = @title_elements.each do |title|
-      puts "title+"
-    end
-    @search_artist = @name_elements.each do |name|
-      puts "name+"
-    end
   end
 
 
