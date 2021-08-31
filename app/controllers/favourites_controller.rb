@@ -4,17 +4,17 @@ class FavouritesController < ApplicationController
   #   @favourites = Favourite.all
   # end
 
-  # def create
-  #   @favourite = Favourite.new
-  #   @album = Album.find(params[:album_id])
-  #   @user = current_user
-  #   @favourite.album = @album
-  #   if @favourite.save
-  #     redirect_to album_path(@album)
-  #   else
-  #     render :new
-  #   end
-  # end
+  def create
+    @favourite = Favourite.new
+    @album = Album.find(params[:album_id])
+    @user = current_user
+    @favourite.album = @album
+    if @favourite.save
+      redirect_to album_path(@album)
+    # else
+      # render :new
+    end
+  end
 
   # def destroy
   #   if @user = current_user

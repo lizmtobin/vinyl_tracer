@@ -11,6 +11,10 @@
   color: #F4F4F4;
 }
 
+#heart {
+  color: black;
+}
+
 #heart:hover {
-  color: red;
+  color: $red;
 }
