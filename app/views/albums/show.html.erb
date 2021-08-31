@@ -1,108 +1,118 @@
 
 <div class="container" style="width: 200rem;">
-  <div class="d-flex justify-content-center">
-    <h1 class="text-underline"><%= @album.album_name + " - " + @album.artist.artist_name %></h1>
-  </div>
-
-
-
-  <div class="flex-container justify-content-center">
-
-    <!-- Buttons -->
-
-    <div class="d-flex align-items center">
-      <div class="row justify-content-center">
-        <div><%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=#{@album.album_name}", class: "btn btn-primary mr-2", target: :blank %></div>
-        <div><%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mr-2" %></div>
-        <div><%= link_to 'Go back to albums', :back, class: "btn btn-info" %></div>
-      </div>
+  <div>
+    <div class="d-flex justify-content-center">
+      <h1 class="text-underline"><%= @album.album_name + " - " + @album.artist.artist_name %></h1>
     </div>
 
-<!--     <div class="flex-item row col-12 justify-content-center">
-      <div class="card-vinyl" style="width: 15rem; margin-top: 2rem;">
-        <img src= <%= @album.artwork_url %> />
-        <div class="card-vinyl-infos">
-          <ul style="list-style: none; margin: 0; padding: 0;">
-            <li><h2><%= @album.album_name %></h2></li>
-            <li><p><%= @album.artist.artist_name %></p></li>
-            <li><p><%= @album.year %></p></li>
-            <% @album.genre.each do |genre| %>
-              <li><p><%= genre %></p></li>
-            <% end %>
-          </ul>
-          <h2 style="text-align: right; margin: 4px 12px;"><i class="fab fa-gratipay" id="heart"></i></h2>
-        </div> -->
 
 
-    <div class="d-flex show-card row col-6 justify-content-center align-items-center m-3">
-          <!-- Featured album card -->
-      <div class="justify-content-center m-2">
-        <div class="card-vinyl" style="width: 15rem; margin-top: 1rem;">
+    <div class="flex-container justify-content-center">
+
+      <!-- Buttons -->
+
+      <div class="d-flex align-items center">
+        <div class="row justify-content-center">
+          <div><%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=#{@album.album_name}", class: "btn btn-primary mr-2", target: :blank %></div>
+          <div><%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mr-2" %></div>
+          <div><%= link_to 'Go back to albums', :back, class: "btn btn-info" %></div>
+        </div>
+      </div>
+
+  <!--     <div class="flex-item row col-12 justify-content-center">
+        <div class="card-vinyl" style="width: 15rem; margin-top: 2rem;">
           <img src= <%= @album.artwork_url %> />
           <div class="card-vinyl-infos">
-          <ul style="list-style: none; margin: 0; padding: 0;">
-            <li><h2><%= @album.album_name %></h2></li>
-            <li><p><%= @album.artist.artist_name %></p></li>
-            <li><p><%= @album.year %></p></li>
-            <% @album.genre.each do |genre| %>
-              <li><p><%= genre %></p></li>
-            <% end %>
-          </ul>
-          <h2 style="text-align: right; margin: 4px 12px;"><i class="fab fa-gratipay" id="heart"></i></h2>
-          </div>
-        </div>
-      </div>
-
-            <!-- Album tracks card -->
-
-      <div class="justify-content-center">
-        <div class="mb-4 card-album-tracks">
-          <h2 class="text-underline mb-1">Track listings</h2>
-          <ol>
-            <% @album.tracks.each_with_index do | track | %>
-              <li><p><%= track %></p></li>
-            <% end %>
-          </ol>
-        </div>
-      </div>
-    </div>
+            <ul style="list-style: none; margin: 0; padding: 0;">
+              <li><h2><%= @album.album_name %></h2></li>
+              <li><p><%= @album.artist.artist_name %></p></li>
+              <li><p><%= @album.year %></p></li>
+              <% @album.genre.each do |genre| %>
+                <li><p><%= genre %></p></li>
+              <% end %>
+            </ul>
+            <h2 style="text-align: right; margin: 4px 12px;"><i class="fab fa-gratipay" id="heart"></i></h2>
+          </div> -->
 
 
-<!--     <div class="d-flex justify-content-center">
-      <%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/search/?type=all&title=#{@search_title}&artist=#{@search_artist}&format=vinyl", class: "btn btn-primary mb-4 mr-3", target: :blank %>
-      <%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mb-4 mr-3" %>
-      <%= link_to 'Go back to albums', :back, class: "btn btn-info mb-4" %> -->
-
-          <!-- Six degrees button -->
-      </div>
-    <div class="col-12 d-flex justify-content-center">
-      <div class="six-degrees btn btn-basic mb-4 w-50" style="text-align: center;">Six Degrees Of Seperation</div>
-
-    </div>
-    <!-- </div> -->
-
-          <!-- Associated album cards -->
-
-    <div class="row col-12 justify-content-center flag hidden">
-      <div class="flex-item mb-4 card-six-degrees_container">
-        <h2 class="text-underline mb-1 ">Linked Artists</h2>
-        <% @associated_albums.each do | album | %>
-          <div class="card-six-degrees">
-            <img src= <%= album.artwork_url%> />
+      <div class="d-flex show-card row col-6 justify-content-center align-items-center m-3">
+            <!-- Featured album card -->
+        <div class="justify-content-center m-2">
+          <div class="card-vinyl" style="width: 15rem; margin-top: 1rem;">
+            <img src= <%= @album.artwork_url %> />
             <div class="card-vinyl-infos">
-                <h2><%= link_to "#{album.album_name}", album_path(album) %></h2>
-                <h3><%= album.artist.artist_name + " " +  album.year %></h3>
-                <br>
-                <h4>Why <%= album.artist.artist_name %>?</h4>
-
-                <p><%= album.associated_act ? album.associated_act.connection_description : nil %></p>
-              </ul>
+            <ul style="list-style: none; margin: 0; padding: 0;">
+              <li><h2><%= @album.album_name %></h2></li>
+              <li><p><%= @album.artist.artist_name %></p></li>
+              <li><p><%= @album.year %></p></li>
+              <% @album.genre.each do |genre| %>
+                <li><p><%= genre %></p></li>
+              <% end %>
+            </ul>
+            <h2 style="text-align: right; margin: 4px 12px;"><i class="fab fa-gratipay" id="heart"></i></h2>
             </div>
           </div>
-        <% end %>
+        </div>
+
+              <!-- Album tracks card -->
+
+        <div class="justify-content-center">
+          <div class="mb-4 card-album-tracks">
+            <h2 class="text-underline mb-1">Track listings</h2>
+            <ol>
+              <% @album.tracks.each_with_index do | track | %>
+                <li><p><%= track %></p></li>
+              <% end %>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+
+  <!--     <div class="d-flex justify-content-center">
+        <%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/search/?type=all&title=#{@search_title}&artist=#{@search_artist}&format=vinyl", class: "btn btn-primary mb-4 mr-3", target: :blank %>
+        <%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mb-4 mr-3" %>
+        <%= link_to 'Go back to albums', :back, class: "btn btn-info mb-4" %> -->
+
+            <!-- Six degrees button -->
+        </div>
+      <div class="col-12 d-flex justify-content-center">
+        <div class="six-degrees btn btn-basic mb-4 w-50" style="text-align: center;">Six Degrees Of Seperation</div>
 
       </div>
+      <!-- </div> -->
+
+            <!-- Associated album cards -->
+
+      <div class="row col-12 justify-content-center flag hidden">
+        <div class="flex-item mb-4 card-six-degrees_container">
+          <h2 class="text-underline mb-1 ">Linked Artists</h2>
+          <% @associated_albums.each do | album | %>
+            <div class="card-six-degrees">
+              <img src= <%= album.artwork_url%> />
+              <div class="card-vinyl-infos">
+                  <h2><%= link_to "#{album.album_name}", album_path(album) %></h2>
+                  <h3><%= album.artist.artist_name + " " +  album.year %></h3>
+                  <br>
+                  <h4>Why <%= album.artist.artist_name %>?</h4>
+
+                  <p><%= album.associated_act ? album.associated_act.connection_description : nil %></p>
+                </ul>
+              </div>
+            </div>
+          <% end %>
+
+        </div>
+      </div>
     </div>
+  <div class="home-card six-text col-10" style="margin:0 auto 50px auto;">
+  <h2 style="color:#AC7FDD;">What is Six Degrees of Seperation?</h2>
+        <p>Musicians like to mingle. They collaborate, change bands, cover each others songs and share producers.
+        Six degrees of seperation explores these links by suggesting six albums all linked to each other by real world events. Starting from your chosen album,
+        the next suggested album could be linked by a guitarist that played in both bands or a producer that worked on both albums or an act that performed with another onstage. The list is endless.
+        This provides a rich variety of suggested material that could span different artists, genres or points in time but are linked by real world events that actually happened.
+        </p>
+  </div>
 
 
 <%= javascript_pack_tag 'show.js' %>
