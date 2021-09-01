@@ -1,2 +1,90 @@
 // Import page-specific CSS files here.
 @import "home";
+
+body{
+  background: #DAF9E1;
+}
+
+.circle, .small, .medium, .large, .xlarge, .xxlarge {
+    overflow:hidden;
+}
+
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: ripple 45s infinite;
+  box-shadow: 0px 0px 1px 0px #583D72;
+  z-index: -1;
+}
+
+.small{
+  width: 200px;
+  height: 200px;
+  left: -100px;
+  top: -100px;
+
+}
+
+.medium{
+  width: 400px;
+  height: 400px;
+  left: -200px;
+  top: -200px;
+}
+
+.large{
+  width: 600px;
+  height: 600px;
+  left: -300px;
+  top: -300px;
+}
+
+.xlarge{
+  width: 800px;
+  height: 800px;
+  left: -400px;
+  top: -400px;
+}
+
+.xxlarge{
+  width: 1000px;
+  height: 1000px;
+  left: -500px;
+  top: -500px;
+}
+
+.shade1{
+  opacity: 0.2;
+}
+.shade2{
+  opacity: 0.5;
+}
+
+.shade3{
+  opacity: 0.7;
+}
+
+.shade4{
+  opacity: 0.8;
+}
+
+.shade5{
+  opacity: 0.9;
+}
+
+@keyframes ripple{
+  0%{
+    transform: scale(0.8);
+  }
+
+  50%{
+    transform: scale(1.8);
+  }
+
+  100%{
+    transform: scale(0.8);
+  }
+}
+
+
