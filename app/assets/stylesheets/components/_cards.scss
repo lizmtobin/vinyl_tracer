@@ -77,12 +77,16 @@
 }
 
 .card-six-degrees{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   width: 15rem;
   margin: 10px auto;
 
 }
 .card-six-degrees_container{
-    width: 17rem;
+    width: 54rem;
+    flex-wrap: wrap;
 }
 
 #seller {

@@ -91,8 +91,8 @@
             <!-- Associated album cards -->
 
       <div class="row col-12 justify-content-center flag hidden">
-        <div class="flex-item mb-4 card-six-degrees_container">
-          <h2 class="text-underline mb-1 ">Linked Artists</h2>
+        <div class="d-flex mb-4 card-six-degrees_container">
+          <!-- <h2 class="text-underline mb-1 ">Linked Artists</h2> -->
           <% @associated_albums.each do | album | %>
             <div class="card-six-degrees">
               <img src= <%= album.artwork_url%> />
