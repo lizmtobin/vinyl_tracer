@@ -97,14 +97,12 @@
             <div class="card-six-degrees">
               <img src= <%= album.artwork_url%> />
               <div class="card-vinyl-infos">
-                <br>
-                  <h2><%= link_to "#{album.album_name}", album_path(album) %></h2>
-                  <h3><%= album.artist.artist_name + " " +  album.year %></h3>
-                  <br>
+                <h2><%= link_to "#{album.album_name}", album_path(album) %></h2>
+                <h3><%= album.artist.artist_name + " " +  album.year %></h3>
+                <div class="mt-3">
                   <h4>Why <%= album.artist.artist_name %>?</h4>
-
                   <p><%= album.associated_act ? album.associated_act.connection_description : nil %></p>
-                </ul>
+                </div>
               </div>
             </div>
           <% end %>
