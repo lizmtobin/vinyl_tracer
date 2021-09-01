@@ -1,4 +1,4 @@
-.card-vinyl, .card-six-degrees, .card-six-degrees_container, .show-card, .home-card  {
+.card-vinyl, .card-six-degrees, .card-six-degrees_container, .show-card, .home-card, .card-six-info  {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -61,7 +61,12 @@
   margin-bottom: 40px;
 }
 
-.home-card h2{
+.card-six-info{
+  background: #EDF0F0;
+  margin-bottom: 40px;
+}
+
+.home-card h2, .card-six-info h2{
   font-family: Oleo Script Swash Caps;
   color: $vt-purple-light;
 }
