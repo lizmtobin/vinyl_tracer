@@ -5,6 +5,7 @@
   border-radius: 10px;
   border : solid 2px #9B72AA;
 }
+
 .card-vinyl {
   width: 18rem;
   height: 450px;
@@ -52,7 +53,7 @@
 }
 
 .card-vinyl .card-vinyl-infos, .card-album-tracks, .card-six-degrees {
-  padding: 16px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   position: relative;

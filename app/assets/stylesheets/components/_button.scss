@@ -10,3 +10,14 @@
   background: #150E56;
   color: #F4F4F4;
 }
+
+#heart {
+  color: black;
+  position: absolute;
+  right: 24px;
+  bottom: 16px;
+}
+
+#heart:hover {
+  color: $red;
+}
