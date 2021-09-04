@@ -1,5 +1,5 @@
 
-<div class="container" style="width: 53rem;">
+<div class="container" style="width: 58rem;">
   <div class="d-flex justify-content-center">
     <h1 style="text-align:center; margin: 50px;"><%= @artist.artist_name%> Vinyl Discography</h1>
   </div>
@@ -19,16 +19,20 @@
         <div class="card-vinyl">
           <img src= <%= album.artwork_url%> />
           <div class="card-vinyl-infos">
-          <ul style="list-style: none; margin: 0; padding: 0;">
-            <li><h2><%= link_to "#{album.album_name}", album_path(album) %></h4></li>
-            <li><h3><%= album.artist.artist_name %></h3></li>
-            <li><p><%= album.year %></p></li>
-
-            <% album.genre.each do |genre| %>
-              <li><p><%= genre %></p></li>
-            <% end %>
-
-          </ul>
+            <div style=" margin: 0; padding: 0;">
+              <h2><%= link_to "#{album.album_name}", album_path(album) %></h2>
+              <h3><%= album.artist.artist_name %></h3>
+            </div>
+            <div class="d-flex flex-column" style="margin:auto">
+              <div>
+                <p><%= album.year %></p>
+              </div>
+              <div>
+                <% album.genre.each do |genre| %>
+                <p><%= genre %></p>
+                <% end %>
+              </div>
+            </div>
           </div>
         </div>
       </div>

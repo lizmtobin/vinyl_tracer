@@ -6,8 +6,8 @@
   border : solid 2px #9B72AA;
 }
 .card-vinyl {
-  width: 16rem;
-  height: 390px;
+  width: 18rem;
+  height: 450px;
 }
 
 .card-vinyl > img {
@@ -17,27 +17,27 @@
 }
 
 .card-vinyl h2, .card-album-tracks h2, .card-six-degrees h2 {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: bold;
   margin: 0;
 }
 
 .card-vinyl p, .card-album-tracks p, .card-six-degrees p {
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: bold;
   opacity: .7;
   margin: 0;
 }
 
 .card-vinyl h3, .card-album-tracks h3, .card-six-degrees h3 {
-  font-size: 14px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: $dark-mauve;
   margin: 0;
   }
 
 .card-vinyl h4, .card-album-tracks h4, .card-six-degrees h4 {
-  font-size: 12px;
+  font-size: 1.4rem;
   font-weight: bold;
   margin: 0;
 }
@@ -83,7 +83,7 @@
 }
 
 .card-album-tracks {
-  width: 15rem;
+  // width: 15rem;
   margin: 20px 0px;
 }
 
