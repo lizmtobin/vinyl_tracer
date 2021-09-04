@@ -8,23 +8,28 @@
   background-position: center;
   padding: 150px 0;
   height: 100vh;
+  text-align: center;
 }
 
 .banner h1 {
   margin: 0;
-  color: white;
+  color: $vt-purple-light;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 100px;
+  font-size: 110px;
   font-weight: bold;
   font-family: Oleo Script Swash Caps;
 }
 
 .banner p {
-  font-size: 24px;
+  font-size: 32px;
   font-family: Raleway;
   color: white;
 
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 
 
+}
+
+.banner h2 {
+  font-size:40px;
 }

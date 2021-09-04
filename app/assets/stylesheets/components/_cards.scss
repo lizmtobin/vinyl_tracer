@@ -3,37 +3,42 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 10px;
-  border : solid 2px #DDCAF1;
+  border : solid 2px #9B72AA;
+}
+
+.card-vinyl {
+  width: 18rem;
+  height: 450px;
 }
 
 .card-vinyl > img {
-  height: 200px;
+  height: 250px;
   width: 100%;
   object-fit: cover;
 }
 
 .card-vinyl h2, .card-album-tracks h2, .card-six-degrees h2 {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: bold;
   margin: 0;
 }
 
 .card-vinyl p, .card-album-tracks p, .card-six-degrees p {
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: bold;
   opacity: .7;
   margin: 0;
 }
 
 .card-vinyl h3, .card-album-tracks h3, .card-six-degrees h3 {
-  font-size: 14px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: $dark-mauve;
   margin: 0;
   }
 
 .card-vinyl h4, .card-album-tracks h4, .card-six-degrees h4 {
-  font-size: 12px;
+  font-size: 1.4rem;
   font-weight: bold;
   margin: 0;
 }
@@ -48,7 +53,7 @@
 }
 
 .card-vinyl .card-vinyl-infos, .card-album-tracks, .card-six-degrees {
-  padding: 16px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -63,7 +68,9 @@
 
 .home-card {
   background: none;
-  margin-bottom: 40px;
+  margin-top: 60px;
+  padding: 20px;
+  text-align:center;
 }
 
 .card-six-info{
@@ -77,7 +84,7 @@
 }
 
 .card-album-tracks {
-  width: 15rem;
+  // width: 15rem;
   margin: 20px 0px;
 }
 
