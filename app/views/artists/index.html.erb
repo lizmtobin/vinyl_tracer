@@ -23,11 +23,9 @@
               <h2><%= link_to "#{album.album_name}", album_path(album) %></h2>
               <h3><%= album.artist.artist_name %></h3>
             </div>
-            <div class="d-flex flex-column" style="margin:auto">
-              <div>
+            <div>
+              <div class="d-flex flex-column align-items-between">
                 <p><%= album.year %></p>
-              </div>
-              <div>
                 <% album.genre.each do |genre| %>
                 <p><%= genre %></p>
                 <% end %>
