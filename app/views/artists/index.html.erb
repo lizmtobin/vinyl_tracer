@@ -1,5 +1,5 @@
-
 <div class="container" style="width: 58rem;">
+
   <div class="d-flex justify-content-center">
     <h1 style="text-align:center; margin: 50px;"><%= @artist.artist_name%> Vinyl Discography</h1>
   </div>
@@ -11,6 +11,11 @@
   <div class='circle mediun shade4'></div>
   <div class='circle small shade5'></div>
 </div>
+
+<div id="artist_trivia" class="card-vinyl" style="text-align:centre, margin: 10px; padding: 10px;">
+  <p id="artist_name" class="hidden"> <%= @artist.artist_name%> </p>
+</div>
+<br>
 
   <div class="flex-container">
 
