@@ -1,14 +1,14 @@
 class FavouritesController < ApplicationController
 
   # def index
-  #   @favourites = Favourite.all
+  #    @favourites = Favourite.all
   # end
 
   def create
     @favourite = Favourite.new
     @album = Album.find(params[:album_id])
-    # @user = current_user
     @favourite.album = @album
+    @user = current_user
     if @favourite.save!
       redirect_to album_path(@album), notice: "album added to favourites!"
     else
