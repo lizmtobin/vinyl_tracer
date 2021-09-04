@@ -25,13 +25,13 @@ class FavouritesController < ApplicationController
     end
   end
 
-  # def destroy
-  #   if @user = current_user
-  #     @favourite = Favourite.find(params[:id])
-  #     @favourite.delete
-  #     redirect_to album_path(@favourite.album)
-  #   end
-  # end
+  def destroy
+    if @user = current_user
+      @favourite = Favourite.find(params[:id])
+      @favourite.delete
+      redirect_to album_path(@favourite.album)
+    end
+  end
 
   # private
 

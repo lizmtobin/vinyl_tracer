@@ -11,13 +11,20 @@
   color: #F4F4F4;
 }
 
-#heart {
+#favourite {
   color: black;
   position: absolute;
   right: 24px;
   bottom: 16px;
 }
 
-#heart:hover {
+#favourite:hover {
   color: $red;
+}
+
+#favourite {
+  color: $red;
+  position: absolute;
+  right: 24px;
+  bottom: 16px;
 }
