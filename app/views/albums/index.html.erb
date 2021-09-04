@@ -6,10 +6,9 @@
 
 
   <div class="flex-container">
-
     <% @albums.each do |album| %>
       <div class="d-flex mb-4 flex-wrap">
-        <div class="card-vinyl" style="width: 15rem;">
+        <div class="card-vinyl">
           <img src= <%= album.artwork_url %> />
           <div class="card-vinyl-infos">
           <ul style="list-style: none; margin: 0; padding: 0;">

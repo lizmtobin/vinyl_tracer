@@ -1,0 +1,37 @@
+<!-- <h2 style="text-align:center;">Hello <#%= "#{@favourites.current_user.name}" %></h2> -->
+
+<div class="container" style="width: 200rem;">
+  <div class="d-flex justify-content-center">
+    <h1 style="text-align:center; margin: 20px; font-family: 'Lobster Two', cursive;">Your favourite albums</h1>
+  </div>
+
+
+
+
+  <div class="flex-container">
+
+    <% @user_favourites.each do |favourite| %>
+
+
+      <div class="d-flex mb-4 flex-wrap">
+        <div class="card-vinyl">
+          <img src= <%= favourite.album.artwork_url %> />
+          <div class="card-vinyl-infos">
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li><h2><%= link_to "#{favourite.album.album_name}", album_path(@album) %></h4></li>
+            <li><h3><%= favourite.album.artist.artist_name %></h3></li>
+            <li><p><%= favourite.album.year %></p></li>
+
+            <% favourite.album.genre.each do |genre| %>
+              <li><p><%= genre %></p></li>
+            <% end %>
+          </ul>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+
+
+</div>

@@ -1,8 +1,13 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%=image_path('home-banner.jpg')%>');">
   <div class="container" style="margin-top:100px;">
     <div class="row d-flex justify-content-between align-items-center">
+<<<<<<< HEAD
       <div class="col-7 ">
         <h1 id="main-heading">Vinyl Tracer</h1>
+=======
+      <div class="col-7" style="margin-right:5%";>
+        <h1>Vinyl Tracer</h1>
+>>>>>>> 2dd72b621193f17e6f6c9a005d92e5f66ebd33d0
         <p style="margin-bottom: 15px;">Follow us down the wormhole of album connections</p>
 
          <%= form_tag artists_path, method: :get do %>
@@ -12,7 +17,7 @@
             placeholder: "Search for an Artist..."
 
           %>
-          <%= submit_tag "Search", class: "btn btn-basic" %>
+          <%= submit_tag "Search", class: "btn btn-basic w-100" %>
         <% end %>
       </div>
 
@@ -22,7 +27,8 @@
         <h2 style="text-align: center;">What We're About</h2>
         <p>Search for Albums.</p>
         <p>Find online or local vinyl sellers.</p>
-        <p>Discover new music using our unique 'Six degrees of separation' system.</p>
+        <p>Discover new music using our unique<br>
+          <strong style="color:#AC7FDD;">'Six degrees of separation'</strong> system.</p>
       </div>
     </div>
   </div>
