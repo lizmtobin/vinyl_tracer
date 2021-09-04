@@ -1,17 +1,21 @@
 
-<div class="container" style="width: 200rem;">
+<div class="container" style="width: 200rem; margin-top: 75px;">
+  <div class='ripple-background'>
+    <div class='circle xxlarge shade1'></div>
+    <div class='circle xlarge shade2'></div>
+    <div class='circle large shade3'></div>
+    <div class='circle mediun shade4'></div>
+    <div class='circle small shade5'></div>
+  </div>
   <div>
-    <div class="d-flex justify-content-center">
-      <h1 class="text-underline"><%= @album.album_name + " - " + @album.artist.artist_name %></h1>
-    </div>
-
-
+    <br>
+      <div class="d-flex justify-content-center">
+        <h1 class="text-underline"><%= @album.album_name + " - " + @album.artist.artist_name %></h1>
+      </div>
+    <br>
 
     <div class="flex-container justify-content-center">
-
       <!-- Buttons -->
-
-
     <div class="d-flex align-items center">
       <div class="row justify-content-center">
         <div><%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/search/?type=all&title=#{@album.album_name}&artist=#{@album.artist.artist_name}&format=vinyl", class: "btn btn-primary mr-2", target: :blank %></div>
@@ -19,6 +23,7 @@
         <div><%= link_to 'Go back to albums', :back, class: "btn btn-info" %></div>
       </div>
     </div>
+
 
   <!--     <div class="flex-item row col-12 justify-content-center">
         <div class="card-vinyl" style="width: 15rem; margin-top: 2rem;">
@@ -36,10 +41,10 @@
           </div> -->
 
 
-      <div class="d-flex show-card row col-6 justify-content-center align-items-center m-3">
+      <div class="d-flex show-card row justify-content-center align-items-center m-3">
             <!-- Featured album card -->
         <div class="justify-content-center m-2">
-          <div class="card-vinyl" style="width: 15rem; margin-top: 1rem;">
+          <div class="card-vinyl" style="height:auto;">
             <img src= <%= @album.artwork_url %> />
             <div class="card-vinyl-infos">
             <ul style="list-style: none; margin: 0; padding: 0;">
@@ -81,7 +86,7 @@
             <!-- Six degrees button -->
         </div>
       <div class="col-12 d-flex justify-content-center">
-        <div class="six-degrees btn btn-basic mb-4 w-50" style="text-align: center;">Six Degrees Of Seperation</div>
+        <div class="six-degrees btn btn-basic mb-4 w-50" style="text-align: center;">Six Degrees Of Separation</div>
 
       </div>
       <!-- </div> -->
@@ -89,19 +94,18 @@
             <!-- Associated album cards -->
 
       <div class="row col-12 justify-content-center flag hidden">
-        <div class="flex-item mb-4 card-six-degrees_container">
-          <h2 class="text-underline mb-1 ">Linked Artists</h2>
+        <div class="d-flex mb-4 card-six-degrees_container">
+          <!-- <h2 class="text-underline mb-1 ">Linked Artists</h2> -->
           <% @associated_albums.each do | album | %>
             <div class="card-six-degrees">
               <img src= <%= album.artwork_url%> />
               <div class="card-vinyl-infos">
-                  <h2><%= link_to "#{album.album_name}", album_path(album) %></h2>
-                  <h3><%= album.artist.artist_name + " " +  album.year %></h3>
-                  <br>
+                <h2><%= link_to "#{album.album_name}", album_path(album) %></h2>
+                <h3><%= album.artist.artist_name + " " +  album.year %></h3>
+                <div class="mt-3">
                   <h4>Why <%= album.artist.artist_name %>?</h4>
-
                   <p><%= album.associated_act ? album.associated_act.connection_description : nil %></p>
-                </ul>
+                </div>
               </div>
             </div>
           <% end %>
@@ -109,8 +113,8 @@
         </div>
       </div>
     </div>
-  <div class="home-card six-text col-10" style="margin:0 auto 50px auto;">
-  <h2 style="color:#AC7FDD;">What is Six Degrees of Seperation?</h2>
+  <div class="card-six-info six-text col-10" style="margin:0 auto 50px auto;">
+  <h2 style="color:#AC7FDD; padding:8px">What is Six Degrees of Separation?</h2>
         <p>Musicians like to mingle. They collaborate, change bands, cover each others songs and share producers.
         Six degrees of seperation explores these links by suggesting six albums all linked to each other by real world events. Starting from your chosen album,
         the next suggested album could be linked by a guitarist that played in both bands or a producer that worked on both albums or an act that performed with another onstage. The list is endless.

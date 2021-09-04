@@ -1,9 +1,9 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%=image_path('home-banner.jpg')%>');">
-  <div class="container">
+  <div class="container" style="margin-top:100px;">
     <div class="row d-flex justify-content-between align-items-center">
-      <div class="col-6 ">
+      <div class="col-7 ">
         <h1 id="main-heading">Vinyl Tracer</h1>
-        <p>Follow us down the wormhole of album connections</p>
+        <p style="margin-bottom: 15px;">Follow us down the wormhole of album connections</p>
 
          <%= form_tag artists_path, method: :get do %>
           <%= text_field_tag :query,
@@ -22,14 +22,7 @@
         <h2 style="text-align: center;">What We're About</h2>
         <p>Search for Albums.</p>
         <p>Find online or local vinyl sellers.</p>
-        <p>Discover new music using our unique 'Six degrees of seperation' system.</p>
-        <!-- <h2>What is Six Degrees of Seperation?</h2>
-        <p>Musicians like to mingle. They collaborate, change bands, cover each others songs and share producers.
-        Six degrees of seperation explores these links by suggesting six albums all linked to each other by real world events. Starting from your chosen album,
-        the next suggested album could be linked by a guitarist that played in both bands or a producer that worked on both albums or an act that performed with another onstage. The list is endless.
-        This provides a rich variety of suggested material taht could span different artists, genres or points in time but are linked by real world events that actually happened.
-        Here at Vinyl Tracer we believe these links provide a much more interesting listening experience that simply suggesting six albums
-        because someone else included them on a similar playlist or the albums just happen to be in the same genre.</p> -->
+        <p>Discover new music using our unique 'Six degrees of separation' system.</p>
       </div>
     </div>
   </div>
