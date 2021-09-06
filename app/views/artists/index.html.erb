@@ -19,6 +19,10 @@
 
   <div class="flex-container">
 
+    <div id="artist_trivia" class="card-trivia" align-items-center>
+    <p id="artist_name" class="hidden"> <%= @artist.artist_name%> </p>
+    </div>
+
     <% @artist.albums.each do |album| %>
       <div class="flex-item mb-4">
         <div class="card-vinyl">
@@ -43,7 +47,7 @@
 
   </div>
   <br>
-  <div style="margin-bottom: 50px;"><%= link_to 'Search again', root_path, class: "btn btn-primary ml-3" %></div>
+  <div style="margin-bottom: 50px;"><%= link_to 'Search again', root_path, class: "btn btn-basic ml-4" %></div>
 
 <%= javascript_pack_tag 'index.js' %>
 </div>
