@@ -1,4 +1,4 @@
-.card-vinyl, .card-six-degrees, .card-six-degrees_container, .show-card, .home-card, .card-six-info  {
+.card-vinyl, .card-six-degrees, .card-six-degrees_container, .show-card, .home-card, .card-six-info, .card-trivia  {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -23,7 +23,7 @@
   margin: 0;
 }
 
-.card-vinyl p, .card-album-tracks p, .card-six-degrees p {
+.card-vinyl p, .card-album-tracks p, .card-trivia, .card-six-degrees p {
   font-size: 1.2rem;
   font-weight: bold;
   opacity: .7;
@@ -101,6 +101,10 @@
     flex-wrap: wrap;
 }
 
+.card-trivia {
+  font-weight: normal;
+}
+
 #seller {
   background-color: $gray;
   width: 15rem;
@@ -108,5 +112,14 @@
 
 #seller > .img {
     object-fit: scale-down;
+}
+
+.card-trivia {
+  width: 100%;
+  padding: auto;
+  margin-bottom:50px;
+  font-size: 18px;
+  text-align:center;
+  justify-content: center;
 }
 

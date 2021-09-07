@@ -1,5 +1,7 @@
 .btn-basic {
   color: white;
+  padding: 10px 20px;
+  font-size: 20px;
   padding: 8px 24px;
   border-radius: 4px;
   background: #644A7E;
@@ -11,13 +13,20 @@
   color: #F4F4F4;
 }
 
-#heart {
+#favourite {
   color: black;
   position: absolute;
   right: 24px;
   bottom: 16px;
 }
 
-#heart:hover {
+#favourite:hover {
   color: $red;
+}
+
+#favourite-red {
+  color: $red;
+  position: absolute;
+  right: 24px;
+  bottom: 16px;
 }

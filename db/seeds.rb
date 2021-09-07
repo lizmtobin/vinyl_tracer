@@ -5,8 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'open-uri'
-require 'json'
+
 
 
 puts "creating sellers"
@@ -584,24 +583,70 @@ puts "done"
 
 
 
-# url = "https://api.discogs.com/database/search?q=Nirvana&token=aCtVKDbDpMUcsVOklJkKEnvQAGCDyfemHoXbZZIh"
+# url = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Sheet%201?api_key=key4EHjHf99psrakN"
 
 #   i = 0
 #   puts "Importing albums from page #{i + 1}"
-#   albums = JSON.parse(open("#{url}?page=#{i + 1}").read)['results']
-#   p albums
-#   albums.each do |album|
-#     puts "Creating #{album['title']}"
-#     Album.create(
-#       album_name: album['title'],
-#       year: album['year'],
-#       artwork_url: album['cover_image'],
-#       record_label: album['label'],
-#       genre: album['genre']
+#   associated = JSON.parse(open("#{url}?page=#{i + 1}").read)['results']
+#   p associated
+#   associated.each do |act|
+#     puts "Creating #{act['title']}"
+#     Associated_act.create(
+#       artist_id:
+#       artist_b_id:
+#       connection_description:
+#
 
 #     )
 
   # end
 
+require 'net/http'
+require 'uri'
+require 'json'
 
+def get_airtable_data(url)
+  # Parse the URL into a URI and set up the request
+  uri = URI.parse(url)
+  request = Net::HTTP::Get.new(uri)
+  # ! replace the bearer token with an ENV variable
+  request["Authorization"] = "Bearer " + ENV["AIRTABLE_TOKEN"]
+
+  # use SSL to make the request
+  req_options = {
+    use_ssl: uri.scheme == "https"
+  }
+
+  # make the request and save the response
+  response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+    http.request(request)
+  end
+  # parse the response payload into JSON and symbolize all keys (deeply)
+  JSON.parse(response.body, symbolize_names: true)
+end
+
+# associated_acts = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Associated_acts"
+# data = get_airtable_data(associated_acts)
+
+tags = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Sheet%201"
+
+tags_data = get_airtable_data(tags)
+
+puts "Creating Tags!"
+p tags_data
+tags_data[:records].each do |record|
+  # create a new tag using the tag name attribute from the Airtable response data for tags
+  #define artist_a and artist_b
+  @artist = Artist.where("artist_name ILIKE ?", "%#{record[:fields]
+    [:artist_a_name]}%").first
+  @artist_b = Artist.where("artist_name ILIKE ?", "%#{record[:fields]
+    [:artist_b_name]}%").first
+  @album = Album.where("album_name ILIKE ?", "%#{record[:fields]
+    [:album_name]}%").first
+  connection = record[:fields][:connection_description].first
+  AssociatedAct.create!(:artist_id => @artist_a.id, :album => @artist_a.album.first.id,
+    :artist_b_id => @artist_b.id, :connection_description => connection)
+end
+
+puts "Tags Created!"
 

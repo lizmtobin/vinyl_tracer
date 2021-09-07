@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [ :index ]
 
-  resources :favourites, only: [ :index ]
+  resources :favourites, only: [ :index, :destroy ]
 
 
   get "profile", action: :index, controller: "users"
