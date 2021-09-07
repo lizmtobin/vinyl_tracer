@@ -1,17 +1,19 @@
 const artist = () => {
-  const artist_name = document.getElementById("artist_name").innerText;
-            $.ajax({
+  const artist_name = document.getElementById("artist_name");
+            if(artist_name){
+              $.ajax({
                 url: 'http://en.wikipedia.org/w/api.php',
-                data: { action: 'query', prop: 'extracts', redirects: 1, exsentences: 6, exintro: true, explaintext: true, titles: artist_name, format: 'json' },
+                data: { action: 'query', prop: 'extracts', redirects: 1, exsentences: 6, exintro: true, explaintext: true, titles: artist_name.innerText, format: 'json' },
                 dataType: 'jsonp',
                 success: processResult
             });
-  function processResult(apiResult){
-    const pages = apiResult.query.pages
-    const pages_inner = Object.keys(pages)[0]
-    const text = pages[pages_inner].extract
-  const artist_trivia = document.getElementById("artist_trivia");
-    artist_trivia.innerText = text;
+    function processResult(apiResult){
+      const pages = apiResult.query.pages
+      const pages_inner = Object.keys(pages)[0]
+      const text = pages[pages_inner].extract
+    const artist_trivia = document.getElementById("artist_trivia");
+      artist_trivia.innerText = text;
+    }
   }
 }
 
