@@ -39,16 +39,16 @@
                   <li><p><%= genre %></p></li>
                 <% end %>
               </ul>
-              <% @favourite.each do |favourite| %>
-                <% if favourite.album_id == @album.id %>
 
+
+                <% if @album == @favourite %>
                   <i class='fab fa-gratipay' id='favourite'></i>
-                <% else %>
+                <% elsif @album %>
                   <%= link_to "<i class='fab fa-gratipay' id='favourite-red'></i>".html_safe,
                   album_favourites_path(@album.id), method: :post %>
                 <% end %>
 
-              <% end %>
+
             </div>
           </div>
         </div>

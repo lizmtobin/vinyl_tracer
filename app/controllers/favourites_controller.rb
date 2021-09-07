@@ -29,7 +29,7 @@ class FavouritesController < ApplicationController
     if @user = current_user
       @favourite = Favourite.find(params[:id])
       @favourite.delete
-      redirect_to album_path(@favourite.album)
+      redirect_to favourites_path
     end
   end
 
