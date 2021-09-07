@@ -1,8 +1,8 @@
 class AlbumsController < ApplicationController
 
 
-  require 'open-uri'
-  require 'nokogiri'
+  # require 'open-uri'
+  # require 'nokogiri'
 
 
   def index
@@ -15,24 +15,27 @@ class AlbumsController < ApplicationController
 
   def show
     @album = Album.find(params[:id])
+    @user = current_user
+    @favourite = Favourite.where(album_id: params[:id])
 
+    # raise
     # @next_album = Album.find(params[:id].to_i + 1)
     @associated_albums = Album.where(id: params[:id].to_i + 1..params[:id].to_i + 6)
 
   end
-
-
-  private
-
-  def scrape_sellers
-    html_content = URI.open("https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=sticky+fingers").read
-    doc = Nokogiri::HTML(html_content)
-
-    doc.search('.item_description_title').each_with_index do |element, index|
-      "#{index + 1}. #{element.text.strip}"
-    end
-  end
 end
+
+  # private
+
+#   def scrape_sellers
+#     html_content = URI.open("https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=sticky+fingers").read
+#     doc = Nokogiri::HTML(html_content)
+
+#     doc.search('.item_description_title').each_with_index do |element, index|
+#       "#{index + 1}. #{element.text.strip}"
+#     end
+#   end
+# end
 
 
 

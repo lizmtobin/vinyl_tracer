@@ -31,18 +31,23 @@
           <div class="card-vinyl" style="height:auto;">
             <img src= <%= @album.artwork_url %> />
             <div class="card-vinyl-infos">
-            <ul style="list-style: none; margin: 0; padding: 0;">
-              <li><h2><%= @album.album_name %></h2></li>
-              <li><p><%= @album.artist.artist_name %></p></li>
-              <li><p><%= @album.year %></p></li>
-              <% @album.genre.each do |genre| %>
-                <li><p><%= genre %></p></li>
-              <% end %>
-            </ul>
-            <!-- <h2 style="text-align: right; margin: 4px 12px;">  -->
-            <%= link_to "<i class='fab fa-gratipay' id='heart'></i>".html_safe, album_favourites_path(@album.id), method: :post %>
+              <ul style="list-style: none; margin: 0; padding: 0;">
+                <li><h2><%= @album.album_name %></h2></li>
+                <li><p><%= @album.artist.artist_name %></p></li>
+                <li><p><%= @album.year %></p></li>
+                <% @album.genre.each do |genre| %>
+                  <li><p><%= genre %></p></li>
+                <% end %>
+              </ul>
 
-            <!-- </h2> -->
+                <% if @favourite == [] %>
+                  <%= link_to album_favourites_path(@album.id), method: :post do  %>
+                    <i class="fab fa-gratipay" id="favourite"></i>
+                    <% end %>
+                <% else  %>
+                    <i class='fab fa-gratipay' id='favourite-red'></i>
+                <% end %>
+
             </div>
           </div>
         </div>
