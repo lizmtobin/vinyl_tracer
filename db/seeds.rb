@@ -628,7 +628,7 @@ end
 # associated_acts = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Associated_acts"
 # data = get_airtable_data(associated_acts)
 
-tags = "https://api.airtable.com/v0/appG8EtUMLM464yhW/associated_acts"
+tags = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Sheet%201"
 
 tags_data = get_airtable_data(tags)
 
@@ -636,8 +636,17 @@ puts "Creating Tags!"
 p tags_data
 tags_data[:records].each do |record|
   # create a new tag using the tag name attribute from the Airtable response data for tags
-  AssociatedAct.create!(@artist = Artist.find("name ILIKE ?", "%#{record[:fields][:artist_a_name]}%"),
-  @artist_b = Artist.find("name ILIKE ?", "%#{record[:fields][:artist_b_name]}%"), connection_description: record[:fields][:connection_description])
+  #define artist_a and artist_b
+  @artist = Artist.where("artist_name ILIKE ?", "%#{record[:fields]
+    [:artist_a_name]}%").first
+  @artist_b = Artist.where("artist_name ILIKE ?", "%#{record[:fields]
+    [:artist_b_name]}%").first
+  @album = Album.where("album_name ILIKE ?", "%#{record[:fields]
+    [:album_name]}%").first
+  connection = record[:fields][:connection_description].first
+  AssociatedAct.create!(:artist_id => @artist_a.id, :album => @artist_a.album.first.id,
+    :artist_b_id => @artist_b.id, :connection_description => connection)
 end
+
 puts "Tags Created!"
 
