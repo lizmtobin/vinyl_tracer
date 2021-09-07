@@ -2,9 +2,9 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  unless ActionController::Base.consider_all_requests_local
-    rescue_from Exception, :with => :render_404
-  end
+  # unless ActionController::Base.consider_all_requests_local
+  #   rescue_from Exception, :with => :render_404
+  # end
 
   def configure_permitted_parameters
     # For additional fields in app/views/devise/registrations/new.html.erb
