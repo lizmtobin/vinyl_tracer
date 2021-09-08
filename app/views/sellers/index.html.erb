@@ -30,9 +30,9 @@
 
     <% @sellers.each do |seller| %>
       <div class="flex-item mb-4">
-        <div class="card-vinyl" id="seller" >
+        <div class="card-seller" id="seller" >
           <img src= <%= seller.seller_logo %> style="object-fit: scale-down"/>
-          <div class="card-vinyl-infos" style= "background-color: white;">
+          <div class="card-vinyl-infos" style= "background-color: white; height: 250px;">
             <h2><%= link_to "#{seller.seller_name}", seller_path(seller) %></h2>
             <p><%= seller.location %></p>
             <p><%= link_to "View website", "#{seller.seller_url}", target: :blank %></p>
