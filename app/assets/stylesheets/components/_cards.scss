@@ -7,12 +7,12 @@
 }
 
 .card-vinyl {
-  width: 18rem;
-  height: 450px;
+  width: 22rem;
+  height: 640px;
 }
 
-.card-vinyl > img {
-  height: 250px;
+.card-vinyl > img, .card-six-degrees > img {
+  // height: 350px;
   width: 100%;
   object-fit: cover;
 }
@@ -28,6 +28,10 @@
   font-weight: bold;
   opacity: .7;
   margin: 0;
+}
+
+.card-album-tracks p{
+  padding: 2px 5px;
 }
 
 .card-vinyl h3, .card-album-tracks h3, .card-six-degrees h3 {
@@ -62,7 +66,8 @@
 }
 
 .card-vinyl-infos{
-  padding-top: 8px;
+  padding: 8px 0;
+  // height:100%;
 }
 
 
@@ -92,12 +97,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 15rem;
+  width: 22rem;
   margin: 10px auto;
-
 }
+
 .card-six-degrees_container{
-    width: 54rem;
+    width: 70rem;
     flex-wrap: wrap;
 }
 
