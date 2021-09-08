@@ -1,4 +1,4 @@
-.card-vinyl, .card-six-degrees, .card-six-degrees_container, .show-card, .home-card, .card-six-info, .card-trivia  {
+.card-vinyl, .card-six-degrees, .card-six-degrees_container, .show-card, .home-card, .card-six-info, .card-trivia, .card-seller  {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -23,7 +23,7 @@
   margin: 0;
 }
 
-.card-vinyl p, .card-album-tracks p, .card-trivia, .card-six-degrees p, {
+.card-vinyl p, .card-album-tracks p, .card-trivia, .card-six-degrees p, .card-seller p {
   font-size: 1.2rem;
   font-weight: bold;
   opacity: .7;
@@ -56,7 +56,7 @@
   text-decoration: none;
 }
 
-.card-vinyl .card-vinyl-infos, .card-album-tracks, .card-six-degrees {
+.card-vinyl .card-vinyl-infos, .card-album-tracks, .card-six-degrees, .card-seller {
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -113,6 +113,10 @@
 
 .card-trivia {
   font-weight: normal;
+}
+
+.card-seller {
+  height: 520px;
 }
 
 #seller {
