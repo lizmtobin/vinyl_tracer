@@ -1,13 +1,9 @@
 
 .banner {
-
-
-  background-image: asset-url("instrument-stall.jpg");
-
+  background-image: asset-url("home-banner.jpg");
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  height: 100vh;
   text-align: center;
 }
 
@@ -24,10 +20,7 @@
   font-size: 32px;
   font-family: Raleway;
   color: white;
-
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-
-
 }
 
 .banner h2 {
