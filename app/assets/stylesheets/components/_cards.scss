@@ -23,7 +23,7 @@
   margin: 0;
 }
 
-.card-vinyl p, .card-album-tracks p, .card-trivia, .card-six-degrees p {
+.card-vinyl p, .card-album-tracks p, .card-trivia, .card-six-degrees p, {
   font-size: 1.2rem;
   font-weight: bold;
   opacity: .7;
@@ -81,6 +81,11 @@
 .card-six-info{
   background: #EDF0F0;
   margin-bottom: 40px;
+}
+
+.card-six-info p {
+  font-size: 1.2rem;
+  // font-weight: bold;
 }
 
 .home-card h2, .card-six-info h2{
