@@ -2,7 +2,7 @@ class Album < ApplicationRecord
   belongs_to :artist
   belongs_to :seller
   has_one :associated_act
-  has_many :favourites
+  has_many :favourites, dependent: :destroy
 
 
 
