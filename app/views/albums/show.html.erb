@@ -1,5 +1,5 @@
 
-<div class="container" style="width: 200rem;">
+<div class="container" style="width: 200rem; margin-top: 75px;">
   <div class='ripple-background'>
     <div class='circle xxlarge shade1'></div>
     <div class='circle xlarge shade2'></div>
@@ -25,45 +25,39 @@
     </div>
 
 
-  <!--     <div class="flex-item row col-12 justify-content-center">
-        <div class="card-vinyl" style="width: 15rem; margin-top: 2rem;">
-          <img src= <%= @album.artwork_url %> />
-          <div class="card-vinyl-infos">
-            <ul style="list-style: none; margin: 0; padding: 0;">
-              <li><h2><%= @album.album_name %></h2></li>
-              <li><p><%= @album.artist.artist_name %></p></li>
-              <li><p><%= @album.year %></p></li>
-              <% @album.genre.each do |genre| %>
-                <li><p><%= genre %></p></li>
-              <% end %>
-            </ul>
-            <h2 style="text-align: right; margin: 4px 12px;"><i class="fab fa-gratipay" id="heart"></i></h2>
-          </div> -->
+      <div class="d-flex show-card row justify-content-between align-items-center m-3 pl-4 pr-4">
 
-
-      <div class="d-flex show-card row col-6 justify-content-center align-items-center m-3">
             <!-- Featured album card -->
-        <div class="justify-content-center m-2">
-          <div class="card-vinyl" style="width: 15rem; margin-top: 1rem;">
+
+        <!-- <div class="justify-content-center m-2"> -->
+          <div class="card-vinyl m-4">
             <img src= <%= @album.artwork_url %> />
-            <div class="card-vinyl-infos">
-            <ul style="list-style: none; margin: 0; padding: 0;">
-              <li><h2><%= @album.album_name %></h2></li>
-              <li><p><%= @album.artist.artist_name %></p></li>
-              <li><p><%= @album.year %></p></li>
-              <% @album.genre.each do |genre| %>
-                <li><p><%= genre %></p></li>
-              <% end %>
-            </ul>
-            <h2 style="text-align: right; margin: 4px 12px;"><i class="fab fa-gratipay" id="heart"></i></h2>
+            <div class="card-vinyl-infos d-flex flex-column justify-content-center" style="height: 43%;">
+              <ul style="list-style: none; margin: 0; padding: 0;">
+                <li><h2><%= @album.album_name %></h2></li>
+                <li><p><%= @album.artist.artist_name %></p></li>
+                <li><p><%= @album.year %></p></li>
+                <% @album.genre.each do |genre| %>
+                  <li><p><%= genre %></p></li>
+                <% end %>
+              </ul>
+
+                <% if @favourite == [] %>
+                  <%= link_to album_favourites_path(@album.id), method: :post do  %>
+                    <i class="fab fa-gratipay" id="favourite"></i>
+                    <% end %>
+                <% else  %>
+                    <i class='fab fa-gratipay' id='favourite-red'></i>
+                <% end %>
+
             </div>
           </div>
-        </div>
+        <!-- </div> -->
 
               <!-- Album tracks card -->
 
         <div class="justify-content-center">
-          <div class="mb-4 card-album-tracks">
+          <div class="m-4 card-album-tracks">
             <h2 class="text-underline mb-1">Track listings</h2>
             <ol>
               <% @album.tracks.each_with_index do | track | %>
@@ -90,20 +84,22 @@
 
             <!-- Associated album cards -->
 
-      <div class="row col-12 justify-content-center flag hidden">
+      <div class="row justify-content-center flag hidden">
         <div class="d-flex mb-4 card-six-degrees_container">
           <!-- <h2 class="text-underline mb-1 ">Linked Artists</h2> -->
           <% @associated_albums.each do | album | %>
             <div class="card-six-degrees">
               <img src= <%= album.artwork_url%> />
-              <div class="card-vinyl-infos">
-                <h2><%= link_to "#{album.album_name}", album_path(album) %></h2>
-                <h3><%= album.artist.artist_name + " " +  album.year %></h3>
-                <div class="mt-3">
-                  <h4>Why <%= album.artist.artist_name %>?</h4>
-                  <p><%= album.associated_act ? album.associated_act.connection_description : nil %></p>
+              <!-- <div class="h-100"> -->
+                <div class="card-vinyl-infos h-100">
+                  <h2 class="pt-2"><%= link_to "#{album.album_name}", album_path(album) %></h2>
+                  <h3><%= album.artist.artist_name + " " +  album.year %></h3>
+                  <div class="pt-4">
+                    <h4>Why <%= album.artist.artist_name %>?</h4>
+                    <p><%= album.associated_act ? album.associated_act.connection_description : nil %></p>
+                  </div>
                 </div>
-              </div>
+              <!-- </div> -->
             </div>
           <% end %>
 
@@ -113,9 +109,9 @@
   <div class="card-six-info six-text col-10" style="margin:0 auto 50px auto;">
   <h2 style="color:#AC7FDD; padding:8px">What is Six Degrees of Separation?</h2>
         <p>Musicians like to mingle. They collaborate, change bands, cover each others songs and share producers.
-        Six degrees of seperation explores these links by suggesting six albums all linked to each other by real world events. Starting from your chosen album,
-        the next suggested album could be linked by a guitarist that played in both bands or a producer that worked on both albums or an act that performed with another onstage. The list is endless.
-        This provides a rich variety of suggested material that could span different artists, genres or points in time but are linked by real world events that actually happened.
+        Six degrees of separation explores these links, by suggesting six albums all linked to each other by real world events. Starting from your chosen album,
+        the next suggestion could be linked by a guitarist that played in both bands, a producer that worked on both albums, or acts that performed together onstage. The possibilities are endless.
+        Opening a panorama of potential links; spanning different artists, genres or points in time; our six degrees are all routed in this exciting world of interlinking unities.
         </p>
   </div>
 
