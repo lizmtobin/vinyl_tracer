@@ -6,7 +6,7 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.0",
-    "bootstrap": "4.6",
+    "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
     "musicbrainz-api": "^0.6.0",
     "popper.js": "^1.16.1",
@@ -16,6 +16,6 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^4.1.1"
   }
 }
