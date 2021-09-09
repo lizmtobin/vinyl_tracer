@@ -25,12 +25,12 @@
     </div>
 
 
-      <div class="d-flex show-card row justify-content-between align-items-center m-3 pl-4 pr-4">
+      <div class="d-flex show-card row justify-content-between align-items-center m-3 pr-4">
 
             <!-- Featured album card -->
 
         <!-- <div class="justify-content-center m-2"> -->
-          <div class="card-vinyl m-4">
+          <div class="card-vinyl m-3">
             <img src= <%= @album.artwork_url %> />
             <div class="card-vinyl-infos d-flex flex-column justify-content-center" style="height: 43%;">
               <ul style="list-style: none; margin: 0; padding: 0;">
@@ -58,7 +58,7 @@
 
         <div class="justify-content-center">
           <div class="m-4 card-album-tracks">
-            <h2 class="text-underline mb-1">Track listings</h2>
+            <h2 class="text-underline mb-4">Track listings</h2>
             <ol>
               <% @album.tracks.each_with_index do | track | %>
                 <li><p><%= track %></p></li>
