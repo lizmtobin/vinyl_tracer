@@ -675,13 +675,13 @@ tags_data[:records].each do |record|
   # create a new tag using the tag name attribute from the Airtable response data for tags
   #define artist_a and artist_b
   @artist = Artist.where("artist_name ILIKE ?", "%#{record[:fields][:artist_a_name]}%").first
-   p @artist
+   # p @artist
   @artist_b = Artist.where("artist_name ILIKE ?", "%#{record[:fields][:artist_b_name]}%").first
-   p @artist_b
+   # p @artist_b
   @album = Album.where("album_name ILIKE ?", "%#{record[:fields][:album].delete("/\"")}%").first
-   p @album
+   # p @album
   connection = record[:fields][:connection_description].delete("/\"")
-    p connection
+    # p connection
   AssociatedAct.create!(:artist_id => @artist.id, :album => @album,
     :artist_b_id => @artist_b.id, :connection_description => connection)
 end
