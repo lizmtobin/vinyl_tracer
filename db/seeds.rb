@@ -616,8 +616,6 @@ Album.create!(
   )
 
 
-
-
 # url = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Sheet%201?api_key=key4EHjHf99psrakN"
 
 #   i = 0
@@ -679,7 +677,7 @@ tags_data[:records].each do |record|
   @album = Album.where("album_name ILIKE ?", "%#{record[:fields][:album].delete("/\"")}%").first
    # p @album
   connection = record[:fields][:connection_description].delete("/\"")
-    p connection
+    # p connection
   AssociatedAct.create!(:artist_id => @artist.id, :album => @album,
     :artist_b_id => @artist_b.id, :connection_description => connection)
 end
