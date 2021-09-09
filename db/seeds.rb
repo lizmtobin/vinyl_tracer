@@ -557,7 +557,7 @@ AssociatedAct.create!(
 
 Artist.create!(
   artist_name: 'Queen',
-  band_members: ["David Bowie"]
+  band_members: ["Freddie Mercury", "Brian May", "John Deacon", "Roger Taylor"]
   )
 
 Album.create!(
@@ -580,6 +580,41 @@ AssociatedAct.create!(
   )
 puts "Albums created"
 puts "done"
+
+Artist.create!(
+  artist_name: 'Various',
+  band_members: ["Various"]
+  )
+
+Album.create!(
+  album_name: "Trainspotting",
+  year: '1996',
+  artwork_url: 'https://en.wikipedia.org/wiki/Trainspotting_(soundtrack)#/media/File:Trainspottingsoundtrack.jpg',
+  producers: ["Various"],
+  record_label: 'Various',
+  seller_id: Seller.all.sample.id,
+  genre: [ 'Various'],
+  artist_id: Artist.last.id,
+  tracks: [ "'Lust for Life' (Iggy Pop), 'Deep Blue Day' (Brian Eno),
+'Trainspotting' (Primal Scream), 'Atomic' (Sleeper), 'Temptation' (New Order), 'Nightclubbing' (Iggy Pop),
+'Sing' (Blur), 'Perfect Day' (Lou Reed), 'Mile End' (Pulp), 'For What You Dream Of' (Bedrock featuring KYO),
+'2:1' (Elastica), 'A Final Hit' (Leftfield), 'Born Slippy' (Underworld), 'Closet Romantic' (Damon Albarn)"]
+  )
+
+Album.create!(
+  album_name: "Earthling",
+  year: '1997',
+  artwork_url: 'https://en.wikipedia.org/wiki/Earthling_(album)#/media/File:Earthling_(album).jpg',
+  producers: ["David Bowie", "Reeves Gabrels","Mark Plati"],
+  record_label: 'Arista',
+  seller_id: Seller.all.sample.id,
+  genre: [ 'Industrial', 'rock', 'electronica', 'drum and bass', 'jungle'],
+  artist_id: Artist.last.id,
+  tracks: [ "'Little Wonder','Looking for Satellites','Battle for Britain (The Letter)',
+'Seven Years in Tibet, 'Dead Man Walking', 'Telling Lies', 'The Last Thing You Should Do',
+'I'm Afraid of Americans', 'Law (Earthlings on Fire)'"]
+  )
+
 
 
 
@@ -625,28 +660,31 @@ def get_airtable_data(url)
   JSON.parse(response.body, symbolize_names: true)
 end
 
-# associated_acts = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Associated_acts"
-# data = get_airtable_data(associated_acts)
+associated_acts = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Associated_acts"
+data = get_airtable_data(associated_acts)
 
-# tags = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Sheet%201"
+tags = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Sheet%201"
 
-# tags_data = get_airtable_data(tags)
+tags_data = get_airtable_data(tags)
 
-# puts "Creating Tags!"
+puts "Creating Tags!"
 # p tags_data
-# tags_data[:records].each do |record|
-#   # create a new tag using the tag name attribute from the Airtable response data for tags
-#   #define artist_a and artist_b
-#   @artist = Artist.where("artist_name ILIKE ?", "%#{record[:fields]
-#     [:artist_a_name]}%").first
-#   @artist_b = Artist.where("artist_name ILIKE ?", "%#{record[:fields]
-#     [:artist_b_name]}%").first
-#   @album = Album.where("album_name ILIKE ?", "%#{record[:fields]
-#     [:album_name]}%").first
-#   connection = record[:fields][:connection_description].first
-#   AssociatedAct.create!(:artist_id => @artist_a.id, :album => @artist_a.album.first.id,
-#     :artist_b_id => @artist_b.id, :connection_description => connection)
-# end
+tags_data[:records].each do |record|
+  # create a new tag using the tag name attribute from the Airtable response data for tags
+  #define artist_a and artist_b
+  @artist = Artist.where("artist_name ILIKE ?", "%#{record[:fields][:artist_a_name]}%").first
+   # p @artist
+  @artist_b = Artist.where("artist_name ILIKE ?", "%#{record[:fields][:artist_b_name]}%").first
+   # p @artist_b
+  @album = Album.where("album_name ILIKE ?", "%#{record[:fields][:album].delete("/\"")}%").first
+   # p @album
+  connection = record[:fields][:connection_description].delete("/\"")
+    p connection
+  AssociatedAct.create!(:artist_id => @artist.id, :album => @album,
+    :artist_b_id => @artist_b.id, :connection_description => connection)
+end
 
-# puts "Tags Created!"
+
+
+
 

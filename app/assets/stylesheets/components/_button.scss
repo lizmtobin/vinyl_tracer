@@ -1,9 +1,7 @@
 .btn-basic {
   color: white;
   padding: 10px 20px;
-  font-size: 20px;
   padding: 8px 24px;
-  border-radius: 4px;
   background: #644A7E;
   transition: background 0.3s ease;
 }
@@ -11,6 +9,11 @@
 .btn-basic:hover {
   background: #150E56;
   color: #F4F4F4;
+}
+
+.btn-primary, .btn-info, .btn-basic  {
+  font-size: 20px;
+  border-radius: 4px;
 }
 
 #favourite {
