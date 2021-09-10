@@ -629,11 +629,6 @@ Album.create!(
   )
 
 
-Artist.create!(
-  artist_name: 'Nine Inch Nails',
-  band_members: ["Trent Reznor", "Atticus Ross"]
-  )
-
 Album.create!(
   album_name: "The Crow",
   year: '1994',
@@ -649,6 +644,11 @@ Album.create!(
 "Ghostrider (Rollins Band)", "Milktoast (Helmet)", "The Badge (Pantera)",
 "Slip Slide Melting (For Love Not Lisa)", "After the Flesh (My Life with the Thrill Kill Kult)",
 "Snakedriver (The Jesus and Mary Chain)", "Time Baby III (Medicine)", "It Can't Rain All the Time(Jane Siberry)"]
+  )
+
+Artist.create!(
+  artist_name: 'Nine Inch Nails',
+  band_members: ["Trent Reznor", "Atticus Ross"]
   )
 
 Album.create!(
