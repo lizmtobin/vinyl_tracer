@@ -1,5 +1,6 @@
 .footer {
-  background: #F4F4F4;
+
+  background: $light-gray;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,3 +29,17 @@
   opacity: 1;
 }
 
+#footer-info a {
+  margin-top: 24px;
+  color: #150E56;
+  opacity: 0.5;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0px 10px;
+}
+
+#footer-info a:hover {
+  opacity: 1;
+  text-decoration: none;
+}

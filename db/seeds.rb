@@ -610,14 +610,43 @@ Album.create!(
   seller_id: Seller.all.sample.id,
   genre: [ 'Industrial', 'rock', 'electronica', 'drum and bass', 'jungle'],
   artist_id: Artist.last.id,
-  tracks: [ "'Little Wonder','Looking for Satellites','Battle for Britain (The Letter)',
-'Seven Years in Tibet, 'Dead Man Walking', 'Telling Lies', 'The Last Thing You Should Do',
-'I'm Afraid of Americans', 'Law (Earthlings on Fire)'"]
+  tracks: [ 'Little Wonder','Looking for Satellites','Battle for Britain (The Letter)',
+'Seven Years in Tibet', 'Dead Man Walking', 'Telling Lies', 'The Last Thing You Should Do',
+"I'm Afraid of Americans", 'Law (Earthlings on Fire)']
   )
 
 Artist.create!(
   artist_name: 'Nine Inch Nails',
   band_members: ["Trent Reznor", "Atticus Ross"]
+  )
+
+Artist.create!(
+  artist_name: 'Red Hot Chilli Peppers',
+  band_members: ['Anthony Kiedis', 'Flea', 'Chad Smith', 'John Frusciante']
+  )
+
+Album.create!(
+  album_name: "Under the covers",
+  year: '1998',
+  artwork_url: 'https://en.wikipedia.org/wiki/Under_the_Covers:_Essential_Red_Hot_Chili_Peppers#/media/File:Red_Hot_Chili_Peppers-Under_the_Covers.jpg',
+  producers: [" Various"],
+  record_label: 'EMI',
+  seller_id: Seller.all.sample.id,
+  genre: [ 'Funk rock'],
+  artist_id: Artist.last.id,
+  tracks: [ "They're Red Hot (Originally by Robert Johnson)",
+"Fire (originally by The Jimi Hendrix Experience)",
+"Subterranean Homesick Blues (originally by Bob Dylan)",
+"Higher Ground (originally by Stevie Wonder)"
+"If You Want Me to Stay (originally by Sly and the Family Stone)",
+"Why Don't You Love Me (originally by Hank Williams)",
+"Tiny Dancer (Live) (originally by Elton John)",
+"Castles Made of Sand (Live) (originally by The Jimi Hendrix Experience)",
+"Dr. Funkenstein (Live) (originally by Parliament)",
+"Hollywood (Africa) (originally by The Meters)",
+"Search and Destroy (originally by Iggy Pop and The Stooges)",
+"Higher Ground (Daddy-O Mix)",
+"Hollywood (Africa) (Extended Dance Mix)"]
   )
 
 # url = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Sheet%201?api_key=key4EHjHf99psrakN"
