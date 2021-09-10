@@ -549,11 +549,25 @@ Album.create!(
   "The Prettiest Star", "Let's Spend the Night Together", "The Jean Genie", "Lady Grinning Soul"]
   )
 
-AssociatedAct.create!(
-  connection_description: "David Bowie produced Lou Reed's 1972 album Transformer.",
+Album.create!(
+  album_name: "Earthling",
+  year: '1997',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/b/bf/Earthling_%28album%29.jpg',
+  producers: ["David Bowie", "Reeves Gabrels", "Mark Plati"],
+  record_label: 'Arista',
+  seller_id: Seller.all.sample.id,
+  genre: [ 'Industrial rock', 'electronica', 'drum and bass', 'jungle', 'techno'],
   artist_id: Artist.last.id,
-  album_id: Album.last.id
+  tracks: ["Little Wonder", "Looking for Satellites", "Battle for Britain (The Letter)",
+"Seven Years in Tibet", "Dead Man Walking", "Telling Lies", "The Last Thing You Should Do",
+"I'm Afraid of Americans", "Law (Earthlings on Fire)"]
   )
+
+# AssociatedAct.create!(
+#   connection_description: "David Bowie produced Lou Reed's 1972 album Transformer.",
+#   artist_id: Artist.last.id,
+#   album_id: Album.last.id
+#   )
 
 Artist.create!(
   artist_name: 'Queen',
@@ -573,13 +587,26 @@ Album.create!(
     "Calling All Girls",  "Las Palabras de Amor (The Words of Love)", "Cool Cat",   "Under Pressure (with David Bowie)"]
   )
 
-AssociatedAct.create!(
-  connection_description: "David Bowie sang with Queen on the 1981 single 'Under Pressure'. He also co-produced their album 'Hot Space'.",
+Album.create!(
+  album_name: "A night at the opera",
+  year: '1975',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/4/4d/Queen_A_Night_At_The_Opera.png',
+  producers: ["Roy Thomas Baker", "Queen"],
+  record_label: 'EMI',
+  seller_id: Seller.all.sample.id,
+  genre: [ 'Progressive rock', 'pop', 'heavy metal', 'hard rock'],
   artist_id: Artist.last.id,
-  album_id: Album.last.id
+  tracks: ["Death on Two Legs (Dedicated to...)", "Lazing on a Sunday Afternoon",
+"I'm in Love with My Car", "You're My Best Friend", "'39", "Sweet Lady", "Seaside Rendezvous",
+"The Prophet's Song", "Love of My Life", "Good Company", "Bohemian Rhapsody", "God Save the Queen"]
   )
-puts "Albums created"
-puts "done"
+
+# AssociatedAct.create!(
+#   connection_description: "David Bowie sang with Queen on the 1981 single 'Under Pressure'. He also co-produced their album 'Hot Space'.",
+#   artist_id: Artist.last.id,
+#   album_id: Album.last.id
+#   )
+
 
 Artist.create!(
   artist_name: 'Various',
@@ -589,7 +616,7 @@ Artist.create!(
 Album.create!(
   album_name: "Trainspotting",
   year: '1996',
-  artwork_url: 'https://en.wikipedia.org/wiki/Trainspotting_(soundtrack)#/media/File:Trainspottingsoundtrack.jpg',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/7/77/Trainspottingsoundtrack.jpg',
   producers: ["Various"],
   record_label: 'Various',
   seller_id: Seller.all.sample.id,
@@ -601,24 +628,65 @@ Album.create!(
 '2:1' (Elastica), 'A Final Hit' (Leftfield), 'Born Slippy' (Underworld), 'Closet Romantic' (Damon Albarn)"]
   )
 
-Album.create!(
-  album_name: "Earthling",
-  year: '1997',
-  artwork_url: 'https://en.wikipedia.org/wiki/Earthling_(album)#/media/File:Earthling_(album).jpg',
-  producers: ["David Bowie", "Reeves Gabrels","Mark Plati"],
-  record_label: 'Arista',
-  seller_id: Seller.all.sample.id,
-  genre: [ 'Industrial', 'rock', 'electronica', 'drum and bass', 'jungle'],
-  artist_id: Artist.last.id,
-  tracks: [ 'Little Wonder','Looking for Satellites','Battle for Britain (The Letter)',
-'Seven Years in Tibet', 'Dead Man Walking', 'Telling Lies', 'The Last Thing You Should Do',
-"I'm Afraid of Americans", 'Law (Earthlings on Fire)']
-  )
 
 Artist.create!(
   artist_name: 'Nine Inch Nails',
   band_members: ["Trent Reznor", "Atticus Ross"]
   )
+
+Album.create!(
+  album_name: "The Crow",
+  year: '1994',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/7/72/The_Crow_soundtrack_album_cover.jpg',
+  producers: ["Various"],
+  record_label: 'Atlantic',
+  seller_id: Seller.all.sample.id,
+  genre: [ 'Various'],
+  artist_id: Artist.last.id,
+  tracks: ["Burn (The Cure)", "Golgotha Tenement Blues (Machines of Loving Grace)",
+"Big Empty (Stone Temple Pilots)", "Dead Souls (Nine Inch Nails)",
+"Darkness (Rage Against the Machine)", "Color Me Once (Violent Femmes)",
+"Ghostrider (Rollins Band)", "Milktoast (Helmet)", "The Badge (Pantera)",
+"Slip Slide Melting (For Love Not Lisa)", "After the Flesh (My Life with the Thrill Kill Kult)",
+"Snakedriver (The Jesus and Mary Chain)", "Time Baby III (Medicine)", "It Can't Rain All the Time(Jane Siberry)"]
+  )
+
+Album.create!(
+  album_name: "With Teeth",
+  year: '1997',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/e/e0/Nine_Inch_Nails_-_With_Teeth.png',
+  producers: ["Trent Reznor", "Alan Moulder", "Atticus Ross"],
+  record_label: 'Interscope',
+  seller_id: Seller.all.sample.id,
+  genre: [ 'Industrial rock', 'electronic rock', 'alternative rock', 'synth-pop'],
+  artist_id: Artist.last.id,
+  tracks: ["All the Love in the World", "You Know What You Are?", "The Collector",
+"The Hand That Feeds", "Love Is Not Enough", "Every Day Is Exactly the Same",
+"With Teeth", "Only", "Getting Smaller", "Sunspots", "The Line Begins to Blur",
+"Beside You in Time", "Right Where It Belongs"]
+  )
+
+
+
+Artist.create!(
+  artist_name: 'Johnny Cash',
+  band_members: ["Johnny Cash"]
+  )
+
+Album.create!(
+ album_name: "American IV: The Man Comes Around",
+ year: '2002',
+ artwork_url: 'https://upload.wikimedia.org/wikipedia/en/e/e0/AmericanIV.jpg',
+ producers: ['Rick Rubin', 'John Carter Cash'],
+ record_label: 'Universal',
+ seller_id: Seller.all.sample.id,
+ genre: ['Acoustic', 'rock', 'folk country', 'Americana'],
+ artist_id: Artist.last.id,
+ tracks: ["The Man Comes Around", "Hurt", "Give My Love to Rose", "Bridge Over Troubled Water",
+"I Hung My Head", "The First Time Ever I Saw Your Face", "Personal Jesus",
+"In My Life", "Sam Hall", "Danny Boy", "Desperado", "I'm So Lonesome I Could Cry",
+"Tear Stained Letter", "Streets of Laredo", "We'll Meet Again"]
+)
 
 Artist.create!(
   artist_name: 'Red Hot Chilli Peppers',
@@ -628,7 +696,7 @@ Artist.create!(
 Album.create!(
   album_name: "Under the covers",
   year: '1998',
-  artwork_url: 'https://en.wikipedia.org/wiki/Under_the_Covers:_Essential_Red_Hot_Chili_Peppers#/media/File:Red_Hot_Chili_Peppers-Under_the_Covers.jpg',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/4/4f/Red_Hot_Chili_Peppers-Under_the_Covers.jpg',
   producers: [" Various"],
   record_label: 'EMI',
   seller_id: Seller.all.sample.id,
@@ -637,7 +705,7 @@ Album.create!(
   tracks: [ "They're Red Hot (Originally by Robert Johnson)",
 "Fire (originally by The Jimi Hendrix Experience)",
 "Subterranean Homesick Blues (originally by Bob Dylan)",
-"Higher Ground (originally by Stevie Wonder)"
+"Higher Ground (originally by Stevie Wonder)",
 "If You Want Me to Stay (originally by Sly and the Family Stone)",
 "Why Don't You Love Me (originally by Hank Williams)",
 "Tiny Dancer (Live) (originally by Elton John)",
@@ -648,6 +716,173 @@ Album.create!(
 "Higher Ground (Daddy-O Mix)",
 "Hollywood (Africa) (Extended Dance Mix)"]
   )
+
+Album.create!(
+  album_name: "Blood Sugar Sex Magik",
+  year: '1991',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/5/5e/RHCP-BSSM.jpg',
+  producers: ["Rick Rubin"],
+  record_label: ' Warner Bros.',
+  seller_id: Seller.all.sample.id,
+  genre: [ 'Funk rock', 'alternative rock', 'funk metal', 'rap rock'],
+  artist_id: Artist.last.id,
+  tracks: [ "The Power of Equality", "If You Have to Ask", "Breaking the Girl",
+"Funky Monks", "Suck My Kiss", "I Could Have Lied", "Mellowship Slinky in B Major",
+"The Righteous & the Wicked", "Give It Away", "Blood Sugar Sex Magik", "Under the Bridge",
+"Naked in the Rain", "Apache Rose Peacock", "The Greeting Song", "My Lovely Man",
+"Sir Psycho Sexy", "They're Red Hot"]
+  )
+
+Artist.create!(
+  artist_name: 'Joy Division',
+  band_members: ['Ian Curtis', 'Bernard Sumner', 'Peter Hook', 'Stephen Morris']
+  )
+
+Album.create!(
+  album_name: "Unknown Pleasures",
+  year: '1979',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/7/70/Unknown_Pleasures_Joy_Division_LP_sleeve.jpg',
+  producers: ["Martin Hannett"],
+  record_label: 'Factory',
+  seller_id: Seller.all.sample.id,
+  genre: ['Post-punk'],
+  artist_id: Artist.last.id,
+  tracks: ["Disorder", "Day of the Lords", "Candidate", "Insight", "New Dawn Fades",
+  "She's Lost Control", "Shadowplay", "Wilderness", "Interzone", "I Remember Nothing"]
+  )
+
+Artist.create!(
+  artist_name: 'New Order',
+  band_members: ['Bernard Sumner', 'Peter Hook', 'Stephen Morris', 'Gillian Gilbert']
+  )
+
+Album.create!(
+  album_name: "Power, Corruption and Lies",
+  year: '1983',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/4/4f/New_Order_-_Power%2C_Corruption_%26_Lies.png',
+  producers: ["New Order"],
+  record_label: 'Factory',
+  seller_id: Seller.all.sample.id,
+  genre: ['Synth-pop', 'new wave', 'post-punk', 'synth-rock'],
+  artist_id: Artist.last.id,
+  tracks: ["Age of Consent", "We All Stand", "The Village", "5 8 6", "Your Silent Face",
+"Ultraviolence", "Ecstasy", "Leave Me Alone"]
+  )
+
+Album.create!(
+  album_name: "Technique",
+  year: '1988',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/8/8a/New_Order_-_Technique.png',
+  producers: ["New Order"],
+  record_label: 'Factory',
+  seller_id: Seller.all.sample.id,
+  genre: ['Alternative dance', 'acid house', 'dance-rock'],
+  artist_id: Artist.last.id,
+  tracks: ["Fine Time", "All the Way", "Love Less", "Round & Round", "Guilty Partner",
+"Run", "Mr. Disco", "Vanishing Point", "Dream Attack"]
+  )
+
+Artist.create!(
+  artist_name: 'Pet Shop Boys',
+  band_members: ['Neil Tennant', 'Chris Lowe']
+  )
+
+Album.create!(
+  album_name: "Actually",
+  year: '1987',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/f/fc/PetShopBoysActually.jpg',
+  producers: ["Stephen Hague", "David Jacob", "Julian Mendelsohn", "Pet Shop Boys", "Shep Pettibone", "Andy Richards"],
+  record_label: 'Parlophone',
+  seller_id: Seller.all.sample.id,
+  genre: ['Synth-pop', 'dance', 'pop', 'disco'],
+  artist_id: Artist.last.id,
+  tracks: ["One More Chance", "What Have I Done to Deserve This? (with Dusty Springfield)", "Shopping",
+"Rent", "Hit Music", "It Couldn't Happen Here", "It's a Sin", "I Want to Wake Up", "Heart", "King's Cross"]
+  )
+
+Artist.create!(
+  artist_name: 'Dusty Springfield',
+  band_members: ['Dusty Springfield']
+  )
+
+Album.create!(
+  album_name: "A Girl Called Dusty",
+  year: '1964',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/4/4e/A_Girl_Called_Dusty_%28Dusty_Springfield_album_-_cover_art%29.jpg',
+  producers: ["Johnny Franz"],
+  record_label: 'Phillips',
+  seller_id: Seller.all.sample.id,
+  genre: ['Pop'],
+  artist_id: Artist.last.id,
+  tracks: ["Mama Said", "You Don't Own Me", "Do Re Mi (Forget About the Do and Think About Me)",
+"When the Lovelight Starts Shining Through His Eyes", "My Colouring Book", "Mockingbird",
+"Twenty Four Hours From Tulsa", "Nothing", "Anyone Who Had a Heart", "Will You Love Me Tomorrow",
+"Wishin' and Hopin'"]
+  )
+
+Artist.create!(
+  artist_name: 'White Stripes',
+  band_members: ['Jack White','Meg White']
+  )
+
+Album.create!(
+  album_name: "Elephant",
+  year: '2003',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/1/11/Elephant%2C_The_White_Stripes.png',
+  producers: ["Jack White"],
+  record_label: 'V2',
+  seller_id: Seller.all.sample.id,
+  genre: ['Garage rock revival', 'blues rock', 'punk blues'],
+  artist_id: Artist.last.id,
+  tracks: ["Seven Nation Army", "Black Math", "There's No Home for You Here",
+"I Just Don't Know What to Do with Myself", "In the Cold, Cold Night",
+"I Want to Be the Boy to Warm Your Mother's Heart", "You've Got Her in Your Pocket",
+"Ball and Biscuit", "The Hardest Button to Button", "Little Acorns", "Hypnotize",
+"The Air Near My Fingers", "Girl, You Have No Faith in Medicine",
+"Well It's True That We Love One Another"]
+  )
+
+Artist.create!(
+  artist_name: 'George Michael',
+  band_members: ["George Michael"]
+  )
+
+Album.create!(
+  album_name: "Faith",
+  year: '1987',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/9/9a/George_Michael_-_Faith.png',
+  producers: ["George Michael"],
+  record_label: 'V2',
+  seller_id: Seller.all.sample.id,
+  genre: ['Pop', 'R&B', 'synthpop', 'soul', 'rock'],
+  artist_id: Artist.last.id,
+  tracks: ["Faith", "Father Figure", "I Want Your Sex", "One More Try", "Hard Day",
+"Hand to Mouth", "Look at Your Hands", "Monkey", "Kissing a Fool"]
+  )
+
+Artist.create!(
+  artist_name: 'Aretha Franklin',
+  band_members: ["Aretha Franklin"]
+  )
+
+Album.create!(
+  album_name: "Yeah!!!",
+  year: '1987',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/6/68/Yeah%21%21%21_album.jpg',
+  producers: [" Clyde Otis"],
+  record_label: ' Columbia',
+  seller_id: Seller.all.sample.id,
+  genre: ['R&B', 'soul'],
+  artist_id: Artist.last.id,
+  tracks: ["This Could Be the Start of Something", "Once In a Lifetime",
+"Misty", "More" , "There Is No Greater Love", "Muddy Water", "If I Had a Hammer",
+"Impossible", "Today I Love Ev'rybody", "Without The One You Love", "Trouble in Mind",
+"Love for Sale"]
+  )
+
+
+puts "Albums created"
+puts "done"
 
 # url = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Sheet%201?api_key=key4EHjHf99psrakN"
 
@@ -704,12 +939,16 @@ tags_data[:records].each do |record|
   # create a new tag using the tag name attribute from the Airtable response data for tags
   #define artist_a and artist_b
   @artist = Artist.where("artist_name ILIKE ?", "%#{record[:fields][:artist_a_name]}%").first
-   # p @artist
+
   @artist_b = Artist.where("artist_name ILIKE ?", "%#{record[:fields][:artist_b_name]}%").first
-   # p @artist_b
+
   @album = Album.where("album_name ILIKE ?", "%#{record[:fields][:album].delete("/\"")}%").first
-   # p @album
+
   connection = record[:fields][:connection_description].delete("/\"")
+    p record[:fields][:album]
+    # p @artist
+    # p @artist_b
+    # p @album
     # p connection
   AssociatedAct.create!(:artist_id => @artist.id, :album => @album,
     :artist_b_id => @artist_b.id, :connection_description => connection)
