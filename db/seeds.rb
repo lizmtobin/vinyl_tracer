@@ -622,10 +622,10 @@ Album.create!(
   seller_id: Seller.all.sample.id,
   genre: [ 'Various'],
   artist_id: Artist.last.id,
-  tracks: [ "'Lust for Life' (Iggy Pop), 'Deep Blue Day' (Brian Eno),
-'Trainspotting' (Primal Scream), 'Atomic' (Sleeper), 'Temptation' (New Order), 'Nightclubbing' (Iggy Pop),
-'Sing' (Blur), 'Perfect Day' (Lou Reed), 'Mile End' (Pulp), 'For What You Dream Of' (Bedrock featuring KYO),
-'2:1' (Elastica), 'A Final Hit' (Leftfield), 'Born Slippy' (Underworld), 'Closet Romantic' (Damon Albarn)"]
+  tracks: [ 'Lust for Life (Iggy Pop)', 'Deep Blue Day (Brian Eno)',
+'Trainspotting (Primal Scream)', 'Atomic (Sleeper)', 'Temptation (New Order)', 'Nightclubbing (Iggy Pop)',
+'Sing (Blur)', 'Perfect Day (Lou Reed)', 'Mile End (Pulp)', 'For What You Dream Of (Bedrock featuring KYO)',
+'2:1 (Elastica)', 'A Final Hit (Leftfield)', 'Born Slippy (Underworld)', 'Closet Romantic (Damon Albarn)']
   )
 
 
