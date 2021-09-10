@@ -702,17 +702,17 @@ Album.create!(
   seller_id: Seller.all.sample.id,
   genre: [ 'Funk rock'],
   artist_id: Artist.last.id,
-  tracks: [ "They're Red Hot (Originally by Robert Johnson)",
-"Fire (originally by The Jimi Hendrix Experience)",
-"Subterranean Homesick Blues (originally by Bob Dylan)",
-"Higher Ground (originally by Stevie Wonder)",
-"If You Want Me to Stay (originally by Sly and the Family Stone)",
-"Why Don't You Love Me (originally by Hank Williams)",
-"Tiny Dancer (Live) (originally by Elton John)",
-"Castles Made of Sand (Live) (originally by The Jimi Hendrix Experience)",
-"Dr. Funkenstein (Live) (originally by Parliament)",
-"Hollywood (Africa) (originally by The Meters)",
-"Search and Destroy (originally by Iggy Pop and The Stooges)",
+  tracks: [ "They're Red Hot (Robert Johnson)",
+"Fire (Jimi Hendrix Experience)",
+"Subterranean Homesick Blues (Bob Dylan)",
+"Higher Ground (Stevie Wonder)",
+"If You Want Me to Stay (Sly and the Family Stone)",
+"Why Don't You Love Me (Hank Williams)",
+"Tiny Dancer (Live) (Elton John)",
+"Castles Made of Sand (Live) (Jimi Hendrix Experience)",
+"Dr. Funkenstein (Live) (Parliament)",
+"Hollywood (Africa) (The Meters)",
+"Search and Destroy (Iggy Pop and The Stooges)",
 "Higher Ground (Daddy-O Mix)",
 "Hollywood (Africa) (Extended Dance Mix)"]
   )
@@ -796,7 +796,7 @@ Album.create!(
   seller_id: Seller.all.sample.id,
   genre: ['Synth-pop', 'dance', 'pop', 'disco'],
   artist_id: Artist.last.id,
-  tracks: ["One More Chance", "What Have I Done to Deserve This? (with Dusty Springfield)", "Shopping",
+  tracks: ["One More Chance", "What Have I Done to Deserve This? \n(with Dusty Springfield)", "Shopping",
 "Rent", "Hit Music", "It Couldn't Happen Here", "It's a Sin", "I Want to Wake Up", "Heart", "King's Cross"]
   )
 
