@@ -17,10 +17,13 @@
 }
 
 #favourite {
-  color: black;
+  color: #3C415C;
   position: absolute;
+  // right: 36px;
+  // bottom: -12px;
   right: 24px;
   bottom: 16px;
+  font-size: 1.5rem;
 }
 
 #favourite:hover {
@@ -32,4 +35,5 @@
   position: absolute;
   right: 24px;
   bottom: 16px;
+  font-size: 1.5rem;
 }
