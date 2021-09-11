@@ -37,7 +37,7 @@
             <div class="card-vinyl-infos d-flex flex-column justify-content-center" style="height: 43%;">
               <ul style="list-style: none; margin: 0; padding: 0;">
                 <li><h2><%= @album.album_name %></h2></li>
-                <li><p><%= @album.artist.artist_name %></p></li>
+                <li><p><%= @album.record_label %></p></li>
                 <li><p><%= @album.year %></p></li>
                 <% @album.genre.each do |genre| %>
                   <li><p><%= genre %></p></li>
