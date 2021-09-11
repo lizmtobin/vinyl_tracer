@@ -105,6 +105,11 @@
       </div>
       <% end %>
     </div>
+
+    <div id="album_trivia" class="card-trivia" align-items-center>
+     <p id="album_name" class="hidden"> <%= @album.album_name%> <span style="display: hidden"><%= @album.artist.artist_name %></span></p>
+    </div>
+
   <div class="card-six-info six-text col-10" style="margin:0 auto 50px auto;">
   <h2 style="color:#AC7FDD; padding:8px">What is Six Degrees of Separation?</h2>
         <p>Musicians like to mingle. They collaborate, change bands, cover each others songs and share producers.
@@ -123,4 +128,3 @@
    <!-- https://www.discogs.com/search/?type=all&title=#{@search_title}&artist=#{@search_artist}&format=vinyl -->
 
         <!-- https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=#{@album.album_name} -->
-
