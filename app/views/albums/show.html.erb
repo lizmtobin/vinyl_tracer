@@ -27,7 +27,7 @@
     </div>
 
 
-      <div class="d-flex show-card row justify-content-between align-items-center m-3 pr-4">
+      <div class="d-flex show-card row justify-content-center align-items-center m-3 pr-4">
 
             <!-- Featured album card -->
 
@@ -59,7 +59,7 @@
               <!-- Album tracks card -->
 
         <div class="justify-content-center">
-          <div class="m-4 card-album-tracks">
+          <div class="card-album-tracks">
             <h2 class="text-underline mb-4">Track listings</h2>
             <ol>
               <% @album.tracks.each_with_index do | track | %>
@@ -97,7 +97,12 @@
                   <h2 class="pt-2"><%= link_to "#{album.album_name}", album_path(album) %></h2>
                   <h3><%= album.artist.artist_name + " " +  album.year %></h3>
                   <div class="pt-4">
-                    <h4>Why <%= album.artist.artist_name %>?</h4>
+                    <h4>Why
+                      <% if album.artist.artist_name == "Various"%>
+                      <%= album.album_name %>
+                      <% else %>
+                      <%= album.artist.artist_name %>
+                      <% end %>?</h4>
                     <p><%= album.associated_act ? album.associated_act.connection_description : nil %></p>
                   </div>
                 </div>
