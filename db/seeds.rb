@@ -399,11 +399,7 @@ Album.create!(
     "Bell Boy" ,  "Doctor Jimmy", "The Rock", "Love, Reign o'er Me"]
   )
 
-# AssociatedAct.create!(
-#   connection_description: "Elton John performed 'Pinball Wizard' in the 1975 film adaption of The Who's concept album 'Tommy'",
-#   artist_id: Artist.last.id,
-#   album_id: Album.last.id
-#   )
+
 
 Artist.create!(
   artist_name: 'Blur',
@@ -425,11 +421,8 @@ Album.create!(
     "Magic America",  "Jubilee", "This Is a Low", "Lot 105"]
   )
 
-# AssociatedAct.create!(
-#   connection_description: "Phil Daniels who performed the lead role in the film adaption of The Who's album 'Quadrophenia' also performs the lead vocals on the 1994 Blur hit 'Parklife'",
-#   artist_id: Artist.last.id,
-#   album_id: Album.last.id
-#   )
+
+
 
 Artist.create!(
   artist_name: 'Gorrilaz',
@@ -601,10 +594,11 @@ Album.create!(
 "The Prophet's Song", "Love of My Life", "Good Company", "Bohemian Rhapsody", "God Save the Queen"]
   )
 
-# AssociatedAct.create!(
-#   connection_description: "David Bowie sang with Queen on the 1981 single 'Under Pressure'. He also co-produced their album 'Hot Space'.",
-#   artist_id: Artist.last.id,
-#   album_id: Album.last.id
+
+
+# Artist.create!(
+#   artist_name: 'Various',
+#   band_members: ["Various"]
 #   )
 
 
@@ -612,6 +606,7 @@ Artist.create!(
   artist_name: 'Various',
   band_members: ["Various"]
   )
+
 
 Album.create!(
   album_name: "Trainspotting",
@@ -627,7 +622,6 @@ Album.create!(
 'Sing (Blur)', 'Perfect Day (Lou Reed)', 'Mile End (Pulp)', 'For What You Dream Of (Bedrock featuring KYO)',
 '2:1 (Elastica)', 'A Final Hit (Leftfield)', 'Born Slippy (Underworld)', 'Closet Romantic (Damon Albarn)']
   )
-
 
 Album.create!(
   album_name: "The Crow",
@@ -645,6 +639,7 @@ Album.create!(
 "Slip Slide Melting (For Love Not Lisa)", "After the Flesh (My Life with the Thrill Kill Kult)",
 "Snakedriver (The Jesus and Mary Chain)", "Time Baby III (Medicine)", "It Can't Rain All the Time(Jane Siberry)"]
   )
+
 
 Artist.create!(
   artist_name: 'Nine Inch Nails',
@@ -770,16 +765,17 @@ Album.create!(
   )
 
 Album.create!(
-  album_name: "Technique",
-  year: '1988',
-  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/8/8a/New_Order_-_Technique.png',
-  producers: ["New Order"],
+  album_name: "Electronic",
+  year: '1991',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/e/ef/Fact290.jpg',
+  producers: ["Bernard Sumner", "Johnny Marr"],
   record_label: 'Factory',
   seller_id: Seller.all.sample.id,
-  genre: ['Alternative dance', 'acid house', 'dance-rock'],
+  genre: ['Alternative dance', 'synth-pop', 'alternative rock'],
   artist_id: Artist.last.id,
-  tracks: ["Fine Time", "All the Way", "Love Less", "Round & Round", "Guilty Partner",
-"Run", "Mr. Disco", "Vanishing Point", "Dream Attack"]
+  tracks: ["Idiot Country", "Reality", "Tighten Up", "The Patience of a Saint",
+"Getting Away with It", "Gangster", "Soviet", "Get the Message", "Try All You Want",
+"Some Distant Memory", "Feel Every Beat"]
   )
 
 Artist.create!(
