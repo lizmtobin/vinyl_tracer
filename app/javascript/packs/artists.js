@@ -2,7 +2,7 @@
           const artist_name = document.getElementById("artist_name");
                     if(artist_name){
                       $.ajax({
-                        url: 'http://en.wikipedia.org/w/api.php',
+                        url: 'https://en.wikipedia.org/w/api.php',
                         data: { action: 'query', prop: 'extracts', redirects: 1, exsentences: 6, exintro: true, explaintext: true, titles: artist_name.innerText, format: 'json' },
                         dataType: 'jsonp',
                         success: processResult
