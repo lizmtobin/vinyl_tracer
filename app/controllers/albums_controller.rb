@@ -20,8 +20,8 @@ class AlbumsController < ApplicationController
 
     # raise
     # @next_album = Album.find(params[:id].to_i + 1)
-    @associated_albums = Album.where(id: params[:id].to_i + 1..params[:id].to_i + 6)
-
+    # @associated_albums = Album.where(id: params[:id].to_i + 1..params[:id].to_i + 6)
+    @associated_acts = @album.get_associated
   end
 end
 
