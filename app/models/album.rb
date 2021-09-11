@@ -11,13 +11,12 @@ class Album < ApplicationRecord
     @acts << AssociatedAct.find_by(artist: self.artist)
     # get the next associated act where artist_a is the artist_b from the previous associated act
     5.times do
-      @acts << get_act(@acts)
+      act = get_act(@acts)
+      @acts << act if act
     end
     # repeat until we have 6 associated acts
     @acts
   end
-
-
 
   def get_act(acts)
     act = AssociatedAct.where(artist: acts.last.linked_artist).sample if acts.last && acts.include?(act)
