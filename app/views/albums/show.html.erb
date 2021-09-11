@@ -1,5 +1,5 @@
 
-<div class="container-fluid" style="width: 200rem; margin-top: 75px;">
+<div class="container" style="width: 200rem; margin-top: 75px;">
 
     <!-- Background ripple animation -->
 
@@ -109,6 +109,10 @@
 
         </div>
       </div>
+    </div>
+
+    <div id="album_trivia" class="card-trivia" align-items-center>
+     <p id="album_name" class="hidden"> <%= @album.album_name%> <span style="display:hidden"><%= @album.artist.artist_name %></span></p>
     </div>
 
                 <!-- Six Degrees blurb card -->
