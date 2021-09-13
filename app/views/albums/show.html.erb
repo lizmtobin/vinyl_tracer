@@ -8,9 +8,11 @@
     <div class='circle small shade5'></div>
   </div>
   <div>
-    <div class="d-flex justify-content-center">
-      <h1 id="vinyl-header" class="text-underline"><%= @album.album_name + " - " + @album.artist.artist_name %></h1>
-    </div>
+
+
+  <div class="d-flex justify-content-center">
+    <h1 id="vinyl-header" class="text-underline"><%= @album.album_name + " - " + @album.artist.artist_name %></h1>
+  </div>
 
 
   <!-- main container -->
@@ -22,7 +24,6 @@
     <div id="album_trivia" class="card-trivia col-8" align-items-center>
      <p id="album_name" class="hidden"> <%= @album.album_name%> <span style="display: hidden"><%= @album.artist.artist_name %></span></p>
     </div>
-
 
 
 
@@ -82,6 +83,8 @@
       <div class="col-12 d-flex justify-content-center">
         <div class="six-degrees btn btn-basic mb-4 w-50" style="text-align: center;">Six Degrees Of Separation</div>
       </div>
+
+
 
 
     <!-- Associated album cards -->
