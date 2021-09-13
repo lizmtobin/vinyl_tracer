@@ -1,10 +1,10 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%=image_path('home-banner.jpg')%>');">
   <!-- <div class="container d-flex justify-content-between align-items-center h-100"> -->
-    <div class="container">
+  <div class="container">
     <div class="row d-flex justify-content-between align-items-center">
-      <div class="col-7" style="margin-right:5%";>
+      <div class="col-7 home-text" style="margin-right:5%";>
         <h1>Vinyl Tracer</h1>
-        <p style="margin-bottom: 15px;">Follow us down the wormhole of album connections</p>
+        <p  style="margin-bottom: 15px;">Follow us down the wormhole of album connections</p>
 
          <%= form_tag artists_path, method: :get do %>
           <%= text_field_tag :query,
@@ -19,16 +19,41 @@
 
         <!-- info card -->
 
-      <div class="col-4 home-card">
+      <div class="col-4 home-card home-text">
         <h2 style="text-align: center;"> What We're About</h2>
-        <p>Search for Albums</p>
-        <p>Discover new music using our unique<br>
+        <p >Search for Albums</p>
+        <p >Discover new music using our unique<br>
           <strong style="color:#AC7FDD;">Six degrees of separation</strong> system</p>
         <p>Find online or with local vinyl sellers</p>
       </div>
+
+
+        <!-- six degrees info -->
+      <div class="col-7">
+        <div class="card-six-info six-text" style="margin: 1rem 0;">
+          <p>
+            <h2 style="color:#AC7FDD; padding:8px" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              What is Six Degrees of Separation?
+            </h2>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <p>
+            Musicians like to mingle. They collaborate, change bands, cover each others songs and share producers.
+              Six degrees of separation explores these links, by suggesting six albums all linked to each other by real world events. Starting from your chosen album,
+              the next suggestion could be linked by a guitarist that played in both bands, a producer that worked on both albums, or acts that performed together onstage. The possibilities are endless.
+              Opening a panorama of potential links; spanning different artists, genres or points in time; our six degrees are all routed in this exciting world of interlinking unities.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    <!-- end of row -->
     </div>
+
+  <!-- end of container -->
   </div>
 
 
 
+<!-- end of banner -->
 </div>
