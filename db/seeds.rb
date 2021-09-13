@@ -298,11 +298,6 @@ Album.create!(
   artist_id: Artist.last.id,
   tracks: ["Rehab", "You Know I'm No Good", "Me & Mr Jones", "Just Friends",  "Back to Black", "Love Is a Losing Game", "Tears Dry on Their Own", "Wake Up Alone",  "Some Unholy War",  "He Can Only Hold Her", "Addicted"]
   )
-# AssociatedAct.create!(
-#   connection_description: "Amy Winehouse collaborated with the Rolling Stones onstage at the Isle of Wight festival in 2007 to sing 'Ain’t Too Proud To Beg'.",
-#   artist_id: Artist.last.id,
-#   album_id: Album.last.id
-#   )
 
 Artist.create!(
   artist_name: 'Marvin Gaye',
@@ -324,12 +319,6 @@ Album.create!(
     "There Goes My Baby"]
   )
 
-# AssociatedAct.create!(
-#   connection_description: "Amy Winehouse covered the Marvin Gaye song 'I heard it through the grapevine' with Jools Holland and Paul Weller on  Jools Holland's New Year’s Hootenanny 2006",
-#   artist_id: Artist.last.id,
-#   album_id: Album.last.id
-#   )
-
 Artist.create!(
   artist_name: 'The Beatles',
   band_members: ["John Lennon", "Paul McCartney", "Ringo Starr", "George Harrison"]
@@ -348,15 +337,37 @@ Album.create!(
     "Being for the Benefit of Mr. Kite!", "Within You Without You", "When I'm Sixty-Four", "Lovely Rita",   "Good Morning Good Morning",  "Sgt. Pepper's Lonely Hearts Club Band (Reprise)",  "A Day in the Life"]
   )
 
-# AssociatedAct.create!(
-#   connection_description: "Marvin Gaye became one of the many acts to record a version of 'Yesterday' by The Beatles in 1970.",
-#   artist_id: Artist.last.id,
-#   album_id: Album.last.id
-#   )
-
 Artist.create!(
   artist_name: 'Elton John',
   band_members: ["Elton John"]
+  )
+
+Album.create!(
+  album_name: "Reg Strikes Back",
+  year: '1988',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/e/e5/Reg_strikes_back.JPG',
+  producers: ["Gus Dudgeon"],
+  record_label: ' DJM ',
+  seller_id: Seller.all.sample.id,
+  genre: ['Rock', 'pop'],
+  artist_id: Artist.last.id,
+  tracks: ["Town of Plenty", "A Word in Spanish","Mona Lisas and Mad Hatters (Part Two)",
+"I Don't Wanna Go On with You Like That", "Japanese Hands", "Goodbye Marlon Brando",
+"The Camera Never Lies", "Heavy Traffic", "Poor Cow", "Since God Invented Girls"]
+  )
+
+Album.create!(
+  album_name: "The Captain and the Kid",
+  year: '2006',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/d/d9/Captainkid.jpg',
+  producers: [" Elton John, Matt Still"],
+  record_label: ' Interscope',
+  seller_id: Seller.all.sample.id,
+  genre: ['Rock'],
+  artist_id: Artist.last.id,
+  tracks: ["Postcards from Richard Nixon", "Just Like Noah's Ark", "Wouldn't Have You Any Other Way (NYC)",
+"Tinderbox","And the House Fell Down", "Blues Never Fade Away", "The Bridge", "I Must Have Lost It on the Wind",
+"Old '67", "The Captain and the Kid"]
   )
 
 Album.create!(
@@ -373,13 +384,6 @@ Album.create!(
     "Dirty Little Girl", "All the Girls Love Alice", "Your Sister Can't Twist (But She Can Rock 'n Roll)", "Saturday Night's Alright for Fighting",
     "Roy Rogers",   "Social Disease",   "Harmony"]
   )
-
-# AssociatedAct.create!(
-#   connection_description: "Beatles producer George Martin also produced Elton John's hit 'Candle in the wind 1997'",
-#   artist_id: Artist.last.id,
-#   album_id: Album.last.id
-#   )
-
 Artist.create!(
   artist_name: 'The Who',
   band_members: ["Roger Daltrey", "Pete Townshend", "John Entwistle", "Keith Moon", "Doug Sandom", "Kenney Jones"]
@@ -421,8 +425,19 @@ Album.create!(
     "Magic America",  "Jubilee", "This Is a Low", "Lot 105"]
   )
 
-
-
+Album.create!(
+  album_name: "Modern Life Is Rubbish",
+  year: '1993',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/1/15/Blur_-_Modern_Life_is_Rubbish.jpg',
+  producers: [  "Blur", "John Smith", "Steve Lovell", "Stephen Street"],
+  record_label: 'Food',
+  seller_id: Seller.all.sample.id,
+  genre: ['Britpop'],
+  artist_id: Artist.last.id,
+  tracks: ["For Tomorrow", "Advert", "Colin Zeal", "Pressure on Julian", "Star Shaped",
+"Blue Jeans", "Chemical World", "Sunday Sunday", "Oily Water" ,"Miss America", "Villa Rosie",
+"Coping", "Turn It Up", "Resigned"]
+  )
 
 Artist.create!(
   artist_name: 'Gorrilaz',
@@ -431,7 +446,7 @@ Artist.create!(
 
 Album.create!(
   album_name: "Demon Days",
-  year: '1994',
+  year: '2005',
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/d/df/Gorillaz_Demon_Days.PNG',
   producers: ["Gorillaz", "Danger Mouse", "Jason Cox", "James Dring"],
   record_label: 'Parlaphone',
@@ -443,11 +458,20 @@ Album.create!(
     "Don't Get Lost in Heaven", "Demon Days"]
   )
 
-# AssociatedAct.create!(
-#   connection_description: "Blur vocalist Damon Alburn is also the founder and vocalist / multi instrumentalist of Gorrilaz",
-#   artist_id: Artist.last.id,
-#   album_id: Album.last.id
-#   )
+Album.create!(
+  album_name: "Gorrilaz",
+  year: '2001',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/4/41/GorillazAlbum.jpg',
+  producers: ["Gorillaz", "Dan the Automator"],
+  record_label: 'Parlaphone',
+  seller_id: Seller.all.sample.id,
+  genre: ['Alternative rock', 'lo-fi', 'dub', 'hip hop','trip hop'],
+  artist_id: Artist.last.id,
+  tracks: [ "Re-Hash", "5/4", "Tomorrow Comes Today", "New Genious (Brother)[a]",
+"Clint Eastwood", "Man Research (Clapper)", "Punk", "Sound Check (Gravity)",
+"Double Bass", "Rock the House", "19-2000", "Latin Simone (¿Qué Pasa Contigo?)",
+"Starshine", "Slow Country", "M1 A1"]
+  )
 
 Artist.create!(
   artist_name: 'Beck',
@@ -467,12 +491,6 @@ Album.create!(
     "Where It's At",  "Minus", "Sissyneck",   "Readymade", "High 5 (Rock the Catskills)",   "Ramshackle"]
   )
 
-# AssociatedAct.create!(
-#   connection_description: "In 2020, Beck collaborated with virtual band Gorillaz to create the song 'The Valley of the Pagans' which appears on Song Machine, Season One: Strange Timez.",
-#   artist_id: Artist.last.id,
-#   album_id: Album.last.id
-#   )
-
 Artist.create!(
   artist_name: 'The Velvet Underground',
   band_members: ["Lou Reed", "Sterling Morrison", "John Cale", "Maureen Tucker", "Nico", "Doug Yule", "Walter Powers", "Willie Alexander"]
@@ -491,14 +509,7 @@ Album.create!(
     "Heroin",   "There She Goes Again",   "I'll Be Your Mirror",  "The Black Angel's Death Song",  "European Son" ]
   )
 
-# AssociatedAct.create!(
-#   connection_description: "In 2009, Beck started an experiment called Record Club in which he and other musicians would record cover versions of entire albums in one day.
-#   The first album covered by Record Club was The Velvet Underground & Nico.",
-#   artist_id: Artist.last.id,
-#   album_id: Album.last.id
-#   )
-puts "Albums created"
-puts "done"
+
 
 Artist.create!(
   artist_name: 'Lou Reed',
@@ -517,12 +528,6 @@ Album.create!(
   tracks: [ "Vicious", "Andy's Chest" , "Perfect Day", "Hangin' 'Round", "Walk on the Wild Side", "Make Up",
   "Satellite of Love", "Wagon Wheel", "New York Telephone Conversation", "I'm So Free", "Goodnight Ladies"  ]
   )
-
-# AssociatedAct.create!(
-#   connection_description: "Lou Reed was a founder member and chief songwriter for the Velvet Underground in the 1960's.",
-#   artist_id: Artist.last.id,
-#   album_id: Album.last.id
-#   )
 
 Artist.create!(
   artist_name: 'David Bowie',
@@ -556,11 +561,6 @@ Album.create!(
 "I'm Afraid of Americans", "Law (Earthlings on Fire)"]
   )
 
-# AssociatedAct.create!(
-#   connection_description: "David Bowie produced Lou Reed's 1972 album Transformer.",
-#   artist_id: Artist.last.id,
-#   album_id: Album.last.id
-#   )
 
 Artist.create!(
   artist_name: 'Queen',
@@ -594,12 +594,6 @@ Album.create!(
 "The Prophet's Song", "Love of My Life", "Good Company", "Bohemian Rhapsody", "God Save the Queen"]
   )
 
-
-
-# Artist.create!(
-#   artist_name: 'Various',
-#   band_members: ["Various"]
-#   )
 
 
 Artist.create!(
@@ -764,6 +758,11 @@ Album.create!(
 "Ultraviolence", "Ecstasy", "Leave Me Alone"]
   )
 
+Artist.create!(
+  artist_name: 'Electronic',
+  band_members: ['Bernard Sumner', 'Johnny Marr']
+  )
+
 Album.create!(
   album_name: "Electronic",
   year: '1991',
@@ -814,6 +813,21 @@ Album.create!(
 "When the Lovelight Starts Shining Through His Eyes", "My Colouring Book", "Mockingbird",
 "Twenty Four Hours From Tulsa", "Nothing", "Anyone Who Had a Heart", "Will You Love Me Tomorrow",
 "Wishin' and Hopin'"]
+  )
+
+Album.create!(
+  album_name: "Where Am I Going?",
+  year: '1967',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/3/38/Where_Am_I_Going.jpg',
+  producers: ["Johnny Franz", "Dusty Springfield"],
+  record_label: 'Phillips',
+  seller_id: Seller.all.sample.id,
+  genre: ['Pop'],
+  artist_id: Artist.last.id,
+  tracks: ["Bring Him Back", "Don't Let Me Lose This Dream", "I Can't Wait Until I See My Baby's Face",
+"Take Me for a Little While", "Chained to a Memory", "Sunny", "(They Long to Be) Close to You",
+"Welcome Home", "Come Back to Me", "If You Go Away (Ne Me Quitte Pas)", "Broken Blossoms",
+"Where Am I Going?"]
   )
 
 Artist.create!(
@@ -876,27 +890,31 @@ Album.create!(
 "Love for Sale"]
   )
 
+Artist.create!(
+  artist_name: 'The Specials',
+  band_members: ["Lynval Golding", "Sir Horace Gentleman", "Terry Hall", "Roddy Radiation", "John Bradbury",
+    "Neville Staples", "Jerry Dammers"]
+  )
+
+Album.create!(
+  album_name: "The Specials",
+  year: '1979',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/9/94/Specials_uk_front.jpg',
+  producers: ["Elvis Costello"],
+  record_label: '2Tone',
+  seller_id: Seller.all.sample.id,
+  genre: ['Ska', 'reggae', '2 Tone'],
+  artist_id: Artist.last.id,
+  tracks: ["A Message to You, Rudy", "Do the Dog", "It's Up to You", "Nite Klub",
+"Doesn't Make It Alright", "Concrete Jungle", "Too Hot", "Monkey Man", "(Dawning of A) New Era",
+"Blank Expression", "Stupid Marriage", "Too Much Too Young", "Little Bitch", "You're Wondering Now" ]
+  )
 
 puts "Albums created"
 puts "done"
 
-# url = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Sheet%201?api_key=key4EHjHf99psrakN"
 
-#   i = 0
-#   puts "Importing albums from page #{i + 1}"
-#   associated = JSON.parse(open("#{url}?page=#{i + 1}").read)['results']
-#   p associated
-#   associated.each do |act|
-#     puts "Creating #{act['title']}"
-#     Associated_act.create(
-#       artist_id:
-#       artist_b_id:
-#       connection_description:
-#
 
-#     )
-
-  # end
 
 require 'net/http'
 require 'uri'
@@ -941,7 +959,7 @@ tags_data[:records].each do |record|
   @album = Album.where("album_name ILIKE ?", "%#{record[:fields][:album].delete("/\"")}%").first
 
   connection = record[:fields][:connection_description].delete("/\"")
-    p record[:fields][:album]
+     p record[:fields][:album]
     # p @artist
     # p @artist_b
     # p @album
