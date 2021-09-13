@@ -21,11 +21,11 @@
             <li><h2><%= link_to "#{favourite.album.album_name}", album_path(favourite.album) %></h4></li>
             <li><h3><%= favourite.album.artist.artist_name %></h3></li>
             <li><p><%= favourite.album.year %></p></li>
-
-            <% favourite.album.genre.each do |genre| %>
-              <li><p><%= genre %></p></li>
-            <% end %>
           </ul>
+            <% favourite.album.genre.each do |genre| %>
+              <p><%= genre %> </p>
+            <% end %>
+
           <%= link_to "<i class='far fa-trash-alt' id='favourite'></i> ".html_safe,
                     favourite_path(favourite),
                     method: :delete,

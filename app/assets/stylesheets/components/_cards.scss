@@ -9,6 +9,7 @@
 .card-vinyl {
   width: 22rem;
   height: 640px;
+  position: relative;
 }
 
 .card-vinyl > img, .card-six-degrees > img {
@@ -60,7 +61,6 @@
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  position: relative;
   flex-direction: column;
   text-align: center
 }
