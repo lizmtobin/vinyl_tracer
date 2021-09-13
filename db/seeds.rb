@@ -360,6 +360,34 @@ Artist.create!(
   )
 
 Album.create!(
+  album_name: "Reg Strikes Back",
+  year: '1988',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/e/e5/Reg_strikes_back.JPG',
+  producers: ["Gus Dudgeon"],
+  record_label: ' DJM ',
+  seller_id: Seller.all.sample.id,
+  genre: ['Rock', 'pop'],
+  artist_id: Artist.last.id,
+  tracks: ["Town of Plenty", "A Word in Spanish","Mona Lisas and Mad Hatters (Part Two)",
+"I Don't Wanna Go On with You Like That", "Japanese Hands", "Goodbye Marlon Brando",
+"The Camera Never Lies", "Heavy Traffic", "Poor Cow", "Since God Invented Girls"]
+  )
+
+Album.create!(
+  album_name: "The Captain and the Kid",
+  year: '2006',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/d/d9/Captainkid.jpg',
+  producers: [" Elton John, Matt Still"],
+  record_label: ' Interscope',
+  seller_id: Seller.all.sample.id,
+  genre: ['Rock'],
+  artist_id: Artist.last.id,
+  tracks: ["Postcards from Richard Nixon", "Just Like Noah's Ark", "Wouldn't Have You Any Other Way (NYC)",
+"Tinderbox","And the House Fell Down", "Blues Never Fade Away", "The Bridge", "I Must Have Lost It on the Wind",
+"Old '67", "The Captain and the Kid"]
+  )
+
+Album.create!(
   album_name: "Goodbye Yellow Brick Road",
   year: '1973',
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/8/86/Elton_John_-_Goodbye_Yellow_Brick_Road.jpg',
@@ -373,13 +401,6 @@ Album.create!(
     "Dirty Little Girl", "All the Girls Love Alice", "Your Sister Can't Twist (But She Can Rock 'n Roll)", "Saturday Night's Alright for Fighting",
     "Roy Rogers",   "Social Disease",   "Harmony"]
   )
-
-# AssociatedAct.create!(
-#   connection_description: "Beatles producer George Martin also produced Elton John's hit 'Candle in the wind 1997'",
-#   artist_id: Artist.last.id,
-#   album_id: Album.last.id
-#   )
-
 Artist.create!(
   artist_name: 'The Who',
   band_members: ["Roger Daltrey", "Pete Townshend", "John Entwistle", "Keith Moon", "Doug Sandom", "Kenney Jones"]
@@ -877,26 +898,14 @@ Album.create!(
   )
 
 
+
+
+
 puts "Albums created"
 puts "done"
 
-# url = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Sheet%201?api_key=key4EHjHf99psrakN"
 
-#   i = 0
-#   puts "Importing albums from page #{i + 1}"
-#   associated = JSON.parse(open("#{url}?page=#{i + 1}").read)['results']
-#   p associated
-#   associated.each do |act|
-#     puts "Creating #{act['title']}"
-#     Associated_act.create(
-#       artist_id:
-#       artist_b_id:
-#       connection_description:
-#
 
-#     )
-
-  # end
 
 require 'net/http'
 require 'uri'
