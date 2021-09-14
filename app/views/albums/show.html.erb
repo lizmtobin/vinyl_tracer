@@ -30,7 +30,7 @@
     </div>
 
 
-    <!-- Album trivia -->
+
 
 
        <!-- Six degrees button -->
@@ -72,7 +72,7 @@
 
     <!-- Featured album card -->
 
-    <div class="d-flex show-card row justify-content-center align-items-center pr-4 mb-3">
+    <div class="d-flex show-card row justify-content-center align-items-center mb-3">
       <div class="card-vinyl m-3">
         <img src= <%= @album.artwork_url %> />
         <div class="card-vinyl-infos d-flex flex-column justify-content-center" style="height: 43%;">
@@ -109,7 +109,9 @@
       </div>
 
 
-    <div id="album_trivia" class="card-vinyl" style="font-size: 20px; padding:  12px; color: #5C527F;" align-items-center>
+      <!-- Album trivia -->
+
+    <div id="album_trivia" class="card-vinyl m-3" style="font-size: 20px; padding:  12px; color: #5C527F;" align-items-center>
      <p id="album_name" class="hidden"> <%= @album.album_name%> <span style="display: hidden"><%= @album.artist.artist_name %></span></p>
     </div>
 
