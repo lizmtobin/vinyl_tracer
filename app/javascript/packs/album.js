@@ -16,7 +16,7 @@ const album = () => {
       pageId = apiResult.query.search[0].pageid
         $.ajax({
           url: 'http://en.wikipedia.org/w/api.php',
-          data: { action: 'query', prop: 'extracts', redirects: 1, exsentences: 6, exintro: true, explaintext: true, pageids: pageId, format: 'json' },
+          data: { action: 'query', prop: 'extracts', redirects: 1, exsentences: 3, exintro: true, explaintext: true, pageids: pageId, format: 'json' },
           dataType: 'jsonp',
           success: processResult
         });
