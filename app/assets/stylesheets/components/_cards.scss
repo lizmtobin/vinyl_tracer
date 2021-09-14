@@ -73,15 +73,14 @@
 
 .home-card {
   background: none;
-  // margin-top: 10vh;
+  max-height: 475px;
   padding: 20px;
   text-align:center;
 }
 
 .card-six-info{
   background: #EDF0F0;
-  margin-bottom: 40px;
-  border: none;
+  padding: 0 5px;
   cursor: pointer;
 }
 
