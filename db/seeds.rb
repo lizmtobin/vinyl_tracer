@@ -620,6 +620,41 @@ Artist.create!(
   band_members: ["Trent Reznor", "Atticus Ross"]
   )
 
+Album.create!(
+  album_name: "Earthling",
+  year: '1997',
+  artwork_url: 'https://en.wikipedia.org/wiki/Earthling_(album)#/media/File:Earthling_(album).jpg',
+  producers: ["David Bowie", "Reeves Gabrels","Mark Plati"],
+  record_label: 'Arista',
+  seller_id: Seller.all.sample.id,
+  genre: [ 'Industrial', 'rock', 'electronica', 'drum and bass', 'jungle'],
+  artist_id: Artist.last.id,
+  tracks: [ 'Little Wonder','Looking for Satellites','Battle for Britain (The Letter)',
+'Seven Years in Tibet', 'Dead Man Walking', 'Telling Lies', 'The Last Thing You Should Do',
+"I'm Afraid of Americans", 'Law (Earthlings on Fire)']
+)
+
+Artist.create!(
+  artist_name: 'Johnny Cash',
+  band_members: ["Johnny Cash"]
+  )
+
+Album.create!(
+  album_name: "American IV: The Man Comes Around ",
+  year: '2002',
+  artwork_url: 'https://en.wikipedia.org/wiki/American_IV:_The_Man_Comes_Around#/media/File:AmericanIV.jpg',
+  producers: ['Rick Rubin', 'John Carter Cash'],
+  record_label: 'Universal',
+  seller_id: Seller.all.sample.id,
+  genre: ['Acoustic', 'rock', 'folk country', 'Americana'],
+  artist_id: Artist.last.id,
+  tracks: ["The Man Comes Around", "Hurt", "Give My Love to Rose", "Bridge Over Troubled Water",
+"I Hung My Head", "The First Time Ever I Saw Your Face", "Personal Jesus",
+"In My Life", "Sam Hall", "Danny Boy", "Desperado", "I'm So Lonesome I Could Cry",
+"Tear Stained Letter", "Streets of Laredo", "We'll Meet Again"]
+)
+
+
 # url = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Sheet%201?api_key=key4EHjHf99psrakN"
 
 #   i = 0
