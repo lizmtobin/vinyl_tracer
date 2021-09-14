@@ -23,9 +23,22 @@ class AlbumsController < ApplicationController
     # @associated_albums = Album.where(id: params[:id].to_i + 1..params[:id].to_i + 6)
     @associated_acts = @album.get_associated
   end
+
+  Private
+
+  def genre_list
+    @album = Album.find(params[:id])
+    @genres = @album.genre
+    @genres.each do |genre|
+      genre.join(", ")
+    end
+  end
+
+
+
 end
 
-  # private
+#
 
 #   def scrape_sellers
 #     html_content = URI.open("https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=sticky+fingers").read
@@ -36,9 +49,6 @@ end
 #     end
 #   end
 # end
-
-
-
 
 
   # def api_call(artist)

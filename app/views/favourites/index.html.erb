@@ -1,17 +1,12 @@
-<!-- <h2 style="text-align:center;">Hello <#%= "#{@favourites.current_user.name}" %></h2> -->
 
 <div class="container" style="width: 200rem;">
   <div class="d-flex justify-content-center">
-    <h1 id="vinyl-header">Album Favourites</h1>
+    <h1 id="vinyl-header">Collected Albums</h1>
   </div>
-
-
-
 
   <div class="flex-container">
 
     <% @user_favourites.each do |favourite| %>
-
 
       <div class="d-flex mb-4 flex-wrap">
         <div class="card-vinyl">
@@ -22,9 +17,14 @@
             <li><h3><%= favourite.album.artist.artist_name %></h3></li>
             <li><p><%= favourite.album.year %></p></li>
           </ul>
-            <% favourite.album.genre.each do |genre| %>
-              <p><%= genre %> </p>
+
+          <% favourite.album.genre.each do |genre| %>
+            <% if genre == genre.last  %>
+              <p><%= genre %></p>
+            <% else %>
+              <p><%= genre + ', ' %></p>
             <% end %>
+          <% end %>
 
           <%= link_to "<i class='far fa-trash-alt' id='favourite'></i> ".html_safe,
                     favourite_path(favourite),
