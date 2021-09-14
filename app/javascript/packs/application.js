@@ -8,6 +8,7 @@ import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
 import "channels";
 import { artist } from "./artists.js";
+import { album } from "./album.js";
 import { initMapbox } from '../plugins/init_mapbox';
 
 Rails.start()
@@ -28,6 +29,7 @@ import "bootstrap";
 
 document.addEventListener('turbolinks:load', () => {
   artist();
+  album();
   initMapbox();
   // Call your functions here, e.g:
   // initSelect2();

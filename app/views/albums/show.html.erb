@@ -8,15 +8,22 @@
     <div class='circle small shade5'></div>
   </div>
   <div>
-    <br>
-      <div class="d-flex justify-content-center">
-        <h1 class="text-underline"><%= @album.album_name + " - " + @album.artist.artist_name %></h1>
-      </div>
-    <br>
 
-    <div class="flex-container justify-content-center">
 
-      <!-- Buttons -->
+
+
+
+  <div class="flex-container justify-content-center">
+
+
+  <!-- title -->
+
+    <div class="d-flex justify-content-center">
+      <h1 id="vinyl-header" class="text-underline"><%= @album.album_name + " - " + @album.artist.artist_name %></h1>
+    </div>
+
+
+    <!-- Buttons -->
 
     <div class="d-flex align-items center">
       <div class="row justify-content-center">
@@ -27,103 +34,99 @@
     </div>
 
 
-      <div class="d-flex show-card row justify-content-between align-items-center m-3 pr-4">
+    <!-- Album trivia -->
 
-            <!-- Featured album card -->
-
-        <!-- <div class="justify-content-center m-2"> -->
-          <div class="card-vinyl m-3">
-            <img src= <%= @album.artwork_url %> />
-            <div class="card-vinyl-infos d-flex flex-column justify-content-center" style="height: 43%;">
-              <ul style="list-style: none; margin: 0; padding: 0;">
-                <li><h2><%= @album.album_name %></h2></li>
-                <li><p><%= @album.artist.artist_name %></p></li>
-                <li><p><%= @album.year %></p></li>
-                <% @album.genre.each do |genre| %>
-                  <li><p><%= genre %></p></li>
-                <% end %>
-              </ul>
-
-                <% if @favourite == [] %>
-                  <%= link_to album_favourites_path(@album.id), method: :post do  %>
-                    <i class="fab fa-gratipay" id="favourite"></i>
-                    <% end %>
-                <% else  %>
-                    <i class='fab fa-gratipay' id='favourite-red'></i>
-                <% end %>
-
-            </div>
-          </div>
-        <!-- </div> -->
-
-              <!-- Album tracks card -->
-
-        <div class="justify-content-center">
-          <div class="m-4 card-album-tracks">
-            <h2 class="text-underline mb-4">Track listings</h2>
-            <ol>
-              <% @album.tracks.each_with_index do | track | %>
-                <li><p><%= track %></p></li>
-              <% end %>
-            </ol>
-          </div>
-        </div>
-      </div>
+    <div id="album_trivia" class="card-trivia col-9" align-items-center>
+     <p id="album_name" class="hidden"> <%= @album.album_name%> <span style="display: hidden"><%= @album.artist.artist_name %></span></p>
+    </div>
 
 
-  <!--     <div class="d-flex justify-content-center">
-        <%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/search/?type=all&title=#{@search_title}&artist=#{@search_artist}&format=vinyl", class: "btn btn-primary mb-4 mr-3", target: :blank %>
-        <%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mb-4 mr-3" %>
-        <%= link_to 'Go back to albums', :back, class: "btn btn-info mb-4" %> -->
+       <!-- Six degrees button -->
 
-            <!-- Six degrees button -->
-        </div>
+    <% if @associated_acts.length > 0 %>
       <div class="col-12 d-flex justify-content-center">
-        <div class="six-degrees btn btn-basic mb-4 w-50" style="text-align: center;">Six Degrees Of Separation</div>
-
+        <div class="six-degrees btn btn-basic m-3 w-50" style="text-align: center;">Six Degrees Of Separation</div>
       </div>
-      <!-- </div> -->
 
-            <!-- Associated album cards -->
+
+
+    <!-- Associated album cards -->
 
       <div class="row justify-content-center flag hidden">
         <div class="d-flex mb-4 card-six-degrees_container">
-          <!-- <h2 class="text-underline mb-1 ">Linked Artists</h2> -->
-          <% @associated_albums.each do | album | %>
+          <% @associated_acts.each do | act | %>
             <div class="card-six-degrees">
-              <img src= <%= album.artwork_url%> />
-              <!-- <div class="h-100"> -->
-                <div class="card-vinyl-infos h-100">
-                  <h2 class="pt-2"><%= link_to "#{album.album_name}", album_path(album) %></h2>
-                  <h3><%= album.artist.artist_name + " " +  album.year %></h3>
-                  <div class="pt-4">
-                    <h4>Why <%= album.artist.artist_name %>?</h4>
-                    <p><%= album.associated_act ? album.associated_act.connection_description : nil %></p>
-                  </div>
+              <img src= <%= act.album.artwork_url%> />
+              <div class="card-vinyl-infos h-100">
+                <h2 class="pt-2"><%= link_to "#{act.album.album_name}", album_path(act.album) %></h2>
+                <h3><%= act.album.artist.artist_name + " " +  act.album.year %></h3>
+                <div class="pt-4">
+                  <h4>Why
+                    <% if act.album.artist.artist_name == "Various"%>
+                    <%= act.album.album_name %>
+                    <% else %>
+                    <%= act.album.artist.artist_name %>
+                    <% end %>?
+                  </h4>
+                  <p><%= act.connection_description %></p>
                 </div>
-              <!-- </div> -->
+              </div>
             </div>
           <% end %>
+        </div>
+      </div>
+      <% end %>
 
+
+    <!-- Featured album card -->
+
+    <div class="d-flex show-card row justify-content-center align-items-center pr-4 mb-3">
+      <div class="card-vinyl m-3">
+        <img src= <%= @album.artwork_url %> />
+        <div class="card-vinyl-infos d-flex flex-column justify-content-center" style="height: 43%;">
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li><h2><%= @album.album_name %></h2></li>
+            <li><p><%= @album.artist.artist_name %></p></li>
+            <li><p><%= @album.year %></p></li>
+            <% @album.genre.each do |genre| %>
+              <li><p><%= genre %></p></li>
+            <% end %>
+          </ul>
+            <% if @favourite == [] %>
+              <%= link_to album_favourites_path(@album.id), method: :post do  %>
+                <i class="fab fa-gratipay" id="favourite"></i>
+                <% end %>
+            <% else  %>
+                <i class='fab fa-gratipay' id='favourite-red'></i>
+            <% end %>
+        </div>
+      </div>
+
+
+      <!-- Album tracks card -->
+
+      <div class="justify-content-center">
+        <div class="card-album-tracks">
+          <h2 class="text-underline mb-4">Track listings</h2>
+          <ol>
+            <% @album.tracks.each_with_index do | track | %>
+              <li><p><%= track %></p></li>
+            <% end %>
+          </ol>
         </div>
       </div>
     </div>
-  <div class="card-six-info six-text col-10" style="margin:0 auto 50px auto;">
-  <h2 style="color:#AC7FDD; padding:8px">What is Six Degrees of Separation?</h2>
-        <p>Musicians like to mingle. They collaborate, change bands, cover each others songs and share producers.
-        Six degrees of separation explores these links, by suggesting six albums all linked to each other by real world events. Starting from your chosen album,
-        the next suggestion could be linked by a guitarist that played in both bands, a producer that worked on both albums, or acts that performed together onstage. The possibilities are endless.
-        Opening a panorama of potential links; spanning different artists, genres or points in time; our six degrees are all routed in this exciting world of interlinking unities.
-        </p>
+
   </div>
 
 
-<%= javascript_pack_tag 'show.js' %>
+<!-- end of main conatiner -->
 </div>
 
+
+<%= javascript_pack_tag 'show.js' %>
     <!-- <a href= <#%= "https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=#{@album.album_name}" %>, target = "blank "> <%= "Search for #{@album.album_name}" %></a> -->
 
    <!-- https://www.discogs.com/search/?type=all&title=#{@search_title}&artist=#{@search_artist}&format=vinyl -->
 
         <!-- https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=#{@album.album_name} -->
-
