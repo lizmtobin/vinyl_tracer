@@ -41,7 +41,15 @@ $headers-font: "Nunito", "Helvetica", "sans-serif", "Lobster Two",
 #vinyl-header {
   color: #3C415C;
   text-align: center;
-  margin: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
   font-family: 'Oleo Script Swash Caps';
   font-size: 4rem;
+}
+
+#album-name p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  opacity: .7;
+  margin: 0;
 }
