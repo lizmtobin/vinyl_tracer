@@ -26,7 +26,7 @@
   margin: 0;
 }
 
-.card-vinyl p, .card-album-tracks p, .card-trivia, .card-six-degrees p, .card-seller p {
+.card-vinyl p, .card-album-tracks p, .card-trivia p, .card-six-degrees p, .card-seller p {
   font-size: 1.2rem;
   font-weight: bold;
   opacity: .7;
@@ -70,6 +70,7 @@
 .card-vinyl {
   width: 22rem;
   height: 640px;
+  margin: 0 10px;
 }
 
 .card-vinyl-infos{
@@ -139,11 +140,13 @@
 
 .card-trivia {
   font-weight: normal;
-  width: 100%;
+  width: 84%;
   padding: auto;
   margin-top: 1rem;
+  margin-bottom: 2rem;
   font-size: 18px;
   text-align:center;
   justify-content: center;
 }
+
 

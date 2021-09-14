@@ -1,5 +1,6 @@
 
-<div class="container" style="width: 200rem; margin-top: 75px;">
+<div class="album-box">
+
   <div class='ripple-background'>
     <div class='circle xxlarge shade1'></div>
     <div class='circle xlarge shade2'></div>
@@ -9,16 +10,11 @@
   </div>
   <div>
 
-
-
-
-
-  <div class="flex-container justify-content-center">
-
+ <div class="flex-container justify-content-center" style="max-width: 110rem";>
 
   <!-- title -->
 
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center col-12">
       <h1 id="vinyl-header" class="text-underline"><%= @album.album_name + " - " + @album.artist.artist_name %></h1>
     </div>
 
@@ -35,10 +31,6 @@
 
 
     <!-- Album trivia -->
-
-    <div id="album_trivia" class="card-trivia col-9" align-items-center>
-     <p id="album_name" class="hidden"> <%= @album.album_name%> <span style="display: hidden"><%= @album.artist.artist_name %></span></p>
-    </div>
 
 
        <!-- Six degrees button -->
@@ -115,9 +107,17 @@
           </ol>
         </div>
       </div>
+
+
+    <div id="album_trivia" class="card-vinyl" style="font-size: 20px; padding:  12px; color: #5C527F;" align-items-center>
+     <p id="album_name" class="hidden"> <%= @album.album_name%> <span style="display: hidden"><%= @album.artist.artist_name %></span></p>
     </div>
 
   </div>
+
+</div>
+
+
 
 
 <!-- end of main conatiner -->
