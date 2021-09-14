@@ -73,19 +73,20 @@
 
 .home-card {
   background: none;
-  // margin-top: 10vh;
+  max-height: 475px;
   padding: 20px;
   text-align:center;
 }
 
 .card-six-info{
   background: #EDF0F0;
-  margin-bottom: 40px;
+  padding: 0 10px;
+  cursor: pointer;
 }
 
 .card-six-info p {
   font-size: 1.2rem;
-  // font-weight: bold;
+
 }
 
 .home-card h2, .card-six-info h2{
@@ -95,7 +96,7 @@
 
 .card-album-tracks {
   // width: 15rem;
-  margin: 20px 0px;
+  margin-top: 20px 0px;
   max-width: 38rem;
 }
 
@@ -113,9 +114,6 @@
     flex-wrap: wrap;
 }
 
-.card-trivia {
-  font-weight: normal;
-}
 
 .card-seller {
   height: 520px;
@@ -130,10 +128,13 @@
     object-fit: scale-down;
 }
 
+
+
 .card-trivia {
+  font-weight: normal;
   width: 100%;
   padding: auto;
-  margin-bottom:50px;
+  margin-bottom: 2rem;
   font-size: 18px;
   text-align:center;
   justify-content: center;
