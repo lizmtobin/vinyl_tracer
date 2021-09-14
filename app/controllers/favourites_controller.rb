@@ -18,9 +18,9 @@ class FavouritesController < ApplicationController
     # @user = current_user
 
     if @favourite.save!
-      redirect_to album_path(@album.id), notice: "album added to favourites!"
+      redirect_to album_path(@album.id), notice: "Yay! Album added to collection!"
     else
-      redirect_to album_path(@album.id), alert: "album not added to favourites!"
+      redirect_to album_path(@album.id), alert: "album not added to collection!"
 
     end
   end
