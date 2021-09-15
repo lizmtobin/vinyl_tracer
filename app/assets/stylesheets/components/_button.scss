@@ -62,7 +62,7 @@
   // bottom: -12px;
   right: 44px;
   bottom: 44px;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 #favourite:hover {
@@ -72,11 +72,20 @@
 #favourite-red {
   color: $red;
   position: absolute;
-  right: 24px;
-  bottom: 16px;
-  font-size: 1.5rem;
+  right: 44px;
+  bottom: 44px;
+  font-size: 2rem;
 }
 
+#seller {
+  color: #583D72;
+  font-size: 1.5rem;
+  padding: 4px;
+}
+
+ #seller:hover {
+    color: $red;
+  }
 
 
 .glow-on-hover {
