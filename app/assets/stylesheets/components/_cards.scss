@@ -4,7 +4,15 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 10px;
   border : solid 2px #9B72AA;
+  position: relative;
 }
+
+
+.card-vinyl {
+  width: 22rem;
+  height: 640px;
+}
+
 
 .card-vinyl > img, .card-six-degrees > img {
   // height: 350px;
@@ -55,7 +63,6 @@
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  position: relative;
   flex-direction: column;
   text-align: center
 }
@@ -118,17 +125,43 @@
 
 .card-seller {
   height: 520px;
-}
-
-#seller {
+  margin: 5%;
   background-color: $gray;
   width: 15rem;
+
+
+  h2 {
+    font-family: raleway;
+  }
+
+  p {
+    font-family: helvetica;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+      object-fit: scale-down;
+
+  }
+
 }
 
-#seller > .img {
-    object-fit: scale-down;
+.seller-infos {
+  padding: 8px 0;
+  background-color: white;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.seller-logo {
+
+
+}
 
 
 .card-trivia {
