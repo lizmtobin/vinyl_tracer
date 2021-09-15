@@ -629,6 +629,21 @@ Album.create!(
 "The Bed", "Sad Song"]
   )
 
+Album.create!(
+  album_name: "Trainspotting",
+  year: '1996',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/7/77/Trainspottingsoundtrack.jpg',
+  producers: ["Various"],
+  record_label: 'Various',
+  seller_id: Seller.all.sample.id,
+  genre: [ 'Various'],
+  artist_id: Artist.last.id,
+  tracks: [ 'Lust for Life (Iggy Pop)', 'Deep Blue Day (Brian Eno)',
+'Trainspotting (Primal Scream)', 'Atomic (Sleeper)', 'Temptation (New Order)', 'Nightclubbing (Iggy Pop)',
+'Sing (Blur)', 'Perfect Day (Lou Reed)', 'Mile End (Pulp)', 'For What You Dream Of (Bedrock featuring KYO)',
+'2:1 (Elastica)', 'A Final Hit (Leftfield)', 'Born Slippy (Underworld)', 'Closet Romantic (Damon Albarn)']
+  )
+
 
 Artist.create!(
   artist_name: 'David Bowie',
@@ -697,25 +712,15 @@ Album.create!(
 
 
 
+# Artist.create!(
+#   artist_name: 'Various',
+#   band_members: ["Various"]
+#   )
+
+
 Artist.create!(
-  artist_name: 'Various',
-  band_members: ["Various"]
-  )
-
-
-Album.create!(
-  album_name: "Trainspotting",
-  year: '1996',
-  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/7/77/Trainspottingsoundtrack.jpg',
-  producers: ["Various"],
-  record_label: 'Various',
-  seller_id: Seller.all.sample.id,
-  genre: [ 'Various'],
-  artist_id: Artist.last.id,
-  tracks: [ 'Lust for Life (Iggy Pop)', 'Deep Blue Day (Brian Eno)',
-'Trainspotting (Primal Scream)', 'Atomic (Sleeper)', 'Temptation (New Order)', 'Nightclubbing (Iggy Pop)',
-'Sing (Blur)', 'Perfect Day (Lou Reed)', 'Mile End (Pulp)', 'For What You Dream Of (Bedrock featuring KYO)',
-'2:1 (Elastica)', 'A Final Hit (Leftfield)', 'Born Slippy (Underworld)', 'Closet Romantic (Damon Albarn)']
+  artist_name: 'Nine Inch Nails',
+  band_members: ["Trent Reznor", "Atticus Ross"]
   )
 
 Album.create!(
@@ -735,25 +740,6 @@ Album.create!(
 "Snakedriver (The Jesus and Mary Chain)", "Time Baby III (Medicine)", "It Can't Rain All the Time(Jane Siberry)"]
   )
 
-
-Artist.create!(
-  artist_name: 'Nine Inch Nails',
-  band_members: ["Trent Reznor", "Atticus Ross"]
-  )
-
-Album.create!(
-  album_name: "Earthling",
-  year: '1997',
-  artwork_url: 'https://en.wikipedia.org/wiki/Earthling_(album)#/media/File:Earthling_(album).jpg',
-  producers: ["David Bowie", "Reeves Gabrels","Mark Plati"],
-  record_label: 'Arista',
-  seller_id: Seller.all.sample.id,
-  genre: [ 'Industrial', 'rock', 'electronica', 'drum and bass', 'jungle'],
-  artist_id: Artist.last.id,
-  tracks: [ 'Little Wonder','Looking for Satellites','Battle for Britain (The Letter)',
-'Seven Years in Tibet', 'Dead Man Walking', 'Telling Lies', 'The Last Thing You Should Do',
-"I'm Afraid of Americans", 'Law (Earthlings on Fire)']
-)
 
 Album.create!(
   album_name: "With Teeth",
