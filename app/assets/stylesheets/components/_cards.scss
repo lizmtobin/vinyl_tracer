@@ -50,11 +50,11 @@
   margin: 0;
 }
 
-.card-vinyl a, .card-album-tracks a, .card-six-degrees a {
+.card-vinyl a, .card-album-tracks a, .card-six-degrees a, .card-seller a {
   color: $red;
 }
 
-.card-vinyl a:hover, .card-album-tracks a:hover, .card-six-degrees a:hover{
+.card-vinyl a:hover, .card-album-tracks a:hover, .card-six-degrees a:hover, .card-seller a:hover{
   color: $storm;
   text-decoration: none;
 }
@@ -124,7 +124,7 @@
 
 
 .card-seller {
-  height: 520px;
+  height: 500px;
   margin: 5%;
   background-color: $gray;
   width: 15rem;
@@ -144,7 +144,6 @@
 
   img {
       object-fit: scale-down;
-
   }
 
 }
@@ -158,8 +157,7 @@
   align-items: center;
 }
 
-.seller-logo {
-
+#seller-logo {
 
 }
 

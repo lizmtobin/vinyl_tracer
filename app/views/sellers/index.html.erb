@@ -15,7 +15,7 @@
       <%= text_field_tag :query,
         params[:query],
         class: "form-control mr-3 w-25", id: "seller-search",
-        placeholder: "enter your location"
+        placeholder: "enter your city or postcode"
       %>
       <%= submit_tag "Search", class: "btn btn-basic mt-4 mb-4" %>
     <% end %>
@@ -26,32 +26,31 @@
  <!-- </div> -->
 
   <div class="flex-container">
-
     <% @sellers.each do |seller| %>
+
       <div class="flex-item mr-4 mb-2">
-        <div class="card-seller" id="seller" >
+        <div class="card-seller">
           <img src= <%= seller.seller_logo %> >
           <div class="seller-infos">
             <ul style="list-style: none; margin: 0; padding: 0;">
-              <li><h2><%= link_to seller.seller_name, seller_path(seller) %></h2></li>
-
+              <li><h2><%= link_to seller.seller_name, seller.seller_url, target: :blank %></h2></li>
               <li><p><%= seller.location %></p></li>
-              <li>
-                <%= link_to seller.seller_url, target: :blank do %>
-                <i class="fas fa-store"></i>
+
+              <li><%= link_to seller.seller_url, target: :blank do %>
+                  <i class="fas fa-store" id="seller"></i>
+                <% end %>
               </li>
+
             </ul>
-
-            <% end %>
-
-
-
           </div>
+
         </div>
       </div>
-    <% end %>
 
+    <% end %>
   </div>
+
+
 <!--- map --->
 <div id="map"
      style="width: 100%; height: 600px;"

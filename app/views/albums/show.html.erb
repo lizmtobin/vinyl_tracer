@@ -75,8 +75,8 @@
             <li><h2><%= @album.album_name %></h2></li>
             <li><p><%= @album.artist.artist_name %></p></li>
             <li><p><%= @album.year %></p></li>
-            <% @album.genre.each do |genre| %>
-              <li><p><%= genre %></p></li>
+            <% @album.genre[0..2].each do |genre| %>
+              <li><p><%= genre.capitalize %></p></li>
             <% end %>
           </ul>
             <% if @favourite == [] %>

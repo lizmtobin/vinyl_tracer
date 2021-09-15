@@ -11,19 +11,15 @@
       <div class="d-flex mb-4 flex-wrap">
         <div class="card-vinyl">
           <img src= <%= favourite.album.artwork_url %> />
-          <div class="card-vinyl-infos" style=margin-top:28px;>
+          <div class="card-vinyl-infos">
           <ul style="list-style: none; margin: 0; padding: 0;">
             <li><h2><%= link_to "#{favourite.album.album_name}", album_path(favourite.album) %></h4></li>
             <li><h3><%= favourite.album.artist.artist_name %></h3></li>
             <li><p><%= favourite.album.year %></p></li>
           </ul>
 
-          <% favourite.album.genre.each do |genre| %>
-            <% if genre == genre.last  %>
-              <p><%= genre %></p>
-            <% else %>
-              <p><%= genre + ', ' %></p>
-            <% end %>
+          <% favourite.album.genre[0..2].each do |genre| %>
+            <p><%= genre.capitalize %></p>
           <% end %>
 
           <%= link_to "<i class='far fa-trash-alt' id='favourite'></i> ".html_safe,
