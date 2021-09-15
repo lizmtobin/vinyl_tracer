@@ -14,16 +14,42 @@
 
   <div class="flex-container" style="max-width: 110rem";>
 
-    <!-- title & info box -->
+    <!-- if artist not in database - error message -->
 
-  <div class="d-flex justify-content-center">
-    <h1 id="vinyl-header"><%= @artist.artist_name%> Vinyl Discography</h1>
-  </div>
+    <div class="d-flex justify-content-center">
+    <% if @artist == nil %>
+      <%= link_to root_path %>
+      <h1 id="vinyl-header" style="font-size:2rem;">
+        <%= "We\'re sorry, #{params[:query]} won\'t spin today. " %>
+        Please browse here, or
+        <%= link_to 'search again', root_path %>
+      </h1>
+    </div>
 
-  <div id="artist_trivia" class="card-trivia" style="text-align:centre, margin: 10px; padding: 10px;">
-    <p id="artist_name" class="hidden"> <%= @artist.artist_name%> </p>
-  </div>
-  <br>
+    <!-- if artist not in database - artist cards -->
+
+    <ul style="list-style: none; margin: 0; padding: 0;">
+      <% @artists.each do |artist| %>
+      <div class="flex-item mb-4">
+        <div class="card-vinyl">
+          <img src= <%= artist.albums[0].artwork_url%> />
+            <li><%= link_to artist.artist_name, artist_path(artist)%></li>
+        </div>
+      </div>
+      <% end %>
+    </ul>
+
+    <!-- if artist found - title & info box -->
+
+    <% else %>
+    <div class="d-flex justify-content-center">
+      <h1 id="vinyl-header"><%= @artist.artist_name %> Vinyl Discography</h1>
+    </div>
+
+    <div id="artist_trivia" class="card-trivia" style="text-align:centre, margin: 10px; padding: 10px;">
+      <p id="artist_name" class="hidden"> <%= @artist.artist_name%> </p>
+    </div>
+    <br>
 
       <!-- album cards -->
 
@@ -49,7 +75,9 @@
   <br>
   <div style="margin-bottom: 50px;" class="d-flex justify-content-center"><%= link_to 'Search again', root_path, class: "btn btn-basic ml-4" %></div>
 
-<%= javascript_pack_tag 'index.js' %>
+  <%= javascript_pack_tag 'index.js' %>
+  <% end %>
+
 </div>
 
 
