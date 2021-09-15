@@ -59,7 +59,7 @@
 
     <div class="d-flex show-card row justify-content-center align-items-center mb-3">
       <div class="card-vinyl m-3">
-        <img src= <%= @album.artwork_url %> />
+        <img class="img1" src= <%= @album.artwork_url %> />
         <div class="card-vinyl-infos d-flex flex-column justify-content-center" style="height: 43%;">
           <ul style="list-style: none; margin: 0; padding: 0;">
             <li><h2><%= @album.album_name %></h2></li>
@@ -111,6 +111,13 @@
       <div><%= link_to 'Go back to albums', :back, class: "btn btn-info" %></div>
     </div>
   </div>
+
+
+  <button class="btnStop">Fade Out</button>
+  <br>
+
+  <br>
+  <button class="btnAdd">Fade In</button>
 
 </div>
 
