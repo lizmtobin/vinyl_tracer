@@ -1,4 +1,5 @@
-.card-vinyl, .card-six-degrees, .card-six-degrees_container, .show-card, .home-card, .card-six-info, .card-trivia, .card-seller  {
+.card-vinyl, .card-six-degrees, .card-six-degrees_container, .show-card,
+.home-card, .card-six-info, .card-trivia, .card-seller, .card-artist,  .card-artist-caption {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -50,16 +51,16 @@
   margin: 0;
 }
 
-.card-vinyl a, .card-album-tracks a, .card-six-degrees a, .card-seller a {
+.card-vinyl a, .card-album-tracks a, .card-six-degrees a, .card-seller a, .card-artist a {
   color: $red;
 }
 
-.card-vinyl a:hover, .card-album-tracks a:hover, .card-six-degrees a:hover, .card-seller a:hover{
+.card-vinyl a:hover, .card-album-tracks a:hover, .card-six-degrees a:hover, .card-seller a:hover, .card-artist a:hover{
   color: $storm;
   text-decoration: none;
 }
 
-.card-vinyl .card-vinyl-infos, .card-album-tracks, .card-six-degrees, .card-seller {
+.card-vinyl .card-vinyl-infos, .card-album-tracks, .card-six-degrees, .card-seller .card-artist {
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -173,4 +174,44 @@
   justify-content: center;
 }
 
+.card-artist {
+  text-align: center;
+  font-family: Oleo Script Swash Caps;
+  font-size: 2rem;
+  padding: 8px;
+}
 
+.card-artist-caption {
+  font-weight: normal;
+  max-width: 50rem;
+  padding: 16px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align:center;
+  justify-content: center;
+
+
+  h1 {
+    font-family: Oleo Script Swash Caps;
+    color: $dark-storm;
+    font-size: 2.5rem;
+    padding: 2px;
+  }
+
+  h2 {
+    font-family: Oleo Script Swash Caps;
+    color: $dark-storm;
+    font-size: 2rem;
+    padding: 2px;
+  }
+
+  a {
+    color: $mauve;
+  }
+
+  a:hover {
+  color: $storm;
+  text-decoration: none;
+  }
+
+}
