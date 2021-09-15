@@ -1,4 +1,4 @@
-<div class="container" style="width: 200rem;">
+<div class="container" style="width: 300rem;">
   <div class='ripple-background'>
   <div class='circle xxlarge shade1'></div>
   <div class='circle xlarge shade2'></div>
@@ -28,13 +28,23 @@
   <div class="flex-container">
 
     <% @sellers.each do |seller| %>
-      <div class="flex-item mb-4">
+      <div class="flex-item mr-4 mb-2">
         <div class="card-seller" id="seller" >
-          <img src= <%= seller.seller_logo %> style="object-fit: scale-down"/>
-          <div class="card-vinyl-infos" style= "background-color: white; height: 250px;">
-            <h2><%= link_to "#{seller.seller_name}", seller_path(seller) %></h2>
-            <p><%= seller.location %></p>
-            <p><%= link_to "View website", "#{seller.seller_url}", target: :blank %></p>
+          <img src= <%= seller.seller_logo %> >
+          <div class="seller-infos">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+              <li><h2><%= link_to seller.seller_name, seller_path(seller) %></h2></li>
+
+              <li><p><%= seller.location %></p></li>
+              <li>
+                <%= link_to seller.seller_url, target: :blank do %>
+                <i class="fas fa-store"></i>
+              </li>
+            </ul>
+
+            <% end %>
+
+
 
           </div>
         </div>
