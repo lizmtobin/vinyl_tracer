@@ -319,9 +319,37 @@ Album.create!(
     "There Goes My Baby"]
   )
 
+Album.create!(
+  album_name: "What's going on",
+  year: '1971',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/8/84/MarvinGayeWhat%27sGoingOnalbumcover.jpg',
+  producers: ["Marvin Gaye"],
+  record_label: 'Tamla',
+  seller_id: Seller.all.sample.id,
+  genre: ['Soul', 'psychedelic soul'],
+  artist_id: Artist.last.id,
+  tracks: [ "What's Going On", "What's Happening Brother", "Flyin' High (In the Friendly Sky)",
+"Save the Children", "God Is Love", "Mercy Mercy Me (The Ecology)", "Right On",
+"Wholy Holy", "Inner City Blues (Make Me Wanna Holler)"]
+  )
+
 Artist.create!(
   artist_name: 'The Beatles',
   band_members: ["John Lennon", "Paul McCartney", "Ringo Starr", "George Harrison"]
+  )
+
+Album.create!(
+  album_name: "Rubber Soul",
+  year: '1965',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/7/74/Rubber_Soul.jpg',
+  producers: [" George Martin"],
+  record_label: 'Parlophone',
+  seller_id: Seller.all.sample.id,
+  genre: ['Rock', 'pop', 'folk rock'],
+  artist_id: Artist.last.id,
+  tracks: ["Drive My Car", "Norwegian Wood (This Bird Has Flown)", "You Won't See Me",
+"Nowhere Man", "Think for Yourself", "The Word", "Michelle", "What Goes On", "Girl",
+"I'm Looking Through You", "In My Life", "Wait", "If I Needed Someone", "Run for Your Life"]
   )
 
 Album.create!(
@@ -335,6 +363,36 @@ Album.create!(
   artist_id: Artist.last.id,
   tracks: [ "Sgt. Pepper's Lonely Hearts Club Band",  "With a Little Help from My Friends",   "Lucy in the Sky with Diamonds", "Getting Better", "Fixing a Hole", "She's Leaving Home",
     "Being for the Benefit of Mr. Kite!", "Within You Without You", "When I'm Sixty-Four", "Lovely Rita",   "Good Morning Good Morning",  "Sgt. Pepper's Lonely Hearts Club Band (Reprise)",  "A Day in the Life"]
+  )
+
+Album.create!(
+  album_name: "Revolver",
+  year: '1966',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/e/ec/Revolver_%28album_cover%29.jpg',
+  producers: [" George Martin"],
+  record_label: 'Parlophone',
+  seller_id: Seller.all.sample.id,
+  genre: ['Rock', 'pop'],
+  artist_id: Artist.last.id,
+  tracks: ["Help!", "The Night Before", "You've Got to Hide Your Love Away",
+"I Need You", "Another Girl", "You're Going to Lose That Girl", "Ticket to Ride",
+"Act Naturally", "It's Only Love", "You Like Me Too Much", "Tell Me What You See",
+"I've Just Seen a Face", "Yesterday", "Dizzy Miss Lizzy"]
+  )
+
+Album.create!(
+  album_name: "Help",
+  year: '1965',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/e/e7/Help%21_%28The_Beatles_album_-_cover_art%29.jpg',
+  producers: [" George Martin"],
+  record_label: 'Parlophone',
+  seller_id: Seller.all.sample.id,
+  genre: ['Rock', 'pop', 'psychedelia'],
+  artist_id: Artist.last.id,
+  tracks: ["Taxman", "Eleanor Rigby", "I'm Only Sleeping", "Love You To", "Here, There and Everywhere",
+"Yellow Submarine" , "She Said She Said", "Good Day Sunshine", "And Your Bird Can Sing",
+"For No One", "Doctor Robert", "I Want to Tell You", "Got to Get You into My Life",
+"Tomorrow Never Knows"]
   )
 
 Artist.create!(
@@ -404,6 +462,19 @@ Album.create!(
   )
 
 
+Album.create!(
+  album_name: "My Generation",
+  year: '1965',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/0/01/My-Generation--2.jpg',
+  producers: ["Shel Talmy"],
+  record_label: 'Brunswick',
+  seller_id: Seller.all.sample.id,
+  genre: ['Rock', 'Garage rock', 'Mod'],
+  artist_id: Artist.last.id,
+  tracks: ["Out in the Street", "I Don't Mind", "The Good's Gone", "La-La-La-Lies",
+"Much Too Much", "My Generation", "The Kids Are Alright", "Please, Please, Please",
+"It's Not True", "I'm a Man", "A Legal Matter", "The Ox"]
+  )
 
 Artist.create!(
   artist_name: 'Blur',
@@ -491,6 +562,20 @@ Album.create!(
     "Where It's At",  "Minus", "Sissyneck",   "Readymade", "High 5 (Rock the Catskills)",   "Ramshackle"]
   )
 
+Album.create!(
+  album_name: "Guero",
+  year: '2005',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/5/50/Guero_cover.jpg',
+  producers: ["Beck Hansen", "The Dust Brothers", "Tony Hoffer"],
+  record_label: 'Interscope',
+  seller_id: Seller.all.sample.id,
+  genre: ['Alternative rock', 'hip hop'],
+  artist_id: Artist.last.id,
+  tracks: ["E-Pro", "Qué Onda Guero", "Girl", "Missing", "Black Tambourine",
+"Earthquake Weather", "Hell Yes", "Broken Drum", "Scarecrow", "Go It Alone",
+"Farewell Ride", "Rental Car", "Emergency Exit"]
+  )
+
 Artist.create!(
   artist_name: 'The Velvet Underground',
   band_members: ["Lou Reed", "Sterling Morrison", "John Cale", "Maureen Tucker", "Nico", "Doug Yule", "Walter Powers", "Willie Alexander"]
@@ -528,6 +613,22 @@ Album.create!(
   tracks: [ "Vicious", "Andy's Chest" , "Perfect Day", "Hangin' 'Round", "Walk on the Wild Side", "Make Up",
   "Satellite of Love", "Wagon Wheel", "New York Telephone Conversation", "I'm So Free", "Goodnight Ladies"  ]
   )
+
+
+Album.create!(
+  album_name: "Berlin",
+  year: '1973',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/7/70/Berlinloureed.jpeg',
+  producers: ["Bob Ezrin"],
+  record_label: 'RCA',
+  seller_id: Seller.all.sample.id,
+  genre: [ 'Rock', 'art rock'],
+  artist_id: Artist.last.id,
+  tracks: ["Berlin", "Lady Day", "Men of Good Fortune", "Caroline Says I",
+"How Do You Think It Feels", "Oh, Jim", "Caroline Says II", "The Kids",
+"The Bed", "Sad Song"]
+  )
+
 
 Artist.create!(
   artist_name: 'David Bowie',
@@ -654,6 +755,7 @@ Album.create!(
 "I'm Afraid of Americans", 'Law (Earthlings on Fire)']
 )
 
+Album.create!(
   album_name: "With Teeth",
   year: '1997',
   artwork_url: 'https://upload.wikimedia.org/wikipedia/en/e/e0/Nine_Inch_Nails_-_With_Teeth.png',
@@ -674,6 +776,7 @@ Artist.create!(
   band_members: ["Johnny Cash"]
   )
 
+Album.create!(
  album_name: "American IV: The Man Comes Around",
  year: '2002',
  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/e/e0/AmericanIV.jpg',
@@ -806,6 +909,21 @@ Album.create!(
 "Rent", "Hit Music", "It Couldn't Happen Here", "It's a Sin", "I Want to Wake Up", "Heart", "King's Cross"]
   )
 
+Album.create!(
+  album_name: "Behaviour",
+  year: '1990',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/a/ad/Pet_Shop_Boys_-_Behaviour.png',
+  producers: ["Pet Shop Boys", "Harold Faltermeyer"],
+  record_label: 'Parlophone',
+  seller_id: Seller.all.sample.id,
+  genre: ['Synth-pop', 'dance', 'pop'],
+  artist_id: Artist.last.id,
+  tracks: ["Being Boring", "This Must Be the Place I Waited Years to Leave", "To Face the Truth",
+"How Can You Expect to Be Taken Seriously?", "Only the Wind", "My October Symphony",
+"So Hard", "Nervously", "The End of the World", "Jealousy"]
+  )
+
+
 Artist.create!(
   artist_name: 'Dusty Springfield',
   band_members: ['Dusty Springfield']
@@ -901,6 +1019,22 @@ Album.create!(
 "Love for Sale"]
   )
 
+Album.create!(
+  album_name: "Soul Sister",
+  year: '1966',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/8/82/Soul_Sister_album.jpg',
+  producers: [" Clyde Otis"],
+  record_label: ' Columbia',
+  seller_id: Seller.all.sample.id,
+  genre: ['Jazz', 'soul', 'pop', 'R&B'],
+  artist_id: Artist.last.id,
+  tracks: ["Until You Were Gone", "You Made Me Love You (I Didn't Want to Do It)",
+"Follow Your Heart", "Ol' Man River", "Sweet Bitter Love", "A Mother's Love",
+"Swanee", "(No, No) I'm Losing You", "Take a Look", "Can't You Just See Me",
+"Cry Like a Baby"]
+  )
+
+
 Artist.create!(
   artist_name: 'The Specials',
   band_members: ["Lynval Golding", "Sir Horace Gentleman", "Terry Hall", "Roddy Radiation", "John Bradbury",
@@ -971,8 +1105,8 @@ tags_data[:records].each do |record|
   @album = Album.where("album_name ILIKE ?", "%#{record[:fields][:album].delete("/\"")}%").first
 
   connection = record[:fields][:connection_description].delete("/\"")
-     p record[:fields][:album]
-    # p @artist
+      p record[:fields][:album]
+     # p @artist
     # p @artist_b
     # p @album
     # p connection
