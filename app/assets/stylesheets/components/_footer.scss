@@ -3,8 +3,10 @@
   background: white;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 2;
   justify-content: space-between;
-  padding: 0px 50px;
+  padding: 1rem 1rem 0 0;
   color: rgba(0,0,0,0.8);
   overflow: hidden;
   // position: absolute;
@@ -41,7 +43,7 @@
 
 
 #footer-info  {
-  margin-top: 24px;
+  padding: 1rem 1rem 0 0;
 
   a {
     margin-top: 24px;
