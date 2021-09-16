@@ -1049,7 +1049,26 @@ Artist.create!(
 Album.create!(
   album_name: "Live at Glastonbury",
   year: '2021',
-  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/9/94/Specials_uk_front.jpg',
+  artwork_url: 'https://res.cloudinary.com/dslpvndc1/image/upload/v1631822160/album_cover_frpoiu.jpg',
+  producers: ["Rahul", "Anne"],
+  record_label: 'Le Wagon',
+  seller_id: Seller.all.sample.id,
+  genre: ['Ruby', 'HTML', 'CSS', 'Javascript'],
+  artist_id: Artist.last.id,
+  tracks: ["I love coding", "Did somebody say just code?", "Coding in the morning", "Coding at night",
+"Coding in the afternoon", "I can't get no (SQL)", "Does my back-end look big in this?",
+"Move to the Algorithm", "Array of light", "Seven function army", "Lucy in the sky with Bootstrap" ]
+  )
+
+Artist.create!(
+  artist_name: 'The Tracers of Vinyl ',
+  band_members: ["Clare Amos", "Gid Berridge", "Liz Tobin"]
+  )
+
+Album.create!(
+  album_name: "Born to Code",
+  year: '2021',
+  artwork_url: 'https://res.cloudinary.com/dslpvndc1/image/upload/v1631822160/album_cover_frpoiu.jpg',
   producers: ["Rahul", "Anne"],
   record_label: 'Le Wagon',
   seller_id: Seller.all.sample.id,
