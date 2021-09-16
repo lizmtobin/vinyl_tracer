@@ -18,6 +18,7 @@
     </div>
 
 
+
     <!-- Buttons -->
 
     <div class="d-flex align-items center">
@@ -29,6 +30,7 @@
         <div><%= link_to 'Go back to albums', :back, class: "btn btn-info" %></div>
       </div>
     </div>
+
 
        <!-- Six degrees button -->
 
@@ -48,10 +50,17 @@
               <img src= <%= act.album.artwork_url%> />
               <div class="card-vinyl-infos h-100">
                 <h2 class="pt-2"><%= link_to "#{act.album.album_name}", album_path(act.album) %></h2>
-                <h3><%= act.album.artist.artist_name + " " +  act.album.year %></h3>
+                <h3><% if act.album.album_name == "Trainspotting"  || act.album.album_name == "The Crow" %>
+                    Various<%= + " " +  act.album.year %>
+                    <% else %>
+                    <%= act.album.artist.artist_name + " " +  act.album.year %>
+                    <% end %>
+                    </h3>
                 <div class="pt-4">
                   <h4>Why
-                    <% if act.album.artist.artist_name == "Various"%>
+                    <% if act.album.album_name == "Trainspotting"  || act.album.album_name == "The Crow" %>
+                    <%= act.album.album_name %>
+                    <% elsif act.album.artist.artist_name == "Various"%>
                     <%= act.album.album_name %>
                     <% else %>
                     <%= act.album.artist.artist_name %>
@@ -71,14 +80,20 @@
 
     <div class="d-flex show-card row justify-content-center align-items-center mb-3">
       <div class="card-vinyl m-3">
-        <img src= <%= @album.artwork_url %> />
+        <img class="img1" src= <%= @album.artwork_url %> />
         <div class="card-vinyl-infos d-flex flex-column justify-content-center" style="height: 43%;">
           <ul style="list-style: none; margin: 0; padding: 0;">
             <li><h2><%= @album.album_name %></h2></li>
-            <li><p><%= @album.artist.artist_name %></p></li>
+            <li><p>
+              <% if @album.album_name == "Trainspotting"  || @album.album_name == "The Crow" %>
+              Various
+              <% else %>
+              <%= @album.artist.artist_name %>
+              <% end %>
+              </p></li>
             <li><p><%= @album.year %></p></li>
-            <% @album.genre.each do |genre| %>
-              <li><p><%= genre %></p></li>
+            <% @album.genre[0..2].each do |genre| %>
+              <li><p><%= genre.capitalize %></p></li>
             <% end %>
           </ul>
             <% if @favourite == [] %>
@@ -112,6 +127,16 @@
      <p id="album_name" class="hidden"> <%= @album.album_name%> <span style="display: hidden"><%= @album.artist.artist_name %></span></p>
     </div>
 
+  </div>
+
+  <!-- Buttons -->
+
+  <div class="d-flex align-items center justify-content-center col-12">
+    <div class="row justify-content-center">
+      <div><%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/search/?type=all&title=#{@album.album_name}&artist=#{@album.artist.artist_name}&format=vinyl", class: "btn btn-primary mr-2", target: :blank %></div>
+      <div><%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mr-2" %></div>
+      <div><%= link_to 'Go back to albums', :back, class: "btn btn-info" %></div>
+    </div>
   </div>
 
 </div>

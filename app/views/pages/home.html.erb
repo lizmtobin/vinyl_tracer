@@ -3,16 +3,24 @@
   <div class="flex-container">
 
     <!-- <div class="row d-flex justify-content-between"> -->
+
     <div>
 
       <!-- <div class="col-7" style="margin-right:5%" > -->
       <div class="flex-item mr-4">
 
+  <div>
+
+
+      <!-- <div class="col-7" style="margin-right:5%" > -->
+      <div class="flex-item mr-4">
         <!-- title -->
 
-        <div class="home-text";>
-          <h1>Vinyl Tracer</h1>
-          <p  id="wormhole", style="margin-bottom: 15px;">Follow us down the wormhole of album connections</p>
+        <!-- <div class="home-text"> -->
+        <div >
+
+          <h1 class="vinyl-header">Vinyl Tracer</h1>
+          <p   style="margin-bottom: 15px;">Follow us down the wormhole of album connections</p>
            <%= form_tag artists_path, method: :get do %>
             <%= text_field_tag :query,
               params[:query],
@@ -25,7 +33,7 @@
 
           <!-- six degrees info -->
 
-          <div class="card-six-info" style="margin: 1rem 0;">
+          <div class="card-six-info" style="margin: 1rem 0; max-width: 40rem;">
             <p>
               <h2 class="glow-on-hover" style="color:#AC7FDD;" data-toggle="collapse" data-target="#collapseExample" aria-controls="collapseExample">
                 What is Six Degrees of Separation?
@@ -33,29 +41,30 @@
             </p>
             <div class="collapse" id="collapseExample">
               <p>
-              Musicians like to mingle. They collaborate, change bands, cover each others songs and share producers.
+                Musicians like to mingle. They collaborate, change bands, cover each others songs and share producers.
                 Six degrees of separation explores these links, by suggesting six albums all linked to each other by real world events. Starting from your chosen album,
                 the next suggestion could be linked by a guitarist that played in both bands, a producer that worked on both albums, or acts that performed together onstage. The possibilities are endless.
                 Opening a panorama of potential links; spanning different artists, genres or points in time; our six degrees are all routed in this exciting world of interlinking unities.
               </p>
             </div>
           </div>
-
+        </div>
       </div>
 
       <!-- info card -->
-
-      <div class="col-4 home-card home-text">
-        <h2 style="text-align: center;"> What We're About</h2>
-        <p >Search for Albums</p>
-        <p >Discover new music using our unique<br>
-          <strong style="color:#AC7FDD;">Six degrees of separation</strong> system</p>
-        <p>Find vinyl online or with local sellers</p>
+      <div class="flex-item ml-4">
+        <div class="home-card" style="max-width: 20rem;">
+        <!-- <div class="col-4 home-card home-text"> -->
+          <h2 style="text-align: center;"> What We're About</h2>
+          <p >Search for Albums</p>
+          <p >Discover new music using our unique<br>
+            <strong style="color:#AC7FDD;">Six degrees of separation</strong> system</p>
+          <p>Find vinyl online or with local sellers</p>
+        </div>
       </div>
 
-
     <!-- end of row -->
-    </div>
+    <!-- </div> -->
 
   <!-- end of container -->
   </div>
