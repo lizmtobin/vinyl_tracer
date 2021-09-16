@@ -1041,6 +1041,25 @@ Album.create!(
 "Blank Expression", "Stupid Marriage", "Too Much Too Young", "Little Bitch", "You're Wondering Now" ]
   )
 
+Artist.create!(
+  artist_name: 'The Vinyl Tracers',
+  band_members: ["Clare Amos", "Gid Berridge", "Liz Tobin"]
+  )
+
+Album.create!(
+  album_name: "Live at Glastonbury",
+  year: '2021',
+  artwork_url: 'https://upload.wikimedia.org/wikipedia/en/9/94/Specials_uk_front.jpg',
+  producers: ["Rahul", "Anne"],
+  record_label: 'Le Wagon',
+  seller_id: Seller.all.sample.id,
+  genre: ['Ruby', 'HTML', 'CSS', 'Javascript'],
+  artist_id: Artist.last.id,
+  tracks: ["I love coding", "Did somebody say just code?", "Coding in the morning", "Coding at night",
+"Coding in the afternoon", "I can't get no (SQL)", "Does my back-end look big in this?",
+"Move to the Algorithm", "Array of light", "Seven function army", "Lucy in the sky with Bootstrap" ]
+  )
+
 puts "Albums created"
 puts "done"
 
