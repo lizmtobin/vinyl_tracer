@@ -6,11 +6,6 @@
   padding: 10% 0;
   text-align: center;
 
-  // height: 100%;
-  // height: 100vh; ******* important - using this causes all the screen to overlap, please do not uncomment!!!********
-
-  height:100vh;
-
 }
 
 .banner h1 {
@@ -27,11 +22,11 @@
   font-size:2rem;
 }
 
-@media screen and (min-width: 1900px) {
-  .banner {
-    height: 100vh;
-  }
-}
+// @media screen and (min-width: 1900px) {
+//   .banner {
+//     height: 100vh;
+//   }
+// }
 
 
 .banner p {
