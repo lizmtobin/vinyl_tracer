@@ -10,6 +10,8 @@ import "channels";
 import { artist } from "./artists.js";
 import { album } from "./album.js";
 import { initMapbox } from '../plugins/init_mapbox';
+//import { initAutocomplete } from '../plugins/init_autocomplete'; // don't implement for seller search
+
 
 Rails.start()
 Turbolinks.start()
@@ -31,6 +33,7 @@ document.addEventListener('turbolinks:load', () => {
   artist();
   album();
   initMapbox();
+  //initAutocomplete();
   // Call your functions here, e.g:
   // initSelect2();
 });

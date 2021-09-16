@@ -60,7 +60,7 @@
   text-decoration: none;
 }
 
-.card-vinyl .card-vinyl-infos, .card-album-tracks, .card-six-degrees, .card-seller .card-artist {
+.card-vinyl .card-vinyl-infos, .card-album-tracks, .card-six-degrees, .card-seller, .card-artist {
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -130,6 +130,11 @@
   margin: 5%;
   background-color: $gray;
   width: 15rem;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center
 
 
   h2 {
@@ -144,11 +149,11 @@
     text-decoration: none;
   }
 
-  img {
+}
+
+.card-seller > img {
       object-fit: scale-down;
   }
-
-}
 
 .seller-infos {
   padding: 8px 0;

@@ -33,10 +33,11 @@
         <% @artists.each do |artist| %>
           <div class="flex-item mb-4 mr-4">
             <div class="card-artist">
-              <h3 style="text-align: center;"><%= link_to artist.artist_name, artist_path(artist)%></h3>
+              <h3 style="text-align: center;"><%= link_to artist.artist_name, "/artists?query=#{artist.artist_name}&commit=Search" %></h3>
               <img src= <%= artist.albums[0].artwork_url%> />
             </div>
           </div>
+       <!-- <div><#%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/search/?type=all&title=#{@album.album_name}&artist=#{@album.artist.artist_name}&format=vinyl", class: "btn btn-primary mr-2", target: :blank %></div> -->
 
 
     <% end %>
