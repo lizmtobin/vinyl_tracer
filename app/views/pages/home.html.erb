@@ -2,23 +2,13 @@
   <!-- <div class="container d-flex justify-content-between align-items-center h-100"> -->
   <div class="flex-container">
 
-    <!-- <div class="row d-flex justify-content-between"> -->
-
     <div>
 
-      <!-- <div class="col-7" style="margin-right:5%" > -->
       <div class="flex-item mr-4">
 
-  <div>
-
-
-      <!-- <div class="col-7" style="margin-right:5%" > -->
-      <div class="flex-item mr-4">
         <!-- title -->
 
-        <!-- <div class="home-text"> -->
         <div >
-
           <h1 class="vinyl-header">Vinyl Tracer</h1>
           <p   style="margin-bottom: 15px;">Follow us down the wormhole of album connections</p>
            <%= form_tag artists_path, method: :get do %>
@@ -33,13 +23,13 @@
 
           <!-- six degrees info -->
 
-          <div class="card-six-info" style="margin: 1rem 0; max-width: 40rem;">
+          <div class="card-six-info" style="margin: 1rem 0; width: 40rem;">
             <p>
               <h2 class="glow-on-hover" style="color:#AC7FDD;" data-toggle="collapse" data-target="#collapseExample" aria-controls="collapseExample">
                 What is Six Degrees of Separation?
               </h2>
             </p>
-            <div class="collapse" id="collapseExample">
+            <div class="collapse home-text" id="collapseExample">
               <p>
                 Musicians like to mingle. They collaborate, change bands, cover each others songs and share producers.
                 Six degrees of separation explores these links, by suggesting six albums all linked to each other by real world events. Starting from your chosen album,
@@ -49,7 +39,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div><!-- end of flex-item div -->
 
       <!-- info card -->
       <div class="flex-item ml-4">
@@ -63,13 +53,8 @@
         </div>
       </div>
 
-    <!-- end of row -->
-    <!-- </div> -->
+    </div>
 
-  <!-- end of container -->
-  </div>
+  </div><!-- end of container -->
 
-
-
-<!-- end of banner -->
-</div>
+</div><!-- end of banner -->
