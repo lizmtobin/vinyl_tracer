@@ -18,6 +18,20 @@
     </div>
 
 
+
+    <!-- Buttons -->
+
+    <div class="d-flex align-items center">
+      <div class="row justify-content-center">
+        <div><%= link_to "Search for #{@album.album_name} on discogs",
+        "https://www.discogs.com/search/?type=all&title=#{@album.album_name}&artist=#{@album.artist.artist_name}&format=vinyl",
+        class: "btn btn-primary mr-2", target: :blank %></div>
+        <div><%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mr-2" %></div>
+        <div><%= link_to 'Go back to albums', :back, class: "btn btn-info" %></div>
+      </div>
+    </div>
+
+
        <!-- Six degrees button -->
 
     <% if @associated_acts.length > 0 %>
@@ -32,7 +46,7 @@
       <div class="row justify-content-center flag hidden">
         <div class="d-flex mb-4 card-six-degrees_container">
           <% @associated_acts.each do | act | %>
-            <div class="card-six-degrees">
+            <div class="card-six-degrees js-fade">
               <img src= <%= act.album.artwork_url%> />
               <div class="card-vinyl-infos h-100">
                 <h2 class="pt-2"><%= link_to "#{act.album.album_name}", album_path(act.album) %></h2>
@@ -117,7 +131,7 @@
 
   <!-- Buttons -->
 
-  <div class="d-flex align-items center justify-content-center col-12">
+  <div class="d-flex align-items center justify-content-center col-12 mb-3">
     <div class="row justify-content-center">
       <div><%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/search/?type=all&title=#{@album.album_name}&artist=#{@album.artist.artist_name}&format=vinyl", class: "btn btn-primary mr-2", target: :blank %></div>
       <div><%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mr-2" %></div>
