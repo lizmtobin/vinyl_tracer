@@ -1069,7 +1069,7 @@ Album.create!(
   )
 
 Artist.create!(
-  artist_name: 'The Tracers of Vinyl ',
+  artist_name: 'The Tracers of Vinyl',
   band_members: ["Clare Amos", "Gid Berridge", "Liz Tobin"]
   )
 
@@ -1086,6 +1086,7 @@ Album.create!(
 "Coding in the afternoon", "I can't get no (SQL)", "Does my back-end look big in this?",
 "Move to the Algorithm", "Array of light", "Seven function army", "Lucy in the sky with Bootstrap" ]
   )
+
 
 puts "Albums created"
 puts "done"
