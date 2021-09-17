@@ -122,9 +122,9 @@
 
     <div id="album_trivia" class="card-vinyl m-3" style="font-size: 20px; padding:  12px; color: #5C527F;" align-items-center>
       <% if @album.album_name == "Live at Glastonbury" %>
-        <strong><%= "Formed: "%></strong><%= "London / Birmingham 2021" %><br>
-        <strong><%= "Record Label: "%></strong><%= "Le Wagon" %><br>
-        <strong><%= "Producers: "%></strong><%= "Rahul, Anne" %><br>
+        <strong><%= "Formed: "%></strong><%= "London / Birmingham 2021" %><br><br>
+        <strong><%= "Record Label: "%></strong><%= "Le Wagon" %><br><br>
+        <strong><%= "Producers: "%></strong><%= "Rahul, Anne" %><br><br>
         <strong><%= "Members: "%></strong><%= "Clare Amos, Gid Berridge, Liz Tobin" %><br>
 
       <% else %>
@@ -136,13 +136,13 @@
 
   <!-- Buttons -->
 
-  <div class="d-flex align-items center justify-content-center col-12 mb-3">
+<!--   <div class="d-flex align-items center justify-content-center col-12 mb-3">
     <div class="row justify-content-center">
       <div><%= link_to "Search for #{@album.album_name} on discogs", "https://www.discogs.com/search/?type=all&title=#{@album.album_name}&artist=#{@album.artist.artist_name}&format=vinyl", class: "btn btn-primary mr-2", target: :blank %></div>
       <div><%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mr-2" %></div>
       <div><%= link_to 'Go back to albums', :back, class: "btn btn-info" %></div>
     </div>
-  </div>
+  </div> -->
 
 </div>
 
