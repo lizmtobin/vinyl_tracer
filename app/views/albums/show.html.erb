@@ -123,7 +123,15 @@
       <!-- Album trivia -->
 
     <div id="album_trivia" class="card-vinyl m-3" style="font-size: 20px; padding:  12px; color: #5C527F;" align-items-center>
-     <p id="album_name" class="hidden"> <%= @album.album_name%> <span style="display: hidden"><%= @album.artist.artist_name %></span></p>
+      <% if @album.album_name == "Live at Glastonbury" %>
+        <strong><%= "Formed: "%></strong><%= "London / Birmingham 2021" %><br>
+        <strong><%= "Record Label: "%></strong><%= "Le Wagon" %><br>
+        <strong><%= "Producers: "%></strong><%= "Rahul, Anne" %><br>
+        <strong><%= "Members: "%></strong><%= "Clare Amos, Gid Berridge, Liz Tobin" %><br>
+
+      <% else %>
+        <p id="album_name" class="hidden"> <%= @album.album_name%> <span style="display: hidden"><%= @album.artist.artist_name %></span></p>
+      <% end %>
     </div>
 
   </div>
