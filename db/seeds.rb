@@ -145,7 +145,7 @@ Album.create!(
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
   artist_id: Artist.all.sample.id,
-  ["Dancing with Mr.D", "100 Years Ago", "Coming Down Again",  "Doo Doo Doo Doo",  "Angie",  "Silver Train",
+  tracks: ["Dancing with Mr.D", "100 Years Ago", "Coming Down Again",  "Doo Doo Doo Doo",  "Angie",  "Silver Train",
     "Hide Your Love",  "Winter",  "Can you Hear the Music",   "Star"]
   )
 
@@ -158,7 +158,7 @@ Album.create!(
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
   artist_id: Artist.all.sample.id,
-  ["Brown Sugar", "Sway", "Wild Horses",  "Can\'t You Hear Me Knocking",  "You gotta Move",  "Bitch",
+  tracks: ["Brown Sugar", "Sway", "Wild Horses",  "Can\'t You Hear Me Knocking",  "You gotta Move",  "Bitch",
     "I Got The Blues",  "Sister Morphine",  "Dead Flowers",   "Moonlight Mile"]
   )
 
@@ -171,7 +171,7 @@ Album.create!(
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
   artist_id: Artist.all.sample.id,
-  ["Hot Stuff", "Hand of Fate", "Cherry Oh Baby",  "Memory Motel",  "Hey Negrite",  "Melody",
+  tracks: ["Hot Stuff", "Hand of Fate", "Cherry Oh Baby",  "Memory Motel",  "Hey Negrite",  "Melody",
     "Fool To Cry",  "Crazy Mama"]
   )
 
