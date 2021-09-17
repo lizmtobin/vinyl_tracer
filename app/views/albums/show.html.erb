@@ -92,9 +92,7 @@
               <% end %>
               </p></li>
             <li><p><%= @album.year %></p></li>
-            <% @album.genre[0..2].each do |genre| %>
-              <li><p><%= genre.capitalize %></p></li>
-            <% end %>
+            <li><p><%= @album.genre[0..2].to_sentence %><p></li>
           </ul>
             <% if @favourite == [] %>
               <%= link_to album_favourites_path(@album.id), method: :post do  %>
