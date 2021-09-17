@@ -1,158 +1,202 @@
-.btn-basic, .btn-six {
+.btn-basic,
+.btn-six {
   color: white;
   padding: 10px 20px;
   padding: 8px 24px;
-  background: #583D72;
+  background: #583d72;
 }
 
 .btn-six {
   display: flex;
-  align-items:center;
-  justify-content:center;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
   font-size: 2.5rem;
-  font-family: 'Oleo Script Swash Caps';
+  font-family: "Oleo Script Swash Caps";
   height: 4rem;
   border: solid 1px white;
-  background: linear-gradient(130deg, #DDCAF1, #AC7FDD, #301B3F);
+  background: linear-gradient(130deg, #ddcaf1, #ac7fdd, #301b3f);
   background-size: 600% 600%;
 
+  -webkit-animation: AnimationName 12s ease infinite;
+  -moz-animation: AnimationName 12s ease infinite;
+  -o-animation: AnimationName 12s ease infinite;
+  animation: AnimationName 12s ease infinite;
+}
 
-    -webkit-animation: AnimationName 12s ease infinite;
-    -moz-animation: AnimationName 12s ease infinite;
-    -o-animation: AnimationName 12s ease infinite;
-    animation: AnimationName 12s ease infinite;
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
   }
-
-  @-webkit-keyframes AnimationName {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
+  50% {
+    background-position: 100% 50%;
   }
-  @-moz-keyframes AnimationName {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
+  100% {
+    background-position: 0% 50%;
   }
-  @-o-keyframes AnimationName {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
   }
-  @keyframes AnimationName {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .btn-basic:hover {
-  background: #150E56;
-  color: #F4F4F4;
+  background: #150e56;
+  color: #f4f4f4;
 }
 
-.btn-primary, .btn-info, .btn-basic  {
+.btn-primary,
+.btn-info,
+.btn-basic {
   font-size: 20px;
   border-radius: 4px;
 }
 
-#favourite {
-  color: #3C415C;
+.favourite {
+  color: $vt-purple-light;
   position: absolute;
-  // right: 36px;
-  // bottom: -12px;
-  right: 44px;
-  bottom: 44px;
+  right: 5%;
+  top: 5%;
   font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 2px;
 }
 
-#favourite:hover {
+.favourite:hover {
   color: $red;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-#favourite-red {
+.favourite-red {
   color: $red;
   position: absolute;
-  right: 44px;
-  bottom: 44px;
+  right: 5%;
+  top: 5%;
   font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.delete {
+  color: #3c415c;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.delete:hover {
+  color: $red;
 }
 
 #seller {
-  color: #583D72;
+  color: #583d72;
   font-size: 1.5rem;
   padding: 4px;
 }
 
- #seller:hover {
-    color: $red;
-  }
-
+#seller:hover {
+  color: $red;
+}
 
 .glow-on-hover {
-    border: none;
-    outline: none;
-    background: #EDF0F0;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #edf0f0;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
 }
 
 .button-user {
-  color: #583D72;
+  color: #583d72;
   font-size: 1.5rem;
 }
 
 .button-user:hover {
-  content: "Back to albums"
+  content: "Back to albums";
 }
 
 .glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg,  #7a00ff, #DDCAF1, #301B3F );
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+  content: "";
+  background: linear-gradient(45deg, #7a00ff, #ddcaf1, #301b3f);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
 .glow-on-hover:active {
-    color: #EDF0F0;
-}
-
-.glow-on-hover:active:after {
-    // background: transparent;
+  color: #edf0f0;
 }
 
 .glow-on-hover:hover:before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #EDF0F0;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #edf0f0;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
 
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
-
-
-

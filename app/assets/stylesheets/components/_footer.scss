@@ -1,21 +1,13 @@
 .footer {
-
   background: white;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  flex-grow: 2;
   justify-content: space-between;
   padding: 1rem 1rem 0 0;
-  color: rgba(0,0,0,0.8);
-  overflow: hidden;
-  // position: absolute;
-  left: 0;
-  bottom: 0;
+  color: rgba(0, 0, 0, 0.8);
   width: 100%;
-
-    p {
-    color: #5C527F;
+  p {
+    color: #5c527f;
     font-family: Oleo Script Swash Caps;
     font-size: 12px;
     text-align: center;
@@ -29,7 +21,7 @@
   flex-basis: 100%;
 
   a {
-    color: #150E56;
+    color: #150e56;
     opacity: 0.3;
     text-decoration: none;
     font-size: 32px;
@@ -41,13 +33,12 @@
   }
 }
 
-
-#footer-info  {
+#footer-info {
   padding: 1rem 1rem 0 0;
 
   a {
     margin-top: 24px;
-    color: #150E56;
+    color: #150e56;
     opacity: 0.5;
     text-decoration: none;
     font-size: 16px;
