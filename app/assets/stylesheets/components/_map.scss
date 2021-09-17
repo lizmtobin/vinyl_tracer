@@ -1,8 +1,7 @@
 .mapboxgl-popup {
   max-width: 200px;
   border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
-  //border : solid 2px #9B72AA;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .mapboxgl-popup-content {
@@ -10,18 +9,17 @@
 }
 
 .mapboxgl-popup-content h2 {
-  font-family: 'Oleo Script Swash Caps';
+  font-family: "Oleo Script Swash Caps";
 }
 
 .mapboxgl-popup-content p {
-  font-family: 'Oleo Script Swash Caps';
+  font-family: "Oleo Script Swash Caps";
   font-size: 17px;
   margin-bottom: 5px;
 }
 
 .mapboxgl-canvas {
-  border : solid 2px #9B72AA;
+  border: solid 2px #9b72aa;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }

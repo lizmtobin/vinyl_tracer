@@ -1,8 +1,11 @@
 .flex-container {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
+  column-gap: 64px;
+  row-gap: 32px;
+  margin: 0 100px;
 }
 
 .container-footer {
@@ -17,5 +20,3 @@
   max-width: 110rem;
   margin: auto;
 }
-
-
