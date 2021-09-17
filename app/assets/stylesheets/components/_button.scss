@@ -143,6 +143,15 @@
   border-radius: 10px;
 }
 
+.button-user {
+  color: #583d72;
+  font-size: 1.5rem;
+}
+
+.button-user:hover {
+  content: "Back to albums";
+}
+
 .glow-on-hover:before {
   content: "";
   background: linear-gradient(45deg, #7a00ff, #ddcaf1, #301b3f);

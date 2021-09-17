@@ -117,7 +117,9 @@ Album.create!(
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: ["Brown Sugar", "Sway", "Wild Horses",  "Can't You Hear Me Knocking",  "You gotta Move",  "Bitch",
+    "I Got The Blues",  "Sister Morphine",  "Dead Flowers",   "Moonlight Mile"]
   )
 
 Album.create!(
@@ -142,7 +144,9 @@ Album.create!(
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: ["Dancing with Mr.D", "100 Years Ago", "Coming Down Again",  "Doo Doo Doo Doo",  "Angie",  "Silver Train",
+    "Hide Your Love",  "Winter",  "Can you Hear the Music",   "Star"]
   )
 
 Album.create!(
@@ -153,7 +157,9 @@ Album.create!(
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: ["Brown Sugar", "Sway", "Wild Horses",  "Can\'t You Hear Me Knocking",  "You gotta Move",  "Bitch",
+    "I Got The Blues",  "Sister Morphine",  "Dead Flowers",   "Moonlight Mile"]
   )
 
 Album.create!(
@@ -164,7 +170,9 @@ Album.create!(
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: ["Hot Stuff", "Hand of Fate", "Cherry Oh Baby",  "Memory Motel",  "Hey Negrite",  "Melody",
+    "Fool To Cry",  "Crazy Mama"]
   )
 
 Album.create!(
