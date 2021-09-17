@@ -5,6 +5,11 @@
   </div>
 
   <div class="flex-container">
+    <% if @user_favourites.length === 0 %>
+      <div class="d-flex justify-content-center">
+        <p>You haven't added any albums to your collection.</p>
+      </div>    
+    <% end %>
 
     <% @user_favourites.each do |favourite| %>
 
