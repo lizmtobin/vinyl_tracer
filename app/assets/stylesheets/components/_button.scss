@@ -6,6 +6,15 @@
   background: #583d72;
 }
 
+.btn-primary, .btn-info:hover {
+  color: white;
+}
+
+.btn-primary:hover {
+  color: black;
+}
+
+
 .btn-six {
   display: flex;
   align-items: center;
