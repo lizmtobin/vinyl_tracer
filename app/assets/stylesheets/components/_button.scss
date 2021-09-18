@@ -85,7 +85,8 @@
   color: $vt-purple-light;
   position: absolute;
   right: 5%;
-  top: 5%;
+  // top: 5%;
+  bottom: 5%;
   font-size: 2rem;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
@@ -101,7 +102,7 @@
   color: $red;
   position: absolute;
   right: 5%;
-  top: 5%;
+  bottom: 5%;
   font-size: 2rem;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
