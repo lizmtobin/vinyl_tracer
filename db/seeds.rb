@@ -183,7 +183,10 @@ Album.create!(
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: [ "Miss You", "When the Whip Comes Down", "Just My Imagination (Running Away with Me)",
+  "Some Girls","Lies", "Far Away Eyes", "Respectable", "Before They Make Me Run",
+   "Beast of Burden", "Shattered"]
   )
 
 Album.create!(
@@ -194,7 +197,9 @@ Album.create!(
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
   genre: ['rock, disco'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: ["Dance (Pt. 1)", "Summer Romance", "Send It to Me", "Let Me Go", "Indian Girl",
+  "Where the Boys Go", "Down in the Hole", "Emotional Rescue", "She's So Cold", "All About You"]
   )
 
 Album.create!(
@@ -205,8 +210,11 @@ Album.create!(
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: ["Start Me Up", "Hang Fire", "Slave", "Little T&A", "Black Limousine",
+  "Neighbours", "Worried About You", "Tops", "Heaven", "No Use in Crying", "Waiting on a Friend"]
   )
+
 
 Album.create!(
   album_name: 'Undercover',
@@ -217,6 +225,9 @@ Album.create!(
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
   artist_id: Artist.all.sample.id,
+  tracks: ["Undercover of the Night", "She Was Hot", "Tie You Up (The Pain of Love)",
+  "Wanna Hold You", "Feel On Baby", "Too Much Blood", "Pretty Beat Up", "Too Tough",
+  "All the Way Down", "It Must Be Hell"]
   )
 
 Album.create!(
@@ -227,7 +238,9 @@ Album.create!(
   record_label: 'CBS Records',
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: ["One Hit (To the Body)", "Fight", "Harlem Shuffle", "Hold Back", "Too Rude",
+  "Winning Ugly", "Back to Zero", "Dirty Work", "Had It with You", "Sleep Tonight", "Key to the Highway" ]
   )
 
 Album.create!(
