@@ -1,1 +1,4 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# Vinyl Tracer 
+
+Loving rifling vinyl in your local independent record store, but not always able to get there? We can spin those stacks for you, to help you unearth those unexpected treasures right here. Using our unique Six Degrees of Separation searches, we'll come up with new-old record discoveries, wild cards, and hidden gems. All based on real life links between the artists involved. Not a computer 'sounds like' algorithm in sight.
+
