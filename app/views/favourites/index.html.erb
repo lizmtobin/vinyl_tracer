@@ -23,7 +23,7 @@
               <li><p><%= favourite.album.year %></p></li>
               <li><p><%= favourite.album.genre[0..2].to_sentence %><p></li>
             </ul>
-            <%= link_to favourite_path(favourite), method: :delete, data: { confirm: "Are you sure you want to delete this album from favourites?"} do %>
+            <%= link_to favourite_path(favourite), method: :delete, data: { confirm: "Are you sure you want to delete this album from your collection?"} do %>
               <i class='far fa-trash-alt delete' id='delete'></i>
             <% end %>
           </div>
