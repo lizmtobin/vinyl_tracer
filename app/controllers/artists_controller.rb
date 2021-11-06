@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:artists]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
 
   def index
