@@ -1,7 +1,5 @@
 class AlbumsController < ApplicationController
-
-  # require 'open-uri'
-  # require 'nokogiri'
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
 
   def index
