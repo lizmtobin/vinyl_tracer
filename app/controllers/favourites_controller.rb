@@ -27,7 +27,7 @@ class FavouritesController < ApplicationController
 
   def destroy
     if @user = current_user
-      flash.alert = "Are you sure you want to remove this album from your collection?"
+      # flash.alert = "Are you sure you want to remove this album from your collection?"
       @favourite = Favourite.find(params[:id])
       @favourite.delete
       redirect_to favourites_path

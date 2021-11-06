@@ -14,7 +14,7 @@ en:
       last_attempt: "You have one more attempt before your account is locked."
       not_found_in_database: "Invalid %{authentication_keys} or password."
       timeout: "Your session expired. Please sign in again to continue."
-      unauthenticated: "Please sign up or sign in to work on your collection!"
+      unauthenticated: "Please sign up or sign in to work on your collection! 🎶 "
       unconfirmed: "You have to confirm your email address before continuing."
     mailer:
       confirmation_instructions:
@@ -38,7 +38,7 @@ en:
       updated_not_active: "Your password has been changed successfully."
     registrations:
       destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
-      signed_up: "Welcome! You have signed up successfully. Start tracing that Vinyl now!"
+      signed_up: "Welcome! You're all signed in. Start tracing that Vinyl now! "
       signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
       signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
       signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
@@ -46,8 +46,8 @@ en:
       updated: "Your account has been updated successfully."
       updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again."
     sessions:
-      signed_in: "You're in! Get working on that collection!"
-      signed_out: "You've signed out successfully. Your collection's safe with us!"
+      signed_in: "🎶 You're in! Start tracing that vinyl! "
+      signed_out: "🎶 Don't be a stranger. We'll keep your collection safe! "
       already_signed_out: "Signed out successfully."
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
