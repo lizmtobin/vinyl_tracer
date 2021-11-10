@@ -183,7 +183,10 @@ Album.create!(
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: [ "Miss You", "When the Whip Comes Down", "Just My Imagination (Running Away with Me)",
+  "Some Girls","Lies", "Far Away Eyes", "Respectable", "Before They Make Me Run",
+   "Beast of Burden", "Shattered"]
   )
 
 Album.create!(
@@ -194,7 +197,9 @@ Album.create!(
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
   genre: ['rock, disco'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: ["Dance (Pt. 1)", "Summer Romance", "Send It to Me", "Let Me Go", "Indian Girl",
+  "Where the Boys Go", "Down in the Hole", "Emotional Rescue", "She's So Cold", "All About You"]
   )
 
 Album.create!(
@@ -205,8 +210,11 @@ Album.create!(
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: ["Start Me Up", "Hang Fire", "Slave", "Little T&A", "Black Limousine",
+  "Neighbours", "Worried About You", "Tops", "Heaven", "No Use in Crying", "Waiting on a Friend"]
   )
+
 
 Album.create!(
   album_name: 'Undercover',
@@ -216,7 +224,10 @@ Album.create!(
   record_label: 'Rolling Stones Records',
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: ["Undercover of the Night", "She Was Hot", "Tie You Up (The Pain of Love)",
+  "Wanna Hold You", "Feel On Baby", "Too Much Blood", "Pretty Beat Up", "Too Tough",
+  "All the Way Down", "It Must Be Hell"]
   )
 
 Album.create!(
@@ -227,7 +238,9 @@ Album.create!(
   record_label: 'CBS Records',
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: ["One Hit (To the Body)", "Fight", "Harlem Shuffle", "Hold Back", "Too Rude",
+  "Winning Ugly", "Back to Zero", "Dirty Work", "Had It with You", "Sleep Tonight", "Key to the Highway" ]
   )
 
 Album.create!(
@@ -238,7 +251,10 @@ Album.create!(
   record_label: 'CBS Records',
   seller_id: Seller.all.sample.id,
   genre: ['rock', 'hard rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks: ["Sad sad sad",  "Mixed Emotions", "Terrifying",  "Hold On to Your Hat",   "Hearts for Sale",
+    "Blind by Love", "Rock and A Hard Place",  "Can't Be Seen",   "Almost Hear You Sigh",
+    "Continental Drift",  "Break the Spell",  "Slipping away"]
   )
 
 Album.create!(
@@ -249,7 +265,10 @@ Album.create!(
   record_label: 'Virgin Records',
   seller_id: Seller.all.sample.id,
   genre: ['blues rock', 'hard rock', 'roots rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks:["Love Is Strong",  "You Got Me Rocking", "Sparks Will Fly",  "The Worst",   "New Faces",
+    "Out of Tears", "I go Wild",  "Brand New Cat",   "Sweethearts Together",
+    "Suck on the Jungular"]
   )
 
 Album.create!(
@@ -260,7 +279,10 @@ Album.create!(
   record_label: 'Virgin Records',
   seller_id:Seller.all.sample.id,
   genre: ['blues rock', 'hard rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks:["Flip the Switch",  "Anybody Seen My Baby?", "Low Down",  "Already Over Me",   "Gunface",
+    "You Don't Have to Mean It", "Out of Control",  "Saint Me",   "Might as Well Get Juiced",
+    "Always Suffering", "Too Tight", "Thief in the Night", "How Can I Stop"]
   )
 
 Album.create!(
@@ -271,7 +293,10 @@ Album.create!(
   record_label: 'Virgin Records',
   seller_id: Seller.all.sample.id,
   genre: ['rock'],
-  artist_id: Artist.all.sample.id
+  artist_id: Artist.all.sample.id,
+  tracks:["Rough Justice",  "Let Me Down Slow", "It won't Tale Long",  "Rain Fall Down",   "Streets of Love",
+    "Back of my Head", "She Saw Me Coming",  "Biggest Mistake",   "This Place Is Empty",
+    "Oh No, Not You Again", "Dangerous Beauty", "Laugh, I nearly Died", "Sweet Neo Con",  "Look What the Cat Dragged In", "Driving Too Fast", "Infamy"]
   )
 
 Album.create!(
