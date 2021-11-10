@@ -1,20 +1,20 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%=image_path('home-banner.jpg')%>');">
   <div class="home-wrapper flex-wrap">
 
-    <div id="title">
-      <div>
-        <h1 class="vinyl-header">Vinyl Tracer</h1>
-        <p   style="margin-bottom: 15px;">Follow us down the wormhole of album connections</p>
-          <%= form_tag artists_path, method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control", id: "home-search",
-            placeholder: "Search for an Artist..." %>
-          <%= submit_tag "Search", class: "btn btn-basic w-100" %>
-        <% end %>
-      </div>
+    <div id="title" class="flex">
+      
+      <h1 class="vinyl-header">Vinyl Tracer</h1>
+      <p style="margin-bottom: 15px;">Follow us down the wormhole of album connections</p>
+        <%= form_tag artists_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control", id: "home-search",
+          placeholder: "Search for an Artist..." %>
+        <%= submit_tag "Search", class: "btn btn-basic w-100" %>
+      <% end %>
+    
 
-      <div class="card-six-info" style="margin: 1rem 0; width: 40rem;">
+      <div class="card-six-info" style="margin: 1rem 0;">
         <p>
           <h2 class="glow-on-hover" style="color:#AC7FDD;" data-toggle="collapse" data-target="#collapseExample" aria-controls="collapseExample">
             What is Six Degrees of Separation?
