@@ -5,7 +5,7 @@
   justify-content: center;
   column-gap: 64px;
   row-gap: 32px;
-  margin: 0 100px;
+  
 }
 
 .container-footer {
@@ -19,4 +19,10 @@
 .album-box {
   max-width: 110rem;
   margin: auto;
+}
+
+@media screen and (min-width: 500px) {
+  .flex-container {
+    margin: 0 100px;
+  }
 }
