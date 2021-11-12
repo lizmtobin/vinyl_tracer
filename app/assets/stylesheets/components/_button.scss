@@ -27,6 +27,7 @@
   background-size: 600% 600%;
   min-width: 12rem;
   padding: 5px;
+  margin: 1rem;
 
   -webkit-animation: AnimationName 12s ease infinite;
   -moz-animation: AnimationName 12s ease infinite;
@@ -214,6 +215,8 @@
 
 @media screen and (max-width: 680px) {
   .btn-six {
-   font-size: 1rem;
+   font-size: 1.5rem;
+   min-width: 17rem;
+   margin: 0;
   }
 }
