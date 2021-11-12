@@ -21,8 +21,17 @@
   margin: auto;
 }
 
+
+.card-six-degrees_container {
+  max-width: 70rem;
+  flex-wrap: wrap;
+}
+
+
 @media screen and (min-width: 500px) {
   .flex-container {
     margin: 0 100px;
   }
+
 }
+
