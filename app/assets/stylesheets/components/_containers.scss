@@ -5,7 +5,7 @@
   justify-content: center;
   column-gap: 64px;
   row-gap: 32px;
-  margin: 0 100px;
+  
 }
 
 .container-footer {
@@ -20,3 +20,18 @@
   max-width: 110rem;
   margin: auto;
 }
+
+
+.card-six-degrees_container {
+  max-width: 70rem;
+  flex-wrap: wrap;
+}
+
+
+@media screen and (min-width: 500px) {
+  .flex-container {
+    margin: 0 100px;
+  }
+
+}
+

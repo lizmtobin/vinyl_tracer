@@ -16,16 +16,18 @@
 
 
 .btn-six {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   border-radius: 10px;
   font-size: 2.5rem;
   font-family: "Oleo Script Swash Caps";
-  height: 4rem;
   border: solid 1px white;
   background: linear-gradient(130deg, #ddcaf1, #ac7fdd, #301b3f);
   background-size: 600% 600%;
+  min-width: 12rem;
+  padding: 5px;
+  margin: 1rem;
 
   -webkit-animation: AnimationName 12s ease infinite;
   -moz-animation: AnimationName 12s ease infinite;
@@ -208,5 +210,13 @@
   }
   100% {
     background-position: 0 0;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .btn-six {
+   font-size: 1.5rem;
+   min-width: 17rem;
+   margin: 0;
   }
 }

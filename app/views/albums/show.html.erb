@@ -25,7 +25,7 @@
       <div class="row justify-content-center">
         <div><%= link_to "Find a copy on discogs",
         "https://www.discogs.com/search/?type=all&title=#{@album.album_name}&artist=#{@album.artist.artist_name}&format=vinyl",
-        class: "btn btn-primary mr-2", target: :blank %></div>
+        class: "btn btn-primary mr-2 mb-2", target: :blank %></div>
         <div><%= link_to 'Find a record store', sellers_path, class: "btn btn-primary mr-2" %></div>
         <div><%= link_to '<i class="fas fa-backward"></i> Rewind'.html_safe, ("/artists?query=#{@album.artist.artist_name}&commit=Search"), class: "btn btn-info" %></div>
       </div>
@@ -35,7 +35,7 @@
 
     <% if @associated_acts.length > 0 %>
       <div class="col-12 d-flex justify-content-center">
-        <div class="six-degrees btn btn-six m-3 w-50" style="text-align: center;">Six Degrees Of Separation</div>
+        <div class="six-degrees btn btn-six w-50" style="text-align: center;">Six Degrees Of Separation</div>
       </div>
 
 
