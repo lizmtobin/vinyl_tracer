@@ -1147,7 +1147,6 @@ end
 associated_acts = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Associated_acts"
 data = get_airtable_data(associated_acts)
 
-
 tags = "https://api.airtable.com/v0/appG8EtUMLM464yhW/Sheet%201"
 
 tags_data = get_airtable_data(tags)
