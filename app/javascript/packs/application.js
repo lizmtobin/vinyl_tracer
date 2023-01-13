@@ -3,20 +3,19 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import Rails from "@rails/ujs";
-import Turbolinks from "turbolinks";
-import * as ActiveStorage from "@rails/activestorage";
-import "channels";
-import { artist } from "./artists.js";
-import { album } from "./album.js";
-import { initMapbox } from '../plugins/init_mapbox';
-//import { initAutocomplete } from '../plugins/init_autocomplete'; // don't implement for seller search
+import Rails from '@rails/ujs'
+import Turbolinks from 'turbolinks'
 
+import * as ActiveStorage from '@rails/activestorage'
+import 'channels'
+import { artist } from './artists.js'
+import { album } from './album.js'
+import { initMapbox } from '../plugins/init_mapbox'
+//import { initAutocomplete } from '../plugins/init_autocomplete'; // don't implement for seller search
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-
 
 // ----------------------------------------------------
 // Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
@@ -24,16 +23,16 @@ ActiveStorage.start()
 // ----------------------------------------------------
 
 // External imports
-import "bootstrap";
+import 'bootstrap'
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
-  artist();
-  album();
-  initMapbox();
+  artist()
+  album()
+  initMapbox()
   //initAutocomplete();
   // Call your functions here, e.g:
   // initSelect2();
-});
+})
