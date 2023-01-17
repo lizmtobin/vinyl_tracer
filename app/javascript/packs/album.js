@@ -3,38 +3,66 @@ const album = () => {
 
   if (album_name_request) {
     console.log('album')
-    $.ajax({
-      url: 'https://en.wikipedia.org/w/api.php',
-      data: {
-        action: 'query',
-        prop: 'extracts',
-        list: 'search',
-        srsearch: album_name_request.innerText,
-        format: 'json',
-      },
-      dataType: 'jsonp',
-      success: processId,
-    })
+
+    fetch(
+      'https://en.wikipedia.org/w/api.php?action=query&origin=*&prop=extracts&list=search&srsearch=' +
+        album_name_request.innerText +
+        '&format=json&dataType=jsonp',
+      {
+        method: 'get',
+      }
+    )
+      .then(function (resp) {
+        return resp.json()
+      })
+      .then(function (data) {
+        processId(data)
+      })
+
+    // $.ajax({
+    //   url: 'https://en.wikipedia.org/w/api.php',
+    //   data: {
+    //     action: 'query',
+    //     prop: 'extracts',
+    //     list: 'search',
+    //     srsearch: album_name_request.innerText,
+    //     format: 'json',
+    //   },
+    //   dataType: 'jsonp',
+    //   success: processId,
+    // })
 
     let pageId
 
     function processId(apiResult) {
       pageId = apiResult.query.search[0].pageid
-      $.ajax({
-        url: 'https://en.wikipedia.org/w/api.php',
-        data: {
-          action: 'query',
-          prop: 'extracts',
-          redirects: 1,
-          exsentences: 3,
-          exintro: true,
-          explaintext: true,
-          pageids: pageId,
-          format: 'json',
-        },
-        dataType: 'jsonp',
-        success: processResult,
-      })
+      fetch(
+        'https://en.wikipedia.org/w/api.php?action=query&origin=*&prop=extracts&redirects=1&exsentences=3&exintro=true&explaintext=true&pageids=pageId&format=json&dataType=jsonp',
+        {
+          method: 'get',
+        }
+      )
+        .then(function (resp) {
+          return resp.json()
+        })
+        .then(function (data) {
+          processResult(data)
+        })
+      // $.ajax({
+      //   url: 'https://en.wikipedia.org/w/api.php',
+      //   data: {
+      //     action: 'query',
+      //     prop: 'extracts',
+      //     redirects: 1,
+      //     exsentences: 3,
+      //     exintro: true,
+      //     explaintext: true,
+      //     pageids: pageId,
+      //     format: 'json',
+      //   },
+      //   dataType: 'jsonp',
+      //   success: processResult,
+      // })
 
       function processResult(apiResultTwo) {
         const pages = apiResultTwo.query.pages
