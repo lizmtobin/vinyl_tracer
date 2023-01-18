@@ -2,8 +2,6 @@ const album = () => {
   const album_name_request = document.getElementById('album_name')
 
   if (album_name_request) {
-    console.log('album')
-
     fetch(
       'https://en.wikipedia.org/w/api.php?action=query&origin=*&prop=extracts&list=search&srsearch=' +
         album_name_request.innerText +
@@ -36,7 +34,6 @@ const album = () => {
 
     function processId(data) {
       pageId = data.query.search[0].pageid
-      console.log(pageId)
       fetch(
         'https://en.wikipedia.org/w/api.php?action=query&origin=*&prop=extracts&redirects=1&exsentences=3&exintro=true&explaintext=true&pageids=' +
           pageId +
