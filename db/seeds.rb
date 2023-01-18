@@ -38,14 +38,14 @@ Seller.create!(
   location: '50 Essex Road, London, N1 8LR',
   rating: 4,
   seller_url: 'https://www.flashback.co.uk/',
-  seller_logo: 'https://www.flashback.co.uk/templates/untitled/images/designer/9d1501262758df2b5a3810689868caeb_logo120.jpg')
+  seller_logo: 'https://cdn.shopify.com/s/files/1/0622/4576/5282/files/logo.jpg?v=1664101384')
 
 Seller.create!(
   seller_name: 'Rough Trade East',
   location: 'Draywalk, 91 Brick Lane, London, E1 6QL',
   rating: 5,
   seller_url: 'https://www.roughtrade.com/',
-  seller_logo: 'https://www.roughtrade.com/assets/logo-4e4504367ced1a66e8b5bb7281e66234fdeaeb3f973516ccfa7704e7fd6c2a58.png')
+  seller_logo: 'https://vinyltracer.s3.amazonaws.com/rough_trade.png')
 
 Seller.create!(
   seller_name: 'Let it Roll Records',
@@ -73,7 +73,7 @@ Seller.create!(
   location: '130 Talbot Road, London, W11 1JA',
   rating: 4,
   seller_url: 'https://www.roughtrade.com/',
-  seller_logo: 'https://www.roughtrade.com/assets/logo-4e4504367ced1a66e8b5bb7281e66234fdeaeb3f973516ccfa7704e7fd6c2a58.png')
+  seller_logo: 'https://vinyltracer.s3.amazonaws.com/rough_trade_west.png')
 
 Seller.create!(
   seller_name: 'Stranger Than Paradise',
