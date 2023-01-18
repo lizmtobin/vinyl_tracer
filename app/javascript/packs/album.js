@@ -34,10 +34,13 @@ const album = () => {
 
     let pageId
 
-    function processId(apiResult) {
-      pageId = apiResult.query.search[0].pageid
+    function processId(data) {
+      pageId = data.query.search[0].pageid
+      console.log(pageId)
       fetch(
-        'https://en.wikipedia.org/w/api.php?action=query&origin=*&prop=extracts&redirects=1&exsentences=3&exintro=true&explaintext=true&pageids=pageId&format=json&dataType=jsonp',
+        'https://en.wikipedia.org/w/api.php?action=query&origin=*&prop=extracts&redirects=1&exsentences=3&exintro=true&explaintext=true&pageids=' +
+          pageId +
+          '&format=json&dataType=jsonp',
         {
           method: 'get',
         }
@@ -46,6 +49,7 @@ const album = () => {
           return resp.json()
         })
         .then(function (data) {
+          console.log(data)
           processResult(data)
         })
       // $.ajax({
@@ -64,8 +68,8 @@ const album = () => {
       //   success: processResult,
       // })
 
-      function processResult(apiResultTwo) {
-        const pages = apiResultTwo.query.pages
+      function processResult(data) {
+        const pages = data.query.pages
         const pages_inner = Object.keys(pages)[0]
         const text = pages[pages_inner].extract
         const album_trivia = document.getElementById('album_trivia')

@@ -57,6 +57,8 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Figaro is an gem for making env files in the config/application.yml
+  gem 'figaro'
 end
 
 group :test do
