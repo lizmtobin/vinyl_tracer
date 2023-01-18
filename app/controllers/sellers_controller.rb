@@ -1,4 +1,5 @@
 class SellersController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     if params[:query].present?
@@ -10,7 +11,9 @@ class SellersController < ApplicationController
       @markers = @sellers.geocoded.map do |seller|
         {
           lat: seller.latitude,
-          lng: seller.longitude
+          lng: seller.longitude,
+          info_window: render_to_string(partial: "info_window", locals: { seller: seller }),
+          image_url: helpers.asset_url('vinyl2.png')
         }
     end
   end

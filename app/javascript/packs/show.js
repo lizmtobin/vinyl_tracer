@@ -1,8 +1,36 @@
 const six = document.querySelector(".six-degrees");
-const js_tag = document.querySelector(".flag");
-const js_tag2 = document.querySelector(".six-text")
+const toggleCards = document.querySelector(".flag");
+
 
 six.addEventListener("click", function() {
-    js_tag.classList.toggle("hidden");
-    js_tag2.classList.add("hidden")
-});
+    toggleCards.classList.toggle("hidden");
+    const fadeInCards = document.querySelectorAll(".js-fade");
+    if(fadeInCards && !toggleCards.classList.contains("hidden")) {
+      fadeInCards.forEach(tag => {
+        tag.style.opacity = 0;
+      });
+      fadeIn(fadeInCards[0]);
+    }
+  });
+
+
+
+function fadeIn(el){
+
+  (function fade() {
+    let val = parseFloat(el.style.opacity);
+    if (!((val += .05) > 1)) {
+      el.style.opacity = val;
+      requestAnimationFrame(fade);
+    } else {
+      const nextElement = el.nextElementSibling;
+      if(nextElement){
+        fadeIn(nextElement)
+      }
+    }
+  })();
+}
+
+
+
+

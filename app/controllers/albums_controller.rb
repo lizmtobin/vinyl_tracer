@@ -1,8 +1,5 @@
 class AlbumsController < ApplicationController
-
-
-  # require 'open-uri'
-  # require 'nokogiri'
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
 
   def index
@@ -20,12 +17,13 @@ class AlbumsController < ApplicationController
 
     # raise
     # @next_album = Album.find(params[:id].to_i + 1)
-    @associated_albums = Album.where(id: params[:id].to_i + 1..params[:id].to_i + 6)
-
+    # @associated_albums = Album.where(id: params[:id].to_i + 1..params[:id].to_i + 6)
+    @associated_acts = @album.get_associated
   end
+
 end
 
-  # private
+#
 
 #   def scrape_sellers
 #     html_content = URI.open("https://www.discogs.com/sell/list?format=Vinyl&format_desc=Album&q=sticky+fingers").read
@@ -36,9 +34,6 @@ end
 #     end
 #   end
 # end
-
-
-
 
 
   # def api_call(artist)

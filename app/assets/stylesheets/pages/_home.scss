@@ -1,6 +1,35 @@
 // Specific CSS for your home-page
 #home-search {
-  // width: 600px;
-  margin-bottom: 32px;
+  margin-bottom: 1rem;
 }
 
+.home-text p {
+  font-size: 1rem;
+  font-family: Raleway;
+  color: #40394a;
+}
+
+#wormhole {
+  font-size: 1.5rem;
+}
+
+.home-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  // the first direct div child of the wrapper div will have a margin right of 64px
+  
+}
+
+#title {
+  max-width: 40%;
+  min-width: 20rem;
+}
+
+@media screen and (min-width: 680px) {
+  .home-wrapper {
+    & > div:first-child {
+      margin-right: 64px;
+    }
+  }
+}

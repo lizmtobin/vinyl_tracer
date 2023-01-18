@@ -4,20 +4,15 @@
 @import "config/bootstrap_variables";
 
 // External libraries
-@import "bootstrap/scss/bootstrap";
-@import "font-awesome-sprockets";
+@import "bootstrap";
+// @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
+
+ 
+
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
 @import "pages/show";
-
-
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
